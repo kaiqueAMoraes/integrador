@@ -2,9 +2,64 @@ body{
     /*background-image: url(../img/100-90-5.png), linear-gradient(#000, #000);*/
 }
 
+*{
+    font-family: 'Lato';
+}
+
 header{
-    height: 100vh;
+    height: 200vh;
     /* background: #a8bedb; */
     position: relative;
     color: #f5f5f5;
+    overflow: hidden;
+
+
+}
+
+div[id=logoImagem] {
+    position: absolute;
+    height: 20vh;
+    width: 10vw;
+    background-image: url("../img/Ativo\ 1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 2rem;
+    left: 2rem;}
+
+h1:first-of-type{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(14px + (110 - 14) * ((100vw - 300px) / (1600 - 300)));
+    top: 55vh;
+}
+
+h2:nth-of-type(1),
+h2:nth-of-type(2){
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc( 80px + (200 - 80) * ((100vw - 300px) / (2000 - 300)));
+    font-weight: bold;
+    white-space: nowrap;
+}
+h2:nth-of-type(1){
+    top: 75vh;
+
+}
+
+h2:nth-of-type(2){
+    top: 95vh;
+}
+
+ul{
+    position: absolute;
+    top: 4vh;
+    right: 2vw;
+}
+li{
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (2000 - 300)));
+    margin-bottom: .5rem;
 }
