@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function() {
     const noise = () => {
         let canvas, ctx;
 
@@ -88,4 +88,4 @@ window.onload = function () {
     };
 
     noise();
-};
+});

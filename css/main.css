@@ -133,33 +133,16 @@ table {
     font-family: 'Lato';
 }
 
-* {
-    cursor: none;
-}
-
 
 body{
     overflow: hidden;
+    background:#227093;
 }
 
 section {
     height: 100vh;
-    background: #a8bedb;
     position: relative;
     color: #f5f5f5;
-}
-
-
-.main-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    height: 100vh;
-    background: #a8bedb;
-    color: #fff;
-    text-align: center;
 }
 
 .noise {
@@ -175,85 +158,3 @@ section {
     opacity: .05;
 }
 
-input,
-a,
-div,
-[id=logoImagem] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #f5f5f5;
-    font-weight: normal;
-}
-
-input {
-    background: transparent;
-    width: 80vw;
-    font-size: calc(34px + (150 - 34) * ((100vw - 300px) / (1600 - 300)));
-    border: none;
-    overflow: hidden;
-}
-
-input[id=usuario] {
-    top: 40vh;
-}
-
-input[id=senha] {
-    top: 70vh;
-}
-
-a {
-    top: 90vh;
-    left: 60vw;
-    text-decoration: none;
-    outline: none;
-    font-size: calc(10px + (17 - 11) * ((100vw - 300px) / (1600 - 300)));
-}
-
-a[href="../index.html"] {
-    top: 2.5rem;
-    left: 3.5rem;
-}
-
-a:active,
-a:visited,
-input:focus,
-input::placeholder {
-    color: #f5f5f5;
-    text-decoration: none;
-    outline: none;
-}
-
-div[id=logoImagem] {
-    height: 20vh;
-    width: 15vw;
-    background-image: url("../img/Ativo\ 1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    top: 13vh;
-}
-
-.cursor {
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-
-
-.cursor:nth-of-type(1) {
-    background-color: #ffffffab;
-    z-index: 1;
-}
-
-
-
-.cursor:nth-of-type(2) {
-    background-color: rgba(255, 0, 0, 0.425);
-    height: 40px;
-    width: 40px;
-}

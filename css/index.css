@@ -1,0 +1,10 @@
+body{
+    /*background-image: url(../img/100-90-5.png), linear-gradient(#000, #000);*/
+}
+
+header{
+    height: 100vh;
+    /* background: #a8bedb; */
+    position: relative;
+    color: #f5f5f5;
+}
