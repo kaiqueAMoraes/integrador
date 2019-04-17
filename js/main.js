@@ -20,7 +20,7 @@ window.onload = function(){
     ScrollReveal().reveal('#voltar', { delay: 100});
     ScrollReveal().reveal('#logoImagem', { delay: 200});
     ScrollReveal().reveal('#usuario', { delay: 500});
-    ScrollReveal().reveal('#senha', { delay: 700});
+    ScrollReveal().reveal('#senha', { delay: 650});
     ScrollReveal().reveal('#refazerSenha', { delay: 1000});
 
     

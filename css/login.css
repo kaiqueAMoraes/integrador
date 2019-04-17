@@ -31,7 +31,7 @@ input {
     font-size: calc(34px + (150 - 34) * ((100vw - 300px) / (1600 - 300)));
     border: none;
     overflow: hidden;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 input[id=usuario] {
