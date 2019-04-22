@@ -1,6 +1,7 @@
 
 $(document).ready( function(){
 
+
 $("input").hover(function(){
     $('.cursor')
             .eq(1)
@@ -37,7 +38,7 @@ $("a").mouseout(function(){
                 transition: 'height .3s ease-in, width .3s ease-in'
             });
 });
-
+/*
 $( window ).scroll(function() {
    
     $(document).mousemove(function (e) {
@@ -46,7 +47,6 @@ $( window ).scroll(function() {
         $('.cursor')
             .eq(0)
             .css({
-                /*left: e.clientX,*/
                 left : e.pageX,
                 top: e.pageY
             });
@@ -61,21 +61,25 @@ $( window ).scroll(function() {
     });
     
   });
-
+*/
 
 $(document).mousemove(function (e) {
     $('.cursor')
         .eq(0)
         .css({
             left: e.clientX,
-            top: e.clientY
+            top: e.clientY,
+            left : e.pageX,
+            top: e.pageY
         });
     setTimeout(function () {
         $('.cursor')
             .eq(1)
             .css({
                 left: e.clientX,
-                top: e.clientY
+                top: e.clientY,
+                left : e.pageX,
+                top: e.pageY
             });
     }, 100); // 100 representa o numero em milisegundo de delay de seguida.
 });
@@ -114,6 +118,21 @@ window.onload = function () {
     ScrollReveal().reveal('.animacaoFadeUp', {
         delay: 350
     });
+
+    $("img").hover(function(){
+        $("img").css({
+            transition: 'grayscale 1s',
+            filter: "grayscale(0)"
+            
+
+        });
+    });
+    $("img").mouseout(function(){
+        $("img").css({
+            filter: "grayscale(100%)"
+        });
+    });
+
 
    
 

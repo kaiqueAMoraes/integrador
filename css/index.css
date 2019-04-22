@@ -101,8 +101,18 @@ p[class=animacaoFadeUp]{
 }
 
 section[class=sectionAlbums] > div{
-    height: 100vh;    
+    height: 100vh;  
+    position: relative;  
+    overflow: hidden;
+
 }
 section[class=sectionAlbums] {
     position: relative;
+    overflow: hidden;
+}
+
+img{
+    position: absolute;
+    height: 70vh;
+    z-index: 10;
 }
