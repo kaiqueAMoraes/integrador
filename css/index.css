@@ -90,3 +90,19 @@ a{
     height: 40px;
     width: 40px;
 }
+
+
+p[class=animacaoFadeUp]{
+    font-size: calc(8px + (40 - 8) * ((100vw - 300px) / (2000 - 300)));
+    position: absolute;
+    bottom: 10vh;
+    width: 25vw;
+    left: 10vw;
+}
+
+section[class=sectionAlbums] > div{
+    height: 100vh;    
+}
+section[class=sectionAlbums] {
+    position: relative;
+}
