@@ -15,17 +15,14 @@ main{
   a{
     position: absolute;
     display: inline-block;
-    color: $softGray;
+    color: $grayedCloud;
     text-decoration: none;
     margin: 1rem;
 
-      &:active{
-        color: $softCloud;
-      }
-
+      &:active,
       &:hover{
         transition: color .5s;
-        color: $softCloud;
+        color: $softBlack;
       }
 
       &[id=portifolio]{
@@ -52,7 +49,7 @@ section.container{
   position: relative;
   overflow-x: hidden;
   height: 100vh;
-  background-image: $backgroundRadial;
+  background: $snowCloud;
 
   div.logo{
     @include BoxImagem('../img/logo.png', no-repeat, contain);

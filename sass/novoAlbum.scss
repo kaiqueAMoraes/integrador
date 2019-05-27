@@ -33,14 +33,7 @@ header{
         @include CentralizarElemento(absolute);
         top: 47%;
       }
-      @include media (">phone", "<tablet") {
-        @include TamanhoEspaco( $left: 3.2vw, $position:relative);
-        $a:TextoResponsivo(50,100);
-        h1:$a;
-        width:$a;
-        height:$a;
-        font-size:$a;
-  }
+
 }
     }
     h1{
@@ -55,11 +48,25 @@ header{
       @include media (">phone", "<tablet") {
         left: 6.5vw;
         top: .5vw;
-        $a:TextoResponsivo(30,100);
+        $a:TextoResponsivo(30,80);
         font-size: $a;
       }
     }
-
+    @include media (">phone", "<tablet") {
+      @include TamanhoEspaco( $left: 3.2vw, $position:relative);
+      $a:TextoResponsivo(50,100);
+      h1:$a;
+      width:$a;
+      height:$a;
+      font-size:$a;
+    }
+    @include media (">tablet", "<desktop"){
+      $a:TextoResponsivo(100,250);
+      h1:$a;
+      width:$a;
+      height:$a;
+      font-size:$a;
+    }
   }
 
 
