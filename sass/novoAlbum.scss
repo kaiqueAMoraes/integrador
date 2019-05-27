@@ -101,7 +101,7 @@ main{
   clear: both;
   position:relative;
   top: 6vw;
-  height: 250vh;
+  height: 195vh;
   section[class="container"]{
     display: flex;
     flex-direction: column;
@@ -272,7 +272,7 @@ div[class="box__input"]{
     display: inline-block;
     background-color: transparent;
     border: none;
-    color: $softCloud;
+    color: $mediumBlack;
     font-size: TextoResponsivo(10,35);
     cursor: pointer;
   }
