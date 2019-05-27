@@ -2,6 +2,12 @@
 
 html{
   font-size: 13px;
+  body{
+    color: $graish;
+    *::placeholder{
+      color: $grayedCloud;
+    }
+  }
 }
 
 header{
@@ -20,53 +26,74 @@ header{
       border-radius: 100%;
       text-align: center;
       display: inline-block;
-      background-color: $mediumBlack;
+      background-color: $snowGray;
+      top: 1vw;
+      color: $mediumBlack;
       $a:TextoResponsivo(30,60);
       width:$a;
       height:$a;
       font-size:$a;
-      &:hover{
-        transition: background-color 500ms;
-        background-color: $softBlack;
-      }
-      a{
-        @include CentralizarElemento(absolute);
-        top: 47%;
-      }
+        &:hover{
+          transition: background-color 500ms;
+          background-color: $snowShadow;
+        }
+        a{
+          @include CentralizarElemento(absolute);
+          top: 47%;
+        }
 
-}
     }
+  }
     h1{
       display: inline-block;
-      color: $darkGray;
       position: relative;
       left: 2.5vw;
-      top: .5vw;
-      font-size: TextoResponsivo(22,40);
+      font-size: TextoResponsivo(50,70);
       cursor:default;
+      font-weight: 100;
+      }
+    @include media (">tablet", "<desktop"){
+      $a:TextoResponsivo(40,60);
+      h1{
+        font-size: $a;
+      }
+      div[id="voltar"]{
+        width:$a;
+        height:$a;
+        font-size:$a;
+      }
 
-      @include media (">phone", "<tablet") {
+    }
+    @include media (">phone", "<tablet") {
+
+      $a:TextoResponsivo(30,70);
+      h1{
+        font-size: $a;
+      }
+      div[id="voltar"]{
+        @include TamanhoEspaco( $left: 3.2vw, $position:relative);
         left: 6.5vw;
         top: .5vw;
-        $a:TextoResponsivo(30,80);
+        width:$a;
+        height:$a;
+        font-size:$a;
+      }
+    }
+
+    @include media ("<phone"){
+      $a:TextoResponsivo(15,20);
+      h1{
         font-size: $a;
       }
     }
-    @include media (">phone", "<tablet") {
-      @include TamanhoEspaco( $left: 3.2vw, $position:relative);
-      $a:TextoResponsivo(50,100);
-      h1:$a;
-      width:$a;
-      height:$a;
-      font-size:$a;
+    @media (max-width: "320px"){
+      $a:TextoResponsivo(15,20);
+      h1{
+        font-size: $a;
+        top: 2.5vw;
+      }
     }
-    @include media (">tablet", "<desktop"){
-      $a:TextoResponsivo(100,250);
-      h1:$a;
-      width:$a;
-      height:$a;
-      font-size:$a;
-    }
+
   }
 
 
@@ -91,6 +118,23 @@ main{
         border-bottom: 1px solid $softGray;
       }
     }
+
+    section[class="sectionTags"]{
+      position: relative;
+      top: 5.5vw;
+      height: 20vh;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      label{
+        margin-right: 1.5vw;
+        input{
+          width: auto;
+        }
+      }
+
+    }
+
     textarea{
       position: relative;
       top: 10vh;
@@ -139,8 +183,8 @@ main{
     div[class="imagensContainer"]{
       // @include CentralizarElemento(relative);
 
-      background-color: $mediumBlack;
-      outline: 2px dashed $darkGray;
+      background-color: $snowShadow;
+      outline: 2px dashed $grayedCloud;
       outline-offset: -10px;
       height: 80vh;
       margin-left: auto;
@@ -202,6 +246,20 @@ div[class="box__input"]{
       textarea{
         font-size: TextoResponsivo(30,100) !important;
       }
+  }
+
+  @include media (">tablet", "<desktop"){
+    $a:TextoResponsivo(40,60);
+    input{
+      font-size: $a;
+    }
+
+  }
+  @include media (">phone", "<tablet"){
+    $a:TextoResponsivo(30,60);
+    input{
+      font-size: $a;
+    }
   }
 
 }
