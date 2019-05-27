@@ -1,0 +1,73 @@
+@import '_dependencias.scss';
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('../fonts/Lato/Lato-Black.ttf');
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: url('../fonts/Lato/Lato-Light.ttf');
+}
+
+a,
+a:active,
+a:visited,
+input:focus{
+  color: #f5f5f5;
+  @include SemDecoracao;
+}
+
+html{
+  @include BackgroundFixed();
+  font-family: 'Lato Light';
+  scrollbar-color: $softGray $darkGray ;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  @include SemEspacoExtra;
+}
+
+body{
+  color: $softCloud;
+}
+
+input {
+    background: transparent;
+    width: 80vw;
+    font-size: ResponsiveText(20,40);
+    border: none;
+    overflow: hidden;
+    font-weight: lighter;
+    input::placeholder{
+      color: #ffffffa9;
+    }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $darkGray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,119 @@
+html {
+  background: #464646;
+}
+
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(#393939 15%, #1b1b1b 85%);
+  color: #393939;
+}
+
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+div.logo,
+section.conteudo {
+  position: absolute;
+}
+
+main a {
+  position: absolute;
+  display: inline-block;
+  color: #9a9a9a;
+  text-decoration: none;
+  margin: 1rem;
+}
+main a:active {
+  color: #f5f5f5;
+}
+main a:hover {
+  transition: color 0.5s;
+  color: #f5f5f5;
+}
+main a[id=portifolio] {
+  right: 0;
+  top: 0;
+  font-size: calc(10px + 1vw);
+}
+main a[id=contato] {
+  bottom: 0;
+  font-size: calc(10px + 1vw);
+}
+main a[id=sobre] {
+  bottom: 0;
+  right: 0;
+  font-size: calc(10px + 1vw);
+}
+
+section.container {
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  background-image: radial-gradient(#393939 15%, #1b1b1b 85%);
+}
+section.container div.logo {
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+  width: 10vh;
+  top: 1rem;
+  right: 0;
+  bottom: 0;
+  left: 1rem;
+}
+section.container section.containerImagem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  width: 40vw;
+  background-image: url("../img/img1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 55vw;
+}
+section.container section.containerImagem p {
+  position: relative;
+  font-size: calc(8px + 0.7vw);
+  color: #f5f5f5;
+  height: auto;
+  width: 25vw;
+  top: 33vh;
+  right: 0;
+  bottom: 0;
+  left: -30vw;
+}
+section.container section.conteudo {
+  top: 40vh;
+  right: 0;
+  bottom: 0;
+  left: -20vw;
+  width: 200vw;
+}
+section.container section.conteudo ul {
+  display: inline-flex;
+  list-style: none;
+  color: #464646;
+  font-size: calc(10px + 2vw);
+}
+section.container section.conteudo ul li {
+  padding-left: 1.5rem;
+}
+section.container section.conteudo ul li[id=album2] {
+  position: relative;
+  top: -50px;
+  font-size: calc(12px + 4vw);
+  color: #f5f5f5;
+}
+
+/*# sourceMappingURL=index.css.map */

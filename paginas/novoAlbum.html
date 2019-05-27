@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Criar um novo album</title>
+    <link rel="stylesheet" type="text/css" href="../sass/css/novoAlbum.css">
+    <script src="../js/frameworks/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="../js/uploadImagens.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="voltar">
+          <a href="./editarAlbuns.html"><span>&#60;</span></a>
+        </div>
+        <h1>Adicionar Album</h1>
+      </div>
+    </header>
+    <main>
+
+        <form class="" action="./editarAlbuns.html" method="post" enctype="multipart/form-data">
+          <section class="container">
+
+            <input type="text" id="nomeAlbum" name="nomeAlbum" value="" placeholder="Titulo do album" maxlength="30">
+
+            <textarea name="name" rows="4" cols="80" placeholder="Descrição do album." maxlength='140'></textarea>
+
+            <section class="sectionTags">
+              <div class="tag"></div>
+            </section>
+            <section class="box">
+
+            <div class="imagensContainer">
+              <div class="box__input">
+                <input class="boxFile" type="file" name="files[]" id="file" data-multiple-caption="{count} arquivos selecionados" multiple />
+                <label for="file"><strong>Selecione um arquivo&nbsp;</strong><span class="box__dragndrop">&nbsp;ou arraste ele aqui</span>.</label>
+              </div>
+              <div class="box__uploading">Uploading&hellip;</div>
+              <div class="box__success">Done!</div>
+              <div class="box__error">Error! <span></span>.</div>
+            </div>
+
+              <!-- <h2>capa do album</h2> -->
+            </section>
+          <br>
+          <button type="submit" name="button">Finalizar</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

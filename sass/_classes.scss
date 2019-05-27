@@ -1,0 +1,30 @@
+
+.containerButton,
+.album{
+  position: relative;
+  @include TamanhoBordas($b-radius: 3%);
+  @include TamanhoObjeto(50vh, 50vh);
+  @include TamanhoMargin(2.5vw,2.5vw,2.5vw,2.5vw);
+}
+
+.album{
+    background: $darkGray;
+    cursor: pointer;
+}
+
+
+
+.button{
+  cursor: pointer;
+  @include CentralizarElemento(absolute);
+  @include TamanhoObjeto(12.5vh, 12.5vh);
+  @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
+  left: 5vw;
+  color: $softCloud;
+    &:hover{
+      transition: color .4s,border .4s, background-color .7s;
+      border-color: $softGreen;
+      background-color: $softGreen;
+      color: $darkGray;
+    }
+}

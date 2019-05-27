@@ -1,0 +1,96 @@
+@import 'mainSass.scss';
+
+
+body,
+ul{
+  @include SemEspacoExtra;
+}
+
+div.logo,
+section.conteudo{
+  position: absolute;
+}
+
+main{
+  a{
+    position: absolute;
+    display: inline-block;
+    color: $softGray;
+    text-decoration: none;
+    margin: 1rem;
+
+      &:active{
+        color: $softCloud;
+      }
+
+      &:hover{
+        transition: color .5s;
+        color: $softCloud;
+      }
+
+      &[id=portifolio]{
+        right: 0;
+        top: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+
+      &[id=contato]{
+        bottom: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+
+      &[id=sobre]{
+        bottom: 0;
+        right: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+  }
+
+}
+
+section.container{
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  background-image: $backgroundRadial;
+
+  div.logo{
+    @include BoxImagem('../img/logo.png', no-repeat, contain);
+    @include TamanhoObjeto(10vh, 10vh);
+    @include TamanhoEspaco(1rem,0,0,1rem);
+  }
+
+  section.containerImagem{
+    @include CentralizarElemento(absolute);
+    @include TamanhoObjeto(40vw, 70vh);
+    @include BoxImagem('../img/img1.jpg', no-repeat, contain);
+    left: 55vw;
+
+      p{
+        position: relative;
+        font-size: TamanhoResponsivo(8, .7);
+        color: $softCloud;
+        @include TamanhoObjeto(25vw, auto);
+        @include TamanhoEspaco(33vh,0,0,-30vw);
+      }
+
+  }
+
+  section.conteudo{
+    @include TamanhoEspaco(40vh,0,0,-20vw);
+    width: 200vw;
+    ul{
+      display: inline-flex;
+      list-style: none;
+      color: $darkGray;
+      font-size: TamanhoResponsivo(10, 2);
+
+        li{
+          padding-left: 1.5rem;
+      }
+      li[id=album2]{
+        @include ObjetoSelecionado();
+      }
+    }
+  }
+}

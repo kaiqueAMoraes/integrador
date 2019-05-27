@@ -1,0 +1,16 @@
+@function TamanhoResponsivo($unidadeMinimaPx, $unidadeMaximaViewportWidth){
+  $Valorpixel : ($unidadeMinimaPx+px);
+  $ValorViewPortWidth : ($unidadeMaximaViewportWidth+vw);
+  @return calc(#{$Valorpixel} + #{$ValorViewPortWidth});
+}
+
+
+@function TextoResponsivo($unidadeMinimaPx, $unidadeMaximaPx){
+  $ValorMinimoPixel : ($unidadeMinimaPx);
+  $ValorMaximoPx : ($unidadeMaximaPx);
+
+  @return calc(#{$ValorMinimoPixel+px}
+                + (#{$ValorMaximoPx} - #{$ValorMinimoPixel})
+                * ((100vw - 300px) / (1600 - 300)));
+
+}

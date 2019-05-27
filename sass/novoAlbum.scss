@@ -1,0 +1,213 @@
+@import 'mainSass.scss';
+
+html{
+  font-size: 13px;
+}
+
+header{
+  @include SemEspacoExtra;
+  position: relative;
+  height: 10vw;
+  div[class=container]{
+  position: relative;
+  top: 2.5vh;
+  display: flex;
+  justify-content: flex-start;
+
+    div[id="voltar"]{
+      cursor: pointer;
+      @include TamanhoEspaco( $left: 1vw, $position:relative);
+      border-radius: 100%;
+      text-align: center;
+      display: inline-block;
+      background-color: $mediumBlack;
+      $a:TextoResponsivo(30,60);
+      width:$a;
+      height:$a;
+      font-size:$a;
+      &:hover{
+        transition: background-color 500ms;
+        background-color: $softBlack;
+      }
+      a{
+        @include CentralizarElemento(absolute);
+        top: 47%;
+      }
+      @include media (">phone", "<tablet") {
+        @include TamanhoEspaco( $left: 3.2vw, $position:relative);
+        $a:TextoResponsivo(50,100);
+        h1:$a;
+        width:$a;
+        height:$a;
+        font-size:$a;
+  }
+}
+    }
+    h1{
+      display: inline-block;
+      color: $darkGray;
+      position: relative;
+      left: 2.5vw;
+      top: .5vw;
+      font-size: TextoResponsivo(22,40);
+      cursor:default;
+
+      @include media (">phone", "<tablet") {
+        left: 6.5vw;
+        top: .5vw;
+        $a:TextoResponsivo(30,100);
+        font-size: $a;
+      }
+    }
+
+  }
+
+
+main{
+  clear: both;
+  position:relative;
+  top: 6vw;
+  height: 250vh;
+  section[class="container"]{
+    display: flex;
+    flex-direction: column;
+    input[id="nomeAlbum"]{
+      font-size: TextoResponsivo(20,80);
+      @include SemEspacoExtra;
+      padding-left: 2vw;
+      font-family: "Lato Light";
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      color: $softGray;
+      &:focus{
+        border-bottom: 1px solid $softGray;
+      }
+    }
+    textarea{
+      position: relative;
+      top: 10vh;
+      resize: none;
+      background: none;
+      border: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      color: $softGray;
+      padding-left: 2vw;
+      font-size: TextoResponsivo(15,50);
+      &:active,
+      &:focus{
+        transition: border .3s;
+        border: 1px dashed $softBlack;
+      }
+    }
+
+
+
+
+    .box__dragndrop,
+    .box__uploading,
+    .box__success,
+    .box__error {
+    display: none;
+  }
+
+  .boxFile{
+    display: inline-block;
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    opacity: 0;
+
+  }
+
+  .box.has-advanced-upload {
+    position: relative;
+    top: 15vh;
+    div[class="imagensContainer"]{
+      // @include CentralizarElemento(relative);
+
+      background-color: $mediumBlack;
+      outline: 2px dashed $darkGray;
+      outline-offset: -10px;
+      height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80vw;
+      display: flex;
+      box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.2), 0px 3px 20px rgba(0, 0, 0, 0.1);
+      @-moz-document url-prefix() {
+      outline: none;
+    }
+      label{
+        cursor: pointer;
+        font-size: TextoResponsivo(10, 18);
+        display: inline-block;
+        @include CentralizarElemento(absolute);
+      }
+        div[class="box__input"]{
+
+          @include CentralizarElemento(relative);
+        }
+    }
+  }
+  .box.has-advanced-upload .box__dragndrop {
+    display: inline-block;
+
+  }
+
+  .box.is-dragover {
+      div[class="imagensContainer"]{
+        transition: background-color 1s;
+        background-color: $softBlack;
+      }
+
+}
+
+div[class="box__input"]{
+  position: relative;
+}
+
+.box.is-uploading .box__input {
+  visibility: none;
+  display: none;
+}
+.box.is-uploading .box__uploading {
+  display: block;
+  z-index: 9999;
+  @include CentralizarElemento(absolute);
+
+}
+
+  }
+
+  @include media (">phone", "<tablet"){
+    top: 25vw;
+      input[id="nomeAlbum"]{
+        font-size: TextoResponsivo(50,100) !important;
+        // background: red;
+      }
+      textarea{
+        font-size: TextoResponsivo(30,100) !important;
+      }
+  }
+
+}
+
+
+  button[type="submit"]{
+    position: absolute;
+    bottom: 2.5vw;
+    right: 2.5vw;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: $softCloud;
+    font-size: TextoResponsivo(10,35);
+    cursor: pointer;
+  }
