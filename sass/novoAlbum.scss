@@ -120,21 +120,51 @@ main{
     }
 
     section[class="sectionTags"]{
+      $b : TamanhoResponsivo(20, .5);
       position: relative;
-      top: 5.5vw;
+      top: 7.5vw;
       height: 20vh;
+      width: 79vw;
+      margin-left: auto;
+      margin-right: auto;
       display: flex;
       align-content: center;
       justify-content: center;
+      outline: 2px dashed $snowShadow;
+      outline-offset: 5px;
+      flex-wrap: wrap;
+      div[class=button]{
+        @include TamanhoObjeto($b, $b);
+        background-color: $snowGray;
+        color: $mediumGray;
+        left: -5;
+        span{
+          font-size: $b;
+          @include CentralizarElemento(absolute);
+          top: 46%;
+        }
+        &:hover{
+          transition: background-color 2s;
+          background-color: $softGreen;
+        }
+      }
       label{
+        margin-top: 1.5vw;
         margin-right: 1.5vw;
-        @include TamanhoObjeto(4vw, 4vh);
+        display: block;
+        @include TamanhoObjeto(auto, auto);
+        padding-left: 10px;
+        padding-right: 10px;
         background-color: $snowShadow;
         border-radius: 10px;
-        // background-color: $softGreen;
+        cursor: pointer;
+
         input{
           width: auto;
-
+          // position: absolute;
+          // z-index: -999;
+          // @include TamanhoObjeto(.1px,.1px);
+          // opacity: 0;
         }
       }
 
@@ -184,7 +214,7 @@ main{
 
   .box.has-advanced-upload {
     position: relative;
-    top: 15vh;
+    top: 25vh;
     div[class="imagensContainer"]{
       // @include CentralizarElemento(relative);
 

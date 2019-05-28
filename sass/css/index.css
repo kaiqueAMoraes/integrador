@@ -97,17 +97,17 @@ input input::placeholder {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #464646;
+  background: #E4E4E4;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #B9B9B9;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #555356;
 }
 
 body,

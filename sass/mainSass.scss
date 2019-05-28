@@ -60,15 +60,15 @@ input {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $darkGray;
+  background: $snowShadow;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $grayedCloud ;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: $graish;
 }

@@ -97,17 +97,17 @@ input input::placeholder {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #464646;
+  background: #E4E4E4;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #B9B9B9;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #555356;
 }
 
 html {
@@ -227,18 +227,48 @@ main section[class=container] input[id=nomeAlbum]:focus {
 }
 main section[class=container] section[class=sectionTags] {
   position: relative;
-  top: 5.5vw;
+  top: 7.5vw;
   height: 20vh;
+  width: 79vw;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-content: center;
   justify-content: center;
+  outline: 2px dashed #E4E4E4;
+  outline-offset: 5px;
+  flex-wrap: wrap;
+}
+main section[class=container] section[class=sectionTags] div[class=button] {
+  height: calc(20px + 0.5vw);
+  width: calc(20px + 0.5vw);
+  background-color: #F1F1F1;
+  color: #323232;
+  left: -5;
+}
+main section[class=container] section[class=sectionTags] div[class=button] span {
+  font-size: calc(20px + 0.5vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 46%;
+}
+main section[class=container] section[class=sectionTags] div[class=button]:hover {
+  transition: background-color 2s;
+  background-color: #2ecc71;
 }
 main section[class=container] section[class=sectionTags] label {
+  margin-top: 1.5vw;
   margin-right: 1.5vw;
-  height: 4vh;
-  width: 4vw;
+  display: block;
+  height: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #E4E4E4;
   border-radius: 10px;
+  cursor: pointer;
 }
 main section[class=container] section[class=sectionTags] label input {
   width: auto;
@@ -279,7 +309,7 @@ main section[class=container] .boxFile {
 }
 main section[class=container] .box.has-advanced-upload {
   position: relative;
-  top: 15vh;
+  top: 25vh;
 }
 main section[class=container] .box.has-advanced-upload div[class=imagensContainer] {
   background-color: #E4E4E4;
