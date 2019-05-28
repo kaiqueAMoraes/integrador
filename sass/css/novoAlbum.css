@@ -177,16 +177,16 @@ header h1 {
 }
 @media (min-width: 321px) and (max-width: 767px) {
   header h1 {
-    font-size: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
   }
   header div[id=voltar] {
     left: 3.2vw;
     position: relative;
     left: 6.5vw;
     top: 0.5vw;
-    width: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
-    height: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
+    width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
   }
 }
 @media (max-width: 319px) {
@@ -235,6 +235,10 @@ main section[class=container] section[class=sectionTags] {
 }
 main section[class=container] section[class=sectionTags] label {
   margin-right: 1.5vw;
+  height: 4vh;
+  width: 4vw;
+  background-color: #E4E4E4;
+  border-radius: 10px;
 }
 main section[class=container] section[class=sectionTags] label input {
   width: auto;

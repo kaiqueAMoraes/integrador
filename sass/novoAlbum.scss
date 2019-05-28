@@ -66,7 +66,7 @@ header{
     }
     @include media (">phone", "<tablet") {
 
-      $a:TextoResponsivo(30,70);
+      $a:TextoResponsivo(50,80);
       h1{
         font-size: $a;
       }
@@ -128,8 +128,13 @@ main{
       justify-content: center;
       label{
         margin-right: 1.5vw;
+        @include TamanhoObjeto(4vw, 4vh);
+        background-color: $snowShadow;
+        border-radius: 10px;
+        // background-color: $softGreen;
         input{
           width: auto;
+
         }
       }
 
