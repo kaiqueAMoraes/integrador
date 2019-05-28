@@ -167,26 +167,26 @@ header h1 {
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   header h1 {
-    font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
   }
   header div[id=voltar] {
-    width: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-    height: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
+    width: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
   }
 }
 @media (min-width: 321px) and (max-width: 767px) {
   header h1 {
-    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
   }
   header div[id=voltar] {
     left: 3.2vw;
     position: relative;
     left: 6.5vw;
     top: 0.5vw;
-    width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-    height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+    width: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(80px + (100 - 80) * ((100vw - 300px) / (1600 - 300)));
   }
 }
 @media (max-width: 319px) {
