@@ -89,3 +89,30 @@
   height: ($height);
   width: $tamanhoPorcento;
 }
+
+
+@function stripUnit($value){
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluidType($minVw, $maxVw, $minFontSize, $maxFontSize){
+  $primeiraUnidade : unit($minVw);
+  $segundaUnidade : unit($maxVw);
+  $terceiraUnidade : unit($minFontSize);
+  $quartaUnidade : unit($maxFontSize);
+
+  @if $primeiraUnidade == $segundaUnidade
+      and $primeiraUnidade == $terceiraUnidade
+      and $primeiraUnidade == $quartaUnidade {
+        &{
+          font-size: $minFontSize;
+          @media screen and (min-width: $minVw) {
+            font-size: calc(#{$minFontSize} + #{stripUnit($maxFontSize - $minFontSize)}
+            * ((100vw - #{$minVw}) / #{stripUnit($maxVw - $minVw)}));
+          }
+          @media screen and (min-width: $maxVw) {
+            font-size: $maxFontSize;
+        }
+      }
+    }
+  }
