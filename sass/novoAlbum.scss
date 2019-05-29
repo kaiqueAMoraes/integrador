@@ -29,10 +29,14 @@ header{
       background-color: $snowGray;
       top: 1vw;
       color: $mediumBlack;
+      $min_width: 320px;
+    $max_width: 1200px;
+
       $a:TextoResponsivo(30,60);
       width:$a;
       height:$a;
-      font-size:$a;
+      @include fluidType($min_width, $max_width, 80px, 85px);
+
         &:hover{
           transition: background-color 500ms;
           background-color: $snowShadow;
@@ -44,55 +48,62 @@ header{
 
     }
   }
+
+      $min_width: 320px;
+      $max_width: 1200px;
+      $min_font: 50px;
+      $max_font: 90px;
+
     h1{
       display: inline-block;
       position: relative;
       left: 2.5vw;
-      font-size: TextoResponsivo(50,70);
+      @include fluidType($min_width, $max_width, $min_font, $max_font);
       cursor:default;
       font-weight: 100;
       }
+
     @include media (">tablet", "<desktop"){
       $a:TextoResponsivo(40,60);
       h1{
-        font-size: $a;
+        @include fluidType($min_width, $max_width, $min_font, $max_font);
       }
       div[id="voltar"]{
         width:$a;
         height:$a;
-        font-size:$a;
+        @include fluidType($min_width, $max_width, $min_font, $max_font);
       }
 
     }
-    @include media (">phone", "<tablet") {
+    // // @include media (">phone", "<tablet") {
+    //
+    //   // $a:TextoResponsivo(50,80);
+    //   // h1{
+    //   //   // @include fluidType(320px,768px,50, 95);
+    //   // }
+    //   div[id="voltar"]{
+    //     @include TamanhoEspaco( $left: 3.2vw, $position:relative);
+    //     left: 6.5vw;
+    //     top: .5vw;
+    //     width:$a;
+    //     height:$a;
+    //     font-size:$a;
+    //   }
+    // }
 
-      $a:TextoResponsivo(50,80);
-      h1{
-        font-size: $a;
-      }
-      div[id="voltar"]{
-        @include TamanhoEspaco( $left: 3.2vw, $position:relative);
-        left: 6.5vw;
-        top: .5vw;
-        width:$a;
-        height:$a;
-        font-size:$a;
-      }
-    }
-
-    @include media ("<phone"){
-      $a:TextoResponsivo(15,20);
-      h1{
-        font-size: $a;
-      }
-    }
-    @media (max-width: "320px"){
-      $a:TextoResponsivo(15,20);
-      h1{
-        font-size: $a;
-        top: 2.5vw;
-      }
-    }
+    // @include media ("<phone"){
+    //   $a:TextoResponsivo(15,20);
+    //   h1{
+    //     // font-size: $a;
+    //   }
+    // }
+    // @media (max-width: "320px"){
+    //   $a:TextoResponsivo(15,20);
+    //   h1{
+    //     // font-size: $a;
+    //     top: 2.5vw;
+    //   }
+    // }
 
   }
 

@@ -144,7 +144,19 @@ header div[class=container] div[id=voltar] {
   color: #242424;
   width: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
   height: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
-  font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+header div[class=container] div[id=voltar] {
+  font-size: 80px;
+}
+@media screen and (min-width: 320px) {
+  header div[class=container] div[id=voltar] {
+    font-size: calc(80px + 5 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  header div[class=container] div[id=voltar] {
+    font-size: 85px;
+  }
 }
 header div[class=container] div[id=voltar]:hover {
   transition: background-color 500ms;
@@ -161,43 +173,54 @@ header h1 {
   display: inline-block;
   position: relative;
   left: 2.5vw;
-  font-size: calc(50px + (70 - 50) * ((100vw - 300px) / (1600 - 300)));
   cursor: default;
   font-weight: 100;
 }
+header h1 {
+  font-size: 50px;
+}
+@media screen and (min-width: 320px) {
+  header h1 {
+    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  header h1 {
+    font-size: 90px;
+  }
+}
 @media (min-width: 769px) and (max-width: 1023px) {
   header h1 {
-    font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 50px;
   }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 320px) {
+  header h1 {
+    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 1200px) {
+  header h1 {
+    font-size: 90px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
   header div[id=voltar] {
     width: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
     height: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-  }
-}
-@media (min-width: 321px) and (max-width: 767px) {
-  header h1 {
-    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
   }
   header div[id=voltar] {
-    left: 3.2vw;
-    position: relative;
-    left: 6.5vw;
-    top: 0.5vw;
-    width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-    height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 50px;
   }
 }
-@media (max-width: 319px) {
-  header h1 {
-    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 320px) {
+  header div[id=voltar] {
+    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
   }
 }
-@media (max-width: 320px) {
-  header h1 {
-    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
-    top: 2.5vw;
+@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 1200px) {
+  header div[id=voltar] {
+    font-size: 90px;
   }
 }
 

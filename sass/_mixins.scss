@@ -101,14 +101,11 @@
   $terceiraUnidade : unit($minFontSize);
   $quartaUnidade : unit($maxFontSize);
 
-  @if $primeiraUnidade == $segundaUnidade
-      and $primeiraUnidade == $terceiraUnidade
-      and $primeiraUnidade == $quartaUnidade {
+  @if $primeiraUnidade == $segundaUnidade and $primeiraUnidade == $terceiraUnidade and $primeiraUnidade == $quartaUnidade {
         &{
           font-size: $minFontSize;
           @media screen and (min-width: $minVw) {
-            font-size: calc(#{$minFontSize} + #{stripUnit($maxFontSize - $minFontSize)}
-            * ((100vw - #{$minVw}) / #{stripUnit($maxVw - $minVw)}));
+            font-size: calc(#{$minFontSize} + #{stripUnit($maxFontSize - $minFontSize)} * ((100vw - #{$minVw}) / #{stripUnit($maxVw - $minVw)}));
           }
           @media screen and (min-width: $maxVw) {
             font-size: $maxFontSize;
