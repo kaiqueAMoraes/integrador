@@ -4,7 +4,7 @@ window.onload = function(){
 
 
 
-    if(confirm("Deseja adicionar um novo album na area de Selecionados?") == true){
+    if(confirm("Deseja adicionar um novo album?") == true){
 
             // var div = document.createElement('div');
             // div.className = 'album';

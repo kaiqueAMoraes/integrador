@@ -92,13 +92,5 @@ main{
 }
 
 footer{
-  position: relative;
-  top: 55vh;
-
-  a{
-      position: absolute;
-      right: 5vw;
-      bottom: 5vh;
-      font-size: TamanhoResponsivo(5, 1.3);
-  }
+  height: 70vh;
 }

@@ -11,7 +11,7 @@
 }
 
 .album {
-  background: #464646;
+  background: #E4E4E4;
   cursor: pointer;
 }
 
@@ -219,14 +219,7 @@ main div[class=button] span {
 }
 
 footer {
-  position: relative;
-  top: 55vh;
-}
-footer a {
-  position: absolute;
-  right: 5vw;
-  bottom: 5vh;
-  font-size: calc(5px + 1.3vw);
+  height: 70vh;
 }
 
 /*# sourceMappingURL=editarAlbuns.css.map */
