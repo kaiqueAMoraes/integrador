@@ -6,6 +6,9 @@ body{
 }
 
 header{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
     height: 20vw;
   div[id="voltar"]{
     cursor: pointer;
@@ -14,7 +17,7 @@ header{
     text-align: center;
     display: inline-block;
     background-color: $snowGray;
-    top: 1vw;
+    top: 2vw;
     color: $mediumBlack;
     $min_width: 320px;
     $max_width: 1500px;
@@ -39,28 +42,24 @@ header{
     h2,
     h3{
       display: inline-block;
-      position: absolute;
+      position: relative;
       @include SemEspacoExtra;
     }
 
     h1{
       font-family: 'Lato Light';
-      font-size: TamanhoResponsivo(10, 3);
+      @include fluidType(320px, 1600px, 40px, 90px);
       font-weight: lighter;
-      top: 2.5vh;
-      color: $softCloud;
+      top: 1vw;
+      left: 2.5vw;
+      color: $grayedCloud;
     }
 
     h2{
-      font-size: TamanhoResponsivo(10, 5);
       font-weight: lighter;
-      @include TamanhoEspaco(3.5vh, $left: 40vw);
-      color: $darkGray;
-    }
-
-    h3{
-      font-size: TamanhoResponsivo(5, 1.8);
-      @include TamanhoEspaco(12vh, $left: 17vw);
+      top: 1.5vw;
+      left: 4.5vw;
+      // @include TamanhoEspaco(3.5vh, $left: 40vw);
       color: $darkGray;
     }
 
