@@ -142,18 +142,18 @@ header div[class=container] div[id=voltar] {
   background-color: #F1F1F1;
   top: 1vw;
   color: #242424;
-  width: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
-  height: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
 header div[class=container] div[id=voltar] {
   font-size: 80px;
 }
 @media screen and (min-width: 320px) {
   header div[class=container] div[id=voltar] {
-    font-size: calc(80px + 5 * ((100vw - 320px) / 880));
+    font-size: calc(80px + 5 * ((100vw - 320px) / 1180));
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   header div[class=container] div[id=voltar] {
     font-size: 85px;
   }
@@ -177,50 +177,25 @@ header h1 {
   font-weight: 100;
 }
 header h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 @media screen and (min-width: 320px) {
   header h1 {
-    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
+    font-size: calc(40px + 50 * ((100vw - 320px) / 1180));
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   header h1 {
     font-size: 90px;
   }
 }
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (max-width: 320px) {
+  header {
+    height: 75vh;
+  }
   header h1 {
-    font-size: 50px;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 320px) {
-  header h1 {
-    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 1200px) {
-  header h1 {
-    font-size: 90px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1023px) {
-  header div[id=voltar] {
-    width: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-    height: calc(40px + (60 - 40) * ((100vw - 300px) / (1600 - 300)));
-  }
-  header div[id=voltar] {
-    font-size: 50px;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 320px) {
-  header div[id=voltar] {
-    font-size: calc(50px + 40 * ((100vw - 320px) / 880));
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) and (min-width: 1200px) {
-  header div[id=voltar] {
-    font-size: 90px;
+    top: 6.5vw;
+    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300))) !important;
   }
 }
 
@@ -263,14 +238,14 @@ main section[class=container] section[class=sectionTags] {
   flex-wrap: wrap;
 }
 main section[class=container] section[class=sectionTags] div[class=button] {
-  height: calc(20px + 0.5vw);
-  width: calc(20px + 0.5vw);
+  height: calc(40px + 0.5vw);
+  width: calc(40px + 0.5vw);
   background-color: #F1F1F1;
   color: #323232;
-  left: -5;
+  left: -5vw;
 }
 main section[class=container] section[class=sectionTags] div[class=button] span {
-  font-size: calc(20px + 0.5vw);
+  font-size: calc(40px + 0.5vw);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,7 +290,7 @@ main section[class=container] textarea {
 }
 main section[class=container] textarea:active, main section[class=container] textarea:focus {
   transition: border 0.3s;
-  border: 1px dashed #393939;
+  border: 1px dashed #B9B9B9;
 }
 main section[class=container] .box__dragndrop,
 main section[class=container] .box__uploading,
@@ -335,7 +310,7 @@ main section[class=container] .box.has-advanced-upload {
   top: 25vh;
 }
 main section[class=container] .box.has-advanced-upload div[class=imagensContainer] {
-  background-color: #E4E4E4;
+  background-color: #F1F1F1;
   outline: 2px dashed #B9B9B9;
   outline-offset: -10px;
   height: 80vh;
@@ -370,7 +345,7 @@ main section[class=container] .box.has-advanced-upload .box__dragndrop {
 }
 main section[class=container] .box.is-dragover div[class=imagensContainer] {
   transition: background-color 1s;
-  background-color: #393939;
+  background-color: #E4E4E4;
 }
 main section[class=container] div[class=box__input] {
   position: relative;

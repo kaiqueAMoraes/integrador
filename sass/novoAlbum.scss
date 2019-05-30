@@ -30,9 +30,9 @@ header{
       top: 1vw;
       color: $mediumBlack;
       $min_width: 320px;
-    $max_width: 1200px;
+      $max_width: 1500px;
 
-      $a:TextoResponsivo(30,60);
+      $a:TextoResponsivo(50,80);
       width:$a;
       height:$a;
       @include fluidType($min_width, $max_width, 80px, 85px);
@@ -50,8 +50,8 @@ header{
   }
 
       $min_width: 320px;
-      $max_width: 1200px;
-      $min_font: 50px;
+      $max_width: 1500px;
+      $min_font: 40px;
       $max_font: 90px;
 
     h1{
@@ -59,52 +59,22 @@ header{
       position: relative;
       left: 2.5vw;
       @include fluidType($min_width, $max_width, $min_font, $max_font);
-      cursor:default;
+      cursor: default;
       font-weight: 100;
       }
 
-    @include media (">tablet", "<desktop"){
-      $a:TextoResponsivo(40,60);
-      h1{
-        @include fluidType($min_width, $max_width, $min_font, $max_font);
+      @include media ("<=phone"){
+
+            height: 75vh;
+
+          h1{
+            top: 6.5vw;
+            font-size: TextoResponsivo(20,25) !important;
+          }
+          // textarea{
+          //   font-size: TextoResponsivo(30,100) !important;
+          // }
       }
-      div[id="voltar"]{
-        width:$a;
-        height:$a;
-        @include fluidType($min_width, $max_width, $min_font, $max_font);
-      }
-
-    }
-    // // @include media (">phone", "<tablet") {
-    //
-    //   // $a:TextoResponsivo(50,80);
-    //   // h1{
-    //   //   // @include fluidType(320px,768px,50, 95);
-    //   // }
-    //   div[id="voltar"]{
-    //     @include TamanhoEspaco( $left: 3.2vw, $position:relative);
-    //     left: 6.5vw;
-    //     top: .5vw;
-    //     width:$a;
-    //     height:$a;
-    //     font-size:$a;
-    //   }
-    // }
-
-    // @include media ("<phone"){
-    //   $a:TextoResponsivo(15,20);
-    //   h1{
-    //     // font-size: $a;
-    //   }
-    // }
-    // @media (max-width: "320px"){
-    //   $a:TextoResponsivo(15,20);
-    //   h1{
-    //     // font-size: $a;
-    //     top: 2.5vw;
-    //   }
-    // }
-
   }
 
 
@@ -131,7 +101,7 @@ main{
     }
 
     section[class="sectionTags"]{
-      $b : TamanhoResponsivo(20, .5);
+      $b : TamanhoResponsivo(40, .5);
       position: relative;
       top: 7.5vw;
       height: 20vh;
@@ -148,17 +118,20 @@ main{
         @include TamanhoObjeto($b, $b);
         background-color: $snowGray;
         color: $mediumGray;
-        left: -5;
+        left: -5vw;
+
         span{
           font-size: $b;
           @include CentralizarElemento(absolute);
           top: 46%;
         }
+
         &:hover{
           transition: background-color 2s;
           background-color: $softGreen;
         }
       }
+
       label{
         margin-top: 1.5vw;
         margin-right: 1.5vw;
@@ -200,7 +173,7 @@ main{
       &:active,
       &:focus{
         transition: border .3s;
-        border: 1px dashed $softBlack;
+        border: 1px dashed $grayedCloud;
       }
     }
 
@@ -229,7 +202,7 @@ main{
     div[class="imagensContainer"]{
       // @include CentralizarElemento(relative);
 
-      background-color: $snowShadow;
+      background-color: $snowGray;
       outline: 2px dashed $grayedCloud;
       outline-offset: -10px;
       height: 80vh;
@@ -261,7 +234,7 @@ main{
   .box.is-dragover {
       div[class="imagensContainer"]{
         transition: background-color 1s;
-        background-color: $softBlack;
+        background-color: $snowShadow;
       }
 
 }
