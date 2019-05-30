@@ -6,7 +6,7 @@ body{
 }
 
 header{
-
+    height: 20vw;
   div[id="voltar"]{
     cursor: pointer;
     @include TamanhoEspaco( $left: 1vw, $position:relative);

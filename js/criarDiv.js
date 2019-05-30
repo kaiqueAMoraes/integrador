@@ -11,7 +11,7 @@ window.onload = function(){
             div.onclick = "location.href='newurl.html';";
             document.getElementsByClassName('container')[0].appendChild(div);
             document.getElementsByClassName('container')[0].append(div);
-            location.href="google.com.br";
+            location.href="../paginas/novoAlbum.html";
 
     }
 };

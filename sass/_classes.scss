@@ -20,7 +20,8 @@
   @include TamanhoObjeto(12.5vh, 12.5vh);
   @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
   left: 5vw;
-  color: $softCloud;
+  color: $softGray;
+  background-color: $snowGray;
     &:hover{
       transition: color .4s,border .4s, background-color .7s;
       border-color: $softGreen;
