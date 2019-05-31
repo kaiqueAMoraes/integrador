@@ -43,6 +43,7 @@
 
 
 @mixin ObjetoSelecionado(){
+  cursor: pointer;
   position: relative;
   top: -50px;
   font-weight: bold;

@@ -30,7 +30,8 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+p{
   color: $grayedCloud;
   @include SemEspacoExtra;
 }
@@ -99,4 +100,18 @@ div[id="voltar"]{
     @include CentralizarElemento(absolute);
     top: 47%;
   }
+}
+
+
+.noise {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    opacity: .05;
 }

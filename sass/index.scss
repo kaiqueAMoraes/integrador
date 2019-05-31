@@ -15,14 +15,16 @@ main{
   a{
     position: absolute;
     display: inline-block;
-    color: $grayedCloud;
+    color: $softBlack;
     text-decoration: none;
     margin: 1rem;
 
       &:active,
-      &:hover{
-        transition: color .5s;
-        color: $softBlack;
+      &:hover,
+      &:focus{
+        transition: color .5s, background-color 1s;
+        color: $softCloud;
+        background-color: $darkerBlack;
       }
 
       &[id=portifolio]{
@@ -37,7 +39,7 @@ main{
       }
 
       &[id=sobre]{
-        bottom: 0;
+        top: 5vh;
         right: 0;
         font-size: TamanhoResponsivo(10,1);
       }
@@ -58,6 +60,7 @@ section.container{
   }
 
   section.containerImagem{
+    cursor: pointer;
     @include CentralizarElemento(absolute);
     @include TamanhoObjeto(40vw, 70vh);
     @include BoxImagem('../img/img1.jpg', no-repeat, contain);
@@ -94,18 +97,4 @@ section.container{
       }
     }
   }
-}
-
-
-.noise {
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    pointer-events: none;
-    opacity: .05;
 }
