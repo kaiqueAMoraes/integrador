@@ -1,66 +1,107 @@
 @import 'mainSass.scss';
 
 header{
-  // div[id="voltar"]{
-  //   position: fixed;
-  //   z-index: 99;
-  // }
-
-  position: relative;
-  height: auto;
-  margin-bottom: 25vw;
-  display: flex;
-  flex-direction: column;
-  div[id="containerInfoAlbum"]{
-    margin-top: 5.5vw;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 30vw;
+
     h1{
+      display: inline-block;
       position: relative;
-      right: 8.5vw;
-      @include fluidType(300px, 2100px, 55px, 150px);
-      margin-bottom: 2.5vw;
+      @include SemEspacoExtra;
+      font-family: 'Lato Light';
+      @include fluidType(320px, 1600px, 30px, 90px);
+      font-weight: lighter;
+      top: 1vw;
+      left: 2.5vw;
+      color: $grayedCloud;
     }
-    p{
-      margin-left: 25%;
-      margin-right: 5%;
-      @include fluidType(300px, 2100px, 12px, 35px);
+
+    input[id="procurar"]{
+      @include fluidType(320px, 1600px, 35px, 150px);
+      font-family: 'Lato Light';
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      &::placeholder{
+        font-weight: 100;
+      }
+      &:focus{
+        outline: 1px dashed $grayedCloud;
+      }
     }
-  }
+
+    section[class="sectionTags"]{
+      $b : TamanhoResponsivo(40, .5);
+      position: relative;
+      top: 7.5vw;
+      height: 20vh;
+      width: 79vw;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      outline: 2px dashed $snowShadow;
+      outline-offset: 5px;
+      flex-wrap: wrap;
+
+      label{
+        margin-top: 1.5vw;
+        margin-right: 1.5vw;
+        display: block;
+        @include TamanhoObjeto(auto, auto);
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $graish;
+        border-radius: 10px;
+        cursor: pointer;
+
+        input{
+          width: auto;
+          // position: absolute;
+          // z-index: -999;
+          // @include TamanhoObjeto(.1px,.1px);
+          // opacity: 0;
+        }
+    }
+}
+
 }
 
 main{
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-flow: wrap;
-  justify-content: space-around;
-  img{
-    margin: 2.5rem;
-    filter: grayscale(100%);
-    p{
-      margin: 5vw;
-    text-align: justify;
-    width: 80%;
-    }
-  }
-}
-footer{
-  overflow: hidden;
   position: relative;
-  height: 20vw;
-  a{
-    width: 85%;
-    $min_width: 320px;
-    $max_width: 1500px;
-    $min_font: 30px;
-    $max_font: 190px;
-    @include CentralizarElemento(absolute);
-    bottom: 30vw;
-    @include fluidType($min_width, $max_width, $min_font, $max_font);
-    margin: auto;
-    display: inline-block;
-  }
+  top: 25vh;
+  height: 100%;
+    section[class=container]{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include container(100%);
+        div[class=album]{
+          overflow: hidden;
+          position: relative;
+          height:TamanhoResponsivo(70, 26.5);
+          width: TamanhoResponsivo(70, 26.5);
+          margin-top: 0.5vw;
+          margin-right: 0.5vw;
+          margin-bottom: 0.5vw;
+          margin-left: 0.5vw;
+          border-radius: 0;
+          background-size: contain;
+          img{
+            width: 100%;
+          }
+          &:hover{
+            transition: background-color .5s;
+            background: $mediumBlack;
+
+          }
+        }
+      }
 }
+
+  footer{
+    height: 70vh;
+  }
