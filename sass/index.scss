@@ -61,8 +61,12 @@ section.container{
     @include CentralizarElemento(absolute);
     @include TamanhoObjeto(40vw, 70vh);
     @include BoxImagem('../img/img1.jpg', no-repeat, contain);
+    filter: grayscale(100%);
     left: 55vw;
-
+    &:hover{
+      transition: filter 1s;
+      filter: grayscale(0%);
+    }
       p{
         position: relative;
         font-size: TamanhoResponsivo(8, .7);
@@ -79,7 +83,7 @@ section.container{
     ul{
       display: inline-flex;
       list-style: none;
-      color: $darkGray;
+      color: $grayedCloud;
       font-size: TamanhoResponsivo(10, 2);
 
         li{
@@ -90,4 +94,18 @@ section.container{
       }
     }
   }
+}
+
+
+.noise {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    opacity: .05;
 }

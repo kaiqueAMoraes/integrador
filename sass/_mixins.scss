@@ -45,8 +45,14 @@
 @mixin ObjetoSelecionado(){
   position: relative;
   top: -50px;
-  font-size: TamanhoResponsivo(12, 4);
-  color: $softCloud;
+  font-weight: bold;
+  font-size: TamanhoResponsivo(50, 4);
+  -moz-text-fill-color: $snowCloud;
+  -webkit-text-fill-color: $snowCloud;
+     -moz-text-stroke-color: #666;
+  -webkit-text-stroke-color: #666;
+     -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
 }
 
 

@@ -1,7 +1,27 @@
 @import 'mainSass.scss';
 
-header{
+header{display: flex;
   height: 15vw;
+
+  h1{
+    position: relative;
+    font-family: 'Lato Light';
+    @include fluidType(320px, 1600px, 20px, 90px);
+    font-weight: lighter;
+    top: 1vw;
+    left: 2.5vw;
+    color: $grayedCloud;
+  }
+
+  @include media ("<=phone", "<tablet"){
+
+        height: 75vh;
+
+      h1{
+        top: 6.5vw;
+        font-size: TextoResponsivo(20,25) !important;
+      }
+    }
 }
 
 main{
