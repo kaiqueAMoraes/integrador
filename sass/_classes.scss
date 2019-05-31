@@ -15,11 +15,12 @@
 
 
 .button{
+  $a:TextoResponsivo(50,80);
   cursor: pointer;
   @include CentralizarElemento(absolute);
-  @include TamanhoObjeto(12.5vh, 12.5vh);
+  @include TamanhoObjeto($a, $a);
   @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
-  left: 5vw;
+  left: 10vw;
   color: $softGray;
   background-color: $snowGray;
     &:hover{

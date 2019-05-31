@@ -19,34 +19,6 @@ header{
   top: 2.5vh;
   display: flex;
   justify-content: flex-start;
-
-    div[id="voltar"]{
-      cursor: pointer;
-      @include TamanhoEspaco( $left: 1vw, $position:relative);
-      border-radius: 100%;
-      text-align: center;
-      display: inline-block;
-      background-color: $snowGray;
-      top: 1vw;
-      color: $mediumBlack;
-      $min_width: 320px;
-      $max_width: 1500px;
-
-      $a:TextoResponsivo(50,80);
-      width:$a;
-      height:$a;
-      @include fluidType($min_width, $max_width, 80px, 85px);
-
-        &:hover{
-          transition: background-color 500ms;
-          background-color: $snowShadow;
-        }
-        a{
-          @include CentralizarElemento(absolute);
-          top: 47%;
-        }
-
-    }
   }
 
       $min_width: 320px;

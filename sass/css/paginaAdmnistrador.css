@@ -21,14 +21,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 12.5vh;
-  width: 12.5vh;
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
   border-top: 0.5vh;
   border-right: 0.5vh;
   border-bottom: 0.5vh;
   border-left: 0.5vh;
   border-radius: 100%;
-  left: 5vw;
+  left: 10vw;
   color: #9a9a9a;
   background-color: #F1F1F1;
 }
@@ -111,10 +111,7 @@ input input::placeholder {
   background: #555356;
 }
 
-header {
-  height: 15vw;
-}
-header div[id=voltar] {
+div[id=voltar] {
   cursor: pointer;
   left: 1vw;
   position: relative;
@@ -122,34 +119,38 @@ header div[id=voltar] {
   text-align: center;
   display: inline-block;
   background-color: #F1F1F1;
-  top: 2vw;
+  top: 1vw;
   color: #242424;
   width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
   height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
-header div[id=voltar] {
+div[id=voltar] {
   font-size: 80px;
 }
 @media screen and (min-width: 320px) {
-  header div[id=voltar] {
+  div[id=voltar] {
     font-size: calc(80px + 5 * ((100vw - 320px) / 1180));
   }
 }
 @media screen and (min-width: 1500px) {
-  header div[id=voltar] {
+  div[id=voltar] {
     font-size: 85px;
   }
 }
-header div[id=voltar]:hover {
+div[id=voltar]:hover {
   transition: background-color 500ms;
   background-color: #E4E4E4;
 }
-header div[id=voltar] a {
+div[id=voltar] a {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 47%;
+}
+
+header {
+  height: 15vw;
 }
 
 main {
