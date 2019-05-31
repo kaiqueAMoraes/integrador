@@ -89,4 +89,11 @@ window.onload = function(){
 
   noise();
 
+
+  window.addEventListener("load", function (){
+      const preloader = document.querySelector(".preloader");
+      preloader.className += " hidden";
+  });
+
+
 }

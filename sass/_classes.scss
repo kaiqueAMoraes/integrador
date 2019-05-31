@@ -32,29 +32,49 @@
 }
 
 
-// #voltar{
-//     cursor: pointer;
-//     @include TamanhoEspaco( $left: 1vw, $position:relative);
-//     border-radius: 100%;
-//     text-align: center;
-//     display: inline-block;
-//     background-color: $snowGray;
-//     top: 2vw;
-//     color: $mediumBlack;
-//     $min_width: 320px;
-//     $max_width: 1500px;
-//
-//     $a:TextoResponsivo(50,80);
-//     width:$a;
-//     height:$a;
-//     @include fluidType($min_width, $max_width, 80px, 85px);
-//
-//       &:hover{
-//         transition: background-color 500ms;
-//         background-color: $snowShadow;
-//       }
-//       a{
-//         @include CentralizarElemento(absolute);
-//         top: 47%;
-//       }
-// }
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #fff;
+  background-color: #4684ee;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 30vh;
+  z-index: 1099;
+}
+
+.preloader span {
+  display: inline-block;
+  opacity: 0.8;
+  animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.preloader span:nth-child(odd) {
+  animation-delay: 0.4s;
+  z-index: 1100;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.preloader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
