@@ -111,14 +111,8 @@ input input::placeholder {
   background: #555356;
 }
 
-body {
-  height: 100%;
-}
-
 header {
-  display: flex;
-  flex-wrap: wrap;
-  height: 20vw;
+  height: 15vw;
 }
 header div[id=voltar] {
   cursor: pointer;
@@ -157,69 +151,40 @@ header div[id=voltar] a {
   transform: translate(-50%, -50%);
   top: 47%;
 }
-header h1,
-header h2,
-header h3 {
-  display: inline-block;
-  position: relative;
-  padding: 0;
-  margin: 0;
+
+main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-header h1 {
-  font-family: "Lato Light";
-  font-weight: lighter;
-  top: 1vw;
-  left: 2.5vw;
-  color: #B9B9B9;
+main {
+  font-size: 50px;
 }
-header h1 {
-  font-size: 40px;
-}
-@media screen and (min-width: 320px) {
-  header h1 {
-    font-size: calc(40px + 50 * ((100vw - 320px) / 1280));
+@media screen and (min-width: 300px) {
+  main {
+    font-size: calc(50px + 60 * ((100vw - 300px) / 1300));
   }
 }
 @media screen and (min-width: 1600px) {
-  header h1 {
-    font-size: 90px;
+  main {
+    font-size: 110px;
   }
 }
-header h2 {
-  font-weight: lighter;
-  top: 1.5vw;
-  left: 4.5vw;
-  color: #464646;
-}
-
-main {
+main a {
   position: relative;
-  top: 25vh;
-  height: 100%;
+  left: 2.5vw;
+  margin-bottom: 4.5vh;
 }
-main section[class=container] {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+main a:hover {
+  transition: color 1s;
+  color: #323232;
 }
-main div[class=button] {
-  position: relative;
-  text-align: center;
-  font-size: calc(20px + 4.5vw);
-}
-main div[class=button] span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 46%;
+main a:focus {
+  outline: 1px dashed #B9B9B9;
 }
 
 footer {
-  height: 70vh;
+  height: 25vh;
 }
 
-/*# sourceMappingURL=editarAlbuns.css.map */
+/*# sourceMappingURL=paginaAdmnistrador.css.map */
