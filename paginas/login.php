@@ -14,8 +14,8 @@
     <main>
       <section class="conteudo">
         <form action="processaLogin.php" method="post">
-                <input type="text" id="usuario" placeholder="usuario">
-                <input type="password" id="senha" placeholder="senha">
+                <input type="text" id="usuario" name="nome" placeholder="usuario">
+                <input type="password" name="senha" id="senha" placeholder="senha">
                 <input id="enviaForm" type="submit"  value="enviar">
                 <span class="cursor"></span>
                 <span class="cursor"></span>
@@ -24,6 +24,6 @@
       </section>
     </main>
     <footer>
-      
+
     </footer>
   </body>
