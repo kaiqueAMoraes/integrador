@@ -1,29 +1,30 @@
+<?php
+
+    require_once("../objetos/obj_processaLogin.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Login Administrador</title>
-    <link rel="stylesheet" type="text/css" href="../sass/css/login.css";
+    <link rel="stylesheet" type="text/css" href="../sass/css/login.css";>
+    <link rel="stylesheet" type="text/css" href="../sass/css/mainCss.css";>
   </head>
   <body>
-    <header>
-      <div id="voltar" title="Voltar á pagina anterior">
-        <a href="../index.html"><span>&#60;</span></a>
-      </div>
-    </header>
     <main>
       <section class="conteudo">
-        <form action="processaLogin.php" method="post">
-                <input type="text" id="usuario" name="nome" placeholder="usuario">
-                <input type="password" name="senha" id="senha" placeholder="senha">
+        <form action="../objetos/obj_processaLogin.php" method="post">
+                <input type="text" id="usuario" placeholder="usuario" name="nome">
+                <input type="password" id="senha" placeholder="senha" name="senha">
                 <input id="enviaForm" type="submit"  value="enviar">
                 <span class="cursor"></span>
                 <span class="cursor"></span>
         </form>
+        <div id="logoImagem"></div>
         <a href="#" id="refazerSenha" >Esqueci a senha!</a>
+        <a id="voltar" href="../index.html">voltar</a>
       </section>
     </main>
-    <footer>
-
-    </footer>
   </body>

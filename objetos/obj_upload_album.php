@@ -51,7 +51,8 @@
                 }
             }
 
-            if($_POST["tag"] != ""){
+
+            if(isset($_POST["tag"]) != ""){
 
                 if (is_array($_POST["tag"]))
                 {
@@ -66,7 +67,9 @@
                             echo "Erro no banco de dados!";
                     }
                 }
+
             }
+
         }
         else {
             echo "Erro no banco de dados!";
