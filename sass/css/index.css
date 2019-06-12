@@ -69,7 +69,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: #B9B9B9;
   padding: 0;
   margin: 0;
