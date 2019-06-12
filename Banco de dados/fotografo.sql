@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_tag` (
 select * from tb_tag;
 
 
-CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album_tag` (
+/*CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album_tag` (
   `id_album` INT NOT NULL,
   `id_tag` INT NOT NULL,
   PRIMARY KEY (`id_album`, `id_tag`),
@@ -60,4 +60,5 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album_tag` (
     REFERENCES `fotografo`.`tb_album` (`id_album`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-select * from tb_album_tag;
+select * from tb_album_tag;*/
+
