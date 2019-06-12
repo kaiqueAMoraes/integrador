@@ -22,9 +22,9 @@ main{
       &:active,
       &:hover,
       &:focus{
-        transition: color .5s, background-color 1s;
+        transition: color .5s;
         color: $softCloud;
-        background-color: $darkerBlack;
+        /* background-color: $darkerBlack; */
       }
 
       &[id=portifolio]{
@@ -33,7 +33,7 @@ main{
         font-size: TamanhoResponsivo(10,1);
       }
 
-      &[id=contato]{
+      &[class=contato]{
         bottom: 0;
         font-size: TamanhoResponsivo(10,1);
       }
@@ -43,6 +43,10 @@ main{
         right: 0;
         font-size: TamanhoResponsivo(10,1);
       }
+  }
+
+  img[class="iconIndex"]{
+    @include TamanhoObjeto(3vw,3vw);
   }
 
 }
@@ -81,20 +85,30 @@ section.container{
   }
 
   section.conteudo{
-    @include TamanhoEspaco(40vh,0,0,-20vw);
-    width: 200vw;
-    ul{
-      display: inline-flex;
-      list-style: none;
-      color: $grayedCloud;
-      font-size: TamanhoResponsivo(10, 2);
+    height: 100vh;
+    display: flex;
+    div{
+      height: 100vh;
+      width: 50vw;
+      &[id=box2]{
+        background: black;
+        a{
+          @include CentralizarElemento(relative);
+          @include fluidType(320px, 1600px, 40px, 60px);
+          &:hover{
+            transition: color .7s;
+            color: black;
+          }
+        }
+        }
+        &[id=box1]{
 
-        li{
-          padding-left: 1.5rem;
-      }
-      li[id=album2]{
-        @include ObjetoSelecionado();
+          a{
+            @include CentralizarElemento(relative);
+            @include fluidType(320px, 1600px, 40px, 60px);
+          }
+          }
       }
     }
-  }
+
 }
