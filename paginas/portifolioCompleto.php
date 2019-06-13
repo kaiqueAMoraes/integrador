@@ -7,7 +7,7 @@
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
 
-$result= mysqli_query(AbreConexaoBd(), $sql);
+  $result= mysqli_query(AbreConexaoBd(), $sql);
 
  ?>
 
@@ -46,50 +46,17 @@ $result= mysqli_query(AbreConexaoBd(), $sql);
   </header>
     <main>
       <section class="container">
+
         <?php
+
           while($album = mysqli_fetch_assoc($result)){
 
           echo "<div class='album'>
-                <img src='../albuns/".$album['dir']."/".$album['arq']."' width='200' height='200'/>
+                <img src='../albuns/".$album['dir']."/".$album['arq']."'/>
                 </div>";
           }
-
         ?>
-        <div class="album">
-          <img src="https://picsum.photos/450/530?grayscale" alt="">
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/458/530?grayscale" alt="">
 
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/457/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/456/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/455/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/454/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/453/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/452/530?grayscale" alt="">
-
-        </div>
-        <div class="album">
-          <img src="https://picsum.photos/451/530?grayscale" alt="">
-
-        </div>
       </section>
     </main>
 <footer>
