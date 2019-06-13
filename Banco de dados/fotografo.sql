@@ -18,8 +18,8 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
 ;
 select * from tb_album;
 
--- SET foreign_key_checks = 0;
--- SET foreign_key_checks = 1;
+ SET foreign_key_checks = 0;
+ SET foreign_key_checks = 1;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
 ;
 select * from tb_foto;
 
+update tb_foto set foto_capa = 1
+where id_foto = 2;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_tag` (
   `id_tag` INT NOT NULL,
@@ -61,4 +63,12 @@ select * from tb_tag;
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 select * from tb_album_tag;*/
+
+truncate table tb_album;
+
+ Select tb_album.nome as dir,
+         tb_foto.nome as arq
+         from tb_album inner join tb_foto
+         on tb_album.id_album = tb_foto.id_album
+         where tb_foto.foto_capa = 1;
 
