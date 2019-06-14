@@ -51,8 +51,10 @@
 
           while($album = mysqli_fetch_assoc($result)){
 
-          echo "<div class='album'>
-                <img src='../albuns/".$album['dir']."/".$album['arq']."'/>
+          
+
+          echo "<div
+                  style=\"background-image: src='../albuns/".$album['dir']."/".$album['arq']."'; background-align: cover;\" class='album'>
                 </div>";
           }
         ?>
