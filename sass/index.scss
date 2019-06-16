@@ -46,7 +46,7 @@ main{
   }
 
   img[class="iconIndex"]{
-    @include TamanhoObjeto(3vw,3vw);
+    @include TamanhoObjeto(2rem,2rem);
   }
 
 }
@@ -58,9 +58,15 @@ section.container{
   background: $snowCloud;
 
   div.logo{
-    @include BoxImagem('../img/logo.png', no-repeat, contain);
-    @include TamanhoObjeto(10vh, 10vh);
+    text-align: center;
+    font-weight: bold;
+    /* @include BoxImagem('../img/logo.png', no-repeat, contain); */
+    @include TamanhoObjeto(25vh, 11vh);
     @include TamanhoEspaco(1rem,0,0,1rem);
+    z-index: 99999;
+    p{
+      @include fluidType(320px, 2600px, 15.5px, 25.5px);
+    }
   }
 
   section.containerImagem{
@@ -91,21 +97,37 @@ section.container{
       height: 100vh;
       width: 50vw;
       &[id=box2]{
-        background: black;
-        a{
-          @include CentralizarElemento(relative);
-          @include fluidType(320px, 1600px, 40px, 60px);
-          &:hover{
-            transition: color .7s;
-            color: black;
-          }
-        }
-        }
-        &[id=box1]{
+            background: $softBlack;
+            transition:all 1s ease-in;
+            transform-origin: right 50%;
 
+              a{
+                color: $softCloud;
+
+                @include CentralizarElemento(relative);
+                @include fluidType(320px, 1600px, 40px, 60px);
+                &:hover{
+                  transition: color .7s;
+                  color: black;
+                }
+
+              }
+
+              }
+        &[id=box1]{
+          background: -webkit-linear-gradient(left, $softCloud 50%, $softBlack 50%);
+          background: -o-linear-gradient(left, $softCloud 50%, $softBlack 50% );
+          background: linear-gradient(to right, $softCloud 50%,$softBlack 50%);
+          background-size: 200% 100%;
+          background-position:left bottom;
+          transition:all 1s ease-out;
           a{
             @include CentralizarElemento(relative);
             @include fluidType(320px, 1600px, 40px, 60px);
+            &:hover{
+              transition: color .7s;
+              color: $softBlack;
+            }
           }
           }
       }
