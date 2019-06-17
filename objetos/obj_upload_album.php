@@ -21,9 +21,32 @@
         if(mysqli_query($conexao, $sql)) {
             $idAlbum = mysqli_insert_id($conexao);
 
+            if (isset($_FILE["capa"])){
+              $capa_tmp = $_FILE["capa"]["tmp_name"];
+              $nomeCapa = $_FILE["capa"]["name"];
+
+              $somenteNomeCapa = md5(Date("dmYHis").pathinfo($nomeCapa, PATHINFO_FILENAME));
+              $somenteExtensaoCapa = pathinfo($nomeCapa, PATHINFO_EXTENSION);
+              $nomeCapaCriptografado = "$somenteNomeCapa.$somenteExtensaoCapa";
+
+              $uploadCapa = move_uploaded_file($capa_tmp, $diretorio . "/" . $nomeCapaCriptografado);
+
+              if ($uploadCapa) {
+                  $sql = "INSERT INTO tb_foto(id_album, nome, foto_capa) VALUES (".$idAlbum.", '".$nomeCapaCriptografado.", 1)";
+                  if(mysqli_query($conexao, $sql)) {
+                      echo "Upload realizado com sucesso!";
+                  }
+                  else
+                      echo "Erro no banco de dados!";
+              }
+              else {
+                  echo "Erro no upload!";
+              }
+
+            }
+
             if (isset($_FILES["foto"])) {
                 // fazer o for para o multiple
-
                 for ($i = 0; $i < count($_FILES["foto"]["name"]); $i++)
                 {
 
@@ -34,9 +57,9 @@
                     $somenteExtensaoFoto = pathinfo($nomeFoto, PATHINFO_EXTENSION);
                     $nomeFotoCriptografado = "$somenteNomeFoto.$somenteExtensaoFoto";
 
-                    $upload = move_uploaded_file($foto_tmp, $diretorio . "/" . $nomeFotoCriptografado);
+                    $uploadFoto = move_uploaded_file($foto_tmp, $diretorio . "/" . $nomeFotoCriptografado);
 
-                    if ($upload) {
+                    if ($uploadFoto) {
                         $sql = "INSERT INTO tb_foto(id_album, nome) VALUES ($idAlbum, '".$nomeFotoCriptografado."');";
                         if(mysqli_query($conexao, $sql)) {
                             echo "Upload realizado com sucesso!";
