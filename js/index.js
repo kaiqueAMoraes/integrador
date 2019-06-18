@@ -12,9 +12,9 @@
     DivPortifolioCompleto.style.width = "100vw";
     DivPortifolioCompleto.style.position = "absolute";
     DivPortifolioCompleto.style.right = "-50vw";
-document.getElementsByTagName('a')[0].style.opacity = "0";
-document.getElementsByTagName('a')[1].style.textAlign = "center";
-document.getElementsByTagName('a')[1].style.width = "100%";
+    document.getElementsByTagName('a')[0].style.opacity = "0";
+    document.getElementsByTagName('a')[1].style.textAlign = "center";
+    document.getElementsByTagName('a')[1].style.width = "100%";
   }
 
   PreencherDivTrabalhosSelecionadosReverso = function(){
