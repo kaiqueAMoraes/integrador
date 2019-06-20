@@ -12,7 +12,6 @@ select * from tb_administrador;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
   `id_album` INT NOT NULL AUTO_INCREMENT,
-  `id_tag` INT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_album`))
@@ -21,6 +20,7 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
+ truncate table tb_foto;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
     ON UPDATE NO ACTION)
 ;
 select * from tb_foto;
+
 update tb_foto set foto_capa = 1
 where id_foto = 2;
 
@@ -63,8 +64,6 @@ select * from tb_tag;
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 select * from tb_album_tag;*/
-
-truncate table tb_album;
 
  Select tb_album.nome as dir,
          tb_foto.nome as arq
