@@ -21,23 +21,25 @@
         if(mysqli_query($conexao, $sql)) {
             $idAlbum = mysqli_insert_id($conexao);
 
-            if (isset($_FILE["capa"])){
-              $capa_tmp = $_FILE["capa"]["tmp_name"];
-              $nomeCapa = $_FILE["capa"]["name"];
+            if (isset($_FILES["capa"])){
+              $capa_tmp = $_FILES["capa"]["tmp_name"][0];
+              $nomeCapa = $_FILES["capa"]["name"][0];
 
               $somenteNomeCapa = md5(Date("dmYHis").pathinfo($nomeCapa, PATHINFO_FILENAME));
               $somenteExtensaoCapa = pathinfo($nomeCapa, PATHINFO_EXTENSION);
               $nomeCapaCriptografado = "$somenteNomeCapa.$somenteExtensaoCapa";
+              $foto_capa= 1;
 
               $uploadCapa = move_uploaded_file($capa_tmp, $diretorio . "/" . $nomeCapaCriptografado);
 
               if ($uploadCapa) {
-                  $sql = "INSERT INTO tb_foto(id_album, nome, foto_capa) VALUES (".$idAlbum.", '".$nomeCapaCriptografado.", 1)";
+                  $sql = "INSERT INTO tb_foto(id_album, nome, foto_capa) VALUES ($idAlbum, '".$nomeCapaCriptografado."', $foto_capa);";
                   if(mysqli_query($conexao, $sql)) {
                       echo "Upload realizado com sucesso!";
                   }
-                  else
+                  else{
                       echo "Erro no banco de dados!";
+                  }
               }
               else {
                   echo "Erro no upload!";
@@ -64,8 +66,9 @@
                         if(mysqli_query($conexao, $sql)) {
                             echo "Upload realizado com sucesso!";
                         }
-                        else
+                        else{
                             echo "Erro no banco de dados!";
+                        }
                     }
                     else {
                         echo "Erro no upload!";
@@ -86,8 +89,7 @@
                         if(mysqli_query($conexao, $sql)) {
                             echo "Upload realizado com sucesso!";
                         }
-                        else
-                            echo "Erro no banco de dados!";
+
                     }
                 }
 

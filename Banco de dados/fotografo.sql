@@ -20,12 +20,13 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
+ truncate table tb_foto;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
   `id_album` INT NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
-  `foto_capa` INT(1) NULL,
+  `foto_capa` INT(1) ,
   PRIMARY KEY (`id_foto`),
   INDEX `fk_tb_foto_tb_album_idx` (`id_album` ASC),
   CONSTRAINT `fk_tb_foto_tb_album`
@@ -63,8 +64,6 @@ select * from tb_tag;
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 select * from tb_album_tag;*/
-
-truncate table tb_album;
 
  Select tb_album.nome as dir,
          tb_foto.nome as arq
