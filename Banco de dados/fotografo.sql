@@ -12,6 +12,7 @@ select * from tb_administrador;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
   `id_album` INT NOT NULL AUTO_INCREMENT,
+  `id_tag` INT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_album`))
@@ -25,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
   `id_album` INT NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
-  `foto_capa` INT(1) NULL,
+  `foto_capa` INT(1) ,
   PRIMARY KEY (`id_foto`),
   INDEX `fk_tb_foto_tb_album_idx` (`id_album` ASC),
   CONSTRAINT `fk_tb_foto_tb_album`
@@ -35,7 +36,6 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
     ON UPDATE NO ACTION)
 ;
 select * from tb_foto;
-
 update tb_foto set foto_capa = 1
 where id_foto = 2;
 
