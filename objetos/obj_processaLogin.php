@@ -7,7 +7,7 @@
  if (isset($_POST["nome"]) && isset($_POST["senha"])) {
         $nome = $_POST["nome"];
         $senha = $_POST["senha"];
-        $_SESSION["user"]= 0;
+        
 
        $conexao = AbreConexaoBd();
 
