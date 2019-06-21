@@ -4,34 +4,29 @@
 
     $mensagem = "";
 
-
-
  if (isset($_POST["nome"]) && isset($_POST["senha"])) {
         $nome = $_POST["nome"];
         $senha = $_POST["senha"];
-
+        $_SESSION["user"]= 0;
 
        $conexao = AbreConexaoBd();
 
 
-         $sql = "SELECT id FROM tb_administrador WHERE nome = '$nome' AND senha = '$senha'";
+        $sql = "SELECT id FROM tb_administrador WHERE nome = '$nome' AND senha = '$senha'";
         $resultado = mysqli_query($conexao, $sql);
 
-        if (mysqli_num_rows($resultado) > 0) {
+        if (mysqli_num_rows($resultado) > 0){
             session_start();
             $_SESSION["user"] = mysqli_fetch_assoc($resultado);
-            //header("location:../index.html");
-            header("location:../paginas/paginaAdministrador.html");
-
+            header("location:../paginas/paginaAdministrador.php");
         }
         else{
-            echo $mensagem = "Login ou senha inválido!";
-        }
+            session_start();
+            $_SESSION["erro"] = true;
+            header("location:../paginas/login.php");
 
+        }
         mysqli_close($conexao);
-}
-else{
-    echo ("Conexão não foi possivel");
-}
+    }
 
 ?>

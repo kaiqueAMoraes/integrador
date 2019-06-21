@@ -13,6 +13,7 @@ select * from tb_administrador;
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
   `id_album` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
+  `id_tag` INT,
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_album`))
 ;
