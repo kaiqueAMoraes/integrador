@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kaiqueAMoraes/integrador/issues"
   },
-  "homepage": "https://github.com/kaiqueAMoraes/integrador#readme"
+  "homepage": "https://github.com/kaiqueAMoraes/integrador#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-scrollify": "^1.0.20"
+  }
 }
