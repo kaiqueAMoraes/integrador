@@ -1,16 +1,12 @@
 @import 'mainSass.scss';
 
+// classes //
 
-main{
-  a{
-    @include fluidType(320px, 1600px, 30px, 90px);
-    font-weight: bolder;
-    &:hover{
-      transition: -webkit-text-stroke-color 2s, -webkit-text-stroke-width 2.5s, font-size 1s;
-      -webkit-text-fill-color: $softCloud;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: $softBlack;
-      font-size: 110px;
-    }
-  }
+// classes fim //
+
+
+section[id="container"]{
+  display: flex;
+  flex-direction: column;
+  
 }
