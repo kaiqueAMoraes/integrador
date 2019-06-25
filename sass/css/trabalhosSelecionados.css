@@ -169,9 +169,37 @@ div[id=voltar] a {
   opacity: 0.05;
 }
 
-section[id=container] {
+header {
+  height: 10vw;
+}
+
+main[id=container] {
   display: flex;
   flex-direction: column;
+}
+main[id=container] .sectionAlbum {
+  position: relative;
+  height: 100vh;
+  width: 99vw;
+  oveflow: hidden;
+}
+main[id=container] .sectionAlbum img {
+  max-width: 60%;
+}
+main[id=container] .sectionAlbum img:nth-of-type(3n+1) {
+  padding-left: 12vw;
+}
+main[id=container] .sectionAlbum img:nth-of-type(3n+2) {
+  padding-left: 13vw;
+}
+main[id=container] .sectionAlbum img:nth-of-type(3n+3) {
+  padding-left: 13vw;
+}
+main[id=container] .sectionAlbum img:nth-of-type(3n+4) {
+  padding-left: 24vw;
+}
+main[id=container] .sectionAlbum img:nth-of-type(3n+5) {
+  padding-left: 24vw;
 }
 
 /*# sourceMappingURL=trabalhosSelecionados.css.map */

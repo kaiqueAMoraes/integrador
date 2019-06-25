@@ -1,12 +1,31 @@
 @import 'mainSass.scss';
 
-// classes //
-
-// classes fim //
-
-
-section[id="container"]{
+header{
+  height: 10vw;
+}
+main[id="container"]{
   display: flex;
   flex-direction: column;
-  
-}
+  .sectionAlbum{
+    position: relative;
+    height: 100vh;
+    width: 99vw;
+    oveflow: hidden;
+    img{
+      max-width: 60%;
+    //  padding-left: (random(45) + 1)+vw;
+
+    }
+    $cores: (random(45) + 1)+vw, (random(25) + 1)+vw,(random(15) + 1)+vw;
+    $repetirPadrao: 5;
+
+    @for $i from 1 through $repetirPadrao {
+      img:nth-of-type(#{length($cores)}n+#{$i}) {
+        padding-left: nth($cores, random(length($cores)));
+      }
+    }
+    }
+
+
+
+  }
