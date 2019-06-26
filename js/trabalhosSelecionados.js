@@ -13,7 +13,7 @@ $(function() {
       updateHash: true,
       touchScroll:true,
       before:function() {},
-      after:function() {},
+      after:function() {$(this).animate({'opacity':'1'},1000);},
       afterResize:function() {},
       afterRender:function() {}
     });

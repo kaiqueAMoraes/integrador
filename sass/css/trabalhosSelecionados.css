@@ -173,6 +173,10 @@ div[id=voltar] a {
   display: none;
 }
 
+.hideme {
+  opacity: 0;
+}
+
 .imagemCapa {
   filter: grayscale(100);
   background-size: cover;
@@ -181,15 +185,16 @@ div[id=voltar] a {
 }
 
 header {
-  height: 0;
+  height: 10vw;
   position: fixed;
-  z-index: 9999999;
+  z-index: 2;
 }
 
 main[id=container] {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 1;
 }
 
 main[id=container] section.sectionAlbum {
@@ -229,6 +234,15 @@ main[id=container] section.sectionAlbum h1 {
 @media screen and (min-width: 2100px) {
   main[id=container] section.sectionAlbum h1 {
     font-size: 150px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
