@@ -1,4 +1,5 @@
 $(function() {
+ScrollReveal().reveal('.hideme',{ delay: 850 });
   $.scrollify({
       section : ".sectionAlbum",
       sectionName : "section",
@@ -13,7 +14,7 @@ $(function() {
       updateHash: true,
       touchScroll:true,
       before:function() {},
-      after:function() {$(this).animate({'opacity':'1'},1000);},
+      after:function() {},
       afterResize:function() {},
       afterRender:function() {}
     });

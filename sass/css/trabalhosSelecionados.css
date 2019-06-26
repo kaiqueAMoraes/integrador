@@ -173,10 +173,6 @@ div[id=voltar] a {
   display: none;
 }
 
-.hideme {
-  opacity: 0;
-}
-
 .imagemCapa {
   filter: grayscale(100);
   background-size: cover;
@@ -196,13 +192,11 @@ main[id=container] {
   overflow: hidden;
   z-index: 1;
 }
-
 main[id=container] section.sectionAlbum {
   position: relative;
   height: 100vh;
   width: 100%;
 }
-
 main[id=container] section.sectionAlbum div {
   position: absolute;
   width: 60vw;
@@ -210,7 +204,6 @@ main[id=container] section.sectionAlbum div {
   right: 5vw;
   top: 15vh;
 }
-
 main[id=container] section.sectionAlbum h1 {
   position: relative;
   top: 20vh;
