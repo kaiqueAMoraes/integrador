@@ -16,5 +16,7 @@ function AbreConexaoBd()
 
     return $conexao;
 }
+
     //--------------------------------
+
 ?>

@@ -13,6 +13,7 @@ select * from tb_administrador;
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
   `id_album` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
+  `id_tag` INT,
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_album`))
 ;
@@ -20,12 +21,13 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
+ truncate table tb_album;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
   `id_album` INT NOT NULL,
   `nome` VARCHAR(100) NOT NULL,
-  `foto_capa` INT(1) NULL,
+  `foto_capa` INT(1) ,
   PRIMARY KEY (`id_foto`),
   INDEX `fk_tb_foto_tb_album_idx` (`id_album` ASC),
   CONSTRAINT `fk_tb_foto_tb_album`
@@ -64,11 +66,10 @@ select * from tb_tag;
     ON UPDATE NO ACTION);
 select * from tb_album_tag;*/
 
-truncate table tb_album;
-
  Select tb_album.nome as dir,
          tb_foto.nome as arq
          from tb_album inner join tb_foto
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1;
-
+         
+DELETE  FROM `tb_album`, `tb_foto` USING `tb_album`, `tb_foto` WHERE `tb_album`.`id_album` = 3 AND `tb_foto`.`id_album` = 3;
