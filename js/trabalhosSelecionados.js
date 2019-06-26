@@ -1,5 +1,14 @@
 $(function() {
-ScrollReveal().reveal('.hideme',{ delay: 850 });
+
+  var div = document.querySelectorAll(".redirecionaAlbumPagina");
+  for (var i = 0; i < div.length; i++){
+
+    div[i].addEventListener("click", function() {
+
+      location.href="albumSelecionado.html";
+    });
+  }
+
   $.scrollify({
       section : ".sectionAlbum",
       sectionName : "section",
@@ -18,4 +27,10 @@ ScrollReveal().reveal('.hideme',{ delay: 850 });
       afterResize:function() {},
       afterRender:function() {}
     });
+
+    ScrollReveal().reveal('.sectionAlbum', {
+    delay: 800,
+    duration: 500,
+    reset: true
+});
 });

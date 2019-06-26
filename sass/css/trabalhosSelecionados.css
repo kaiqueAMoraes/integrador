@@ -192,19 +192,20 @@ main[id=container] {
   overflow: hidden;
   z-index: 1;
 }
-main[id=container] section.sectionAlbum {
+main[id=container] section[class=sectionAlbum] {
   position: relative;
   height: 100vh;
   width: 100%;
 }
-main[id=container] section.sectionAlbum div {
+main[id=container] section[class=sectionAlbum] div {
   position: absolute;
   width: 60vw;
   height: 75vh;
   right: 5vw;
   top: 15vh;
+  cursor: pointer;
 }
-main[id=container] section.sectionAlbum h1 {
+main[id=container] section[class=sectionAlbum] h1 {
   position: relative;
   top: 20vh;
   left: 5.5vw;
@@ -215,17 +216,18 @@ main[id=container] section.sectionAlbum h1 {
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #9a9a9a;
+  cursor: pointer;
 }
-main[id=container] section.sectionAlbum h1 {
+main[id=container] section[class=sectionAlbum] h1 {
   font-size: 80.5px;
 }
 @media screen and (min-width: 300px) {
-  main[id=container] section.sectionAlbum h1 {
+  main[id=container] section[class=sectionAlbum] h1 {
     font-size: calc(80.5px + 69.5 * ((100vw - 300px) / 1800));
   }
 }
 @media screen and (min-width: 2100px) {
-  main[id=container] section.sectionAlbum h1 {
+  main[id=container] section[class=sectionAlbum] h1 {
     font-size: 150px;
   }
 }
