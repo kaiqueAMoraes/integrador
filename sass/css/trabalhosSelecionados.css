@@ -169,37 +169,67 @@ div[id=voltar] a {
   opacity: 0.05;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.imagemCapa {
+  filter: grayscale(100);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 header {
-  height: 10vw;
+  height: 0;
+  position: fixed;
+  z-index: 9999999;
 }
 
 main[id=container] {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-main[id=container] .sectionAlbum {
+
+main[id=container] section.sectionAlbum {
   position: relative;
   height: 100vh;
-  width: 99vw;
-  oveflow: hidden;
+  width: 100%;
 }
-main[id=container] .sectionAlbum img {
-  max-width: 60%;
+
+main[id=container] section.sectionAlbum div {
+  position: absolute;
+  width: 60vw;
+  height: 75vh;
+  right: 5vw;
+  top: 15vh;
 }
-main[id=container] .sectionAlbum img:nth-of-type(3n+1) {
-  padding-left: 12vw;
+
+main[id=container] section.sectionAlbum h1 {
+  position: relative;
+  top: 20vh;
+  left: 5.5vw;
+  z-index: 10;
+  font-weight: bolder;
+  color: #f5f5f5;
+  -webkit-text-fill-color: #f5f5f5;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #9a9a9a;
 }
-main[id=container] .sectionAlbum img:nth-of-type(3n+2) {
-  padding-left: 13vw;
+main[id=container] section.sectionAlbum h1 {
+  font-size: 80.5px;
 }
-main[id=container] .sectionAlbum img:nth-of-type(3n+3) {
-  padding-left: 13vw;
+@media screen and (min-width: 300px) {
+  main[id=container] section.sectionAlbum h1 {
+    font-size: calc(80.5px + 69.5 * ((100vw - 300px) / 1800));
+  }
 }
-main[id=container] .sectionAlbum img:nth-of-type(3n+4) {
-  padding-left: 24vw;
-}
-main[id=container] .sectionAlbum img:nth-of-type(3n+5) {
-  padding-left: 24vw;
+@media screen and (min-width: 2100px) {
+  main[id=container] section.sectionAlbum h1 {
+    font-size: 150px;
+  }
 }
 
 /*# sourceMappingURL=trabalhosSelecionados.css.map */

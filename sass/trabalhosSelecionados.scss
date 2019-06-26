@@ -1,31 +1,49 @@
 @import 'mainSass.scss';
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.imagemCapa{
+  filter: grayscale(100);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 header{
-  height: 10vw;
+  height: 0;
+  position: fixed;
+  z-index: 9999999;
 }
 main[id="container"]{
   display: flex;
   flex-direction: column;
-  .sectionAlbum{
-    position: relative;
+  overflow: hidden;
+}
+main[id="container"] section.sectionAlbum{
+    position:relative;
     height: 100vh;
-    width: 99vw;
-    oveflow: hidden;
-    img{
-      max-width: 60%;
-    //  padding-left: (random(45) + 1)+vw;
-
+    width: 100%;
+}
+main[id="container"] section.sectionAlbum div {
+      position: absolute;
+      width: 60vw;
+      height: 75vh;
+      right: 5vw;
+      top:15vh;
     }
-    $cores: (random(45) + 1)+vw, (random(25) + 1)+vw,(random(15) + 1)+vw;
-    $repetirPadrao: 5;
-
-    @for $i from 1 through $repetirPadrao {
-      img:nth-of-type(#{length($cores)}n+#{$i}) {
-        padding-left: nth($cores, random(length($cores)));
-      }
+main[id="container"] section.sectionAlbum h1{
+      position: relative;
+      top:20vh;
+      left:5.5vw;
+      z-index:10;
+      @include fluidType(300px, 2100px, 80.5px, 150px);
+      font-weight: bolder;
+      color: $softCloud;
+  -webkit-text-fill-color: $softCloud; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $softGray;
     }
-    }
-
-
-
-  }
