@@ -6,7 +6,6 @@
          from tb_album inner join tb_foto
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
-
   $result= mysqli_query(AbreConexaoBd(), $sql);
 
  ?>

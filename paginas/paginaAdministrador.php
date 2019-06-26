@@ -2,7 +2,6 @@
     session_start();
     require_once("../objetos/obj_processaLogin.php");
     include("../objetos/obj_validaLogin.php");
-
 ?>
 
 <!DOCTYPE html>
