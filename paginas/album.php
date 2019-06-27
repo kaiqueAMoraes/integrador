@@ -64,7 +64,7 @@ include("../objetos/obj_conexao_bd.php");
 
     while($album = mysqli_fetch_assoc($resultado)){
 
-   echo "<img src='../albuns/".$album['dir']."/".$album['foto']."'>";
+   echo "<img style='max-width: 60%;' src='../albuns/".$album['dir']."/".$album['foto']."'>";
     }
 
 
