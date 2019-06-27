@@ -39,6 +39,14 @@
   color: #464646;
 }
 
+@keyframes encherDireita {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
 @font-face {
   font-family: "Lato Black";
   src: url("../fonts/Lato/Lato-Black.ttf");

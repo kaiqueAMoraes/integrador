@@ -26,7 +26,6 @@
     <div id="voltar" title="Voltar á pagina anterior">
       <a href="../index.html"><span>&#60;</span></a>
     </div>
-    <h1>Portifolio completo</h1>
     <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
     <section class="sectionTags">
       <!-- <div class="tagArea"> -->
