@@ -16,8 +16,8 @@
     <meta charset="utf-8">
     <title>Editar Albuns</title>
     <link rel="stylesheet" type="text/css" href="../sass/css/portifolioCompleto.css">
-    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
     <script src="../js/portifolio.js" charset="utf-8"></script>
+    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
 <body>
   <canvas id="noise" class="noise"></canvas>
@@ -26,23 +26,20 @@
     <div id="voltar" title="Voltar á pagina anterior">
       <a href="../index.html"><span>&#60;</span></a>
     </div>
-    <h1>Portifolio completo</h1>
-    <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
-    <section class="sectionTags">
-      <!-- <div class="tagArea"> -->
-        <label><input type="checkbox" name="checkbox" value="value">casamento</label>
-        <label><input type="checkbox" name="checkbox" value="value">infantil</label>
-        <label><input type="checkbox" name="checkbox" value="value">eventos</label>
-        <label><input type="checkbox" name="checkbox" value="value">mulher</label>
-        <label><input type="checkbox" name="checkbox" value="value">homem</label>
-        <label><input type="checkbox" name="checkbox" value="value">ensaio</label>
-        <label><input type="checkbox" name="checkbox" value="value">pets</label>
-        <label><input type="checkbox" name="checkbox" value="value">roberto carlos</label>
-      <!-- </div> -->
-
-
-    </section>
   </header>
+  <section class="sectionProcura">
+  <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
+    <div class="tagArea">
+    <label><input type="checkbox" name="checkbox" value="value">casamento</label>
+    <label><input type="checkbox" name="checkbox" value="value">infantil</label>
+    <label><input type="checkbox" name="checkbox" value="value">eventos</label>
+    <label><input type="checkbox" name="checkbox" value="value">mulher</label>
+    <label><input type="checkbox" name="checkbox" value="value">homem</label>
+    <label><input type="checkbox" name="checkbox" value="value">ensaio</label>
+    <label><input type="checkbox" name="checkbox" value="value">pets</label>
+    <label><input class="teste" type="checkbox" name="checkbox" value="value">roberto carlos</label>
+    </div>
+  </section>
     <main>
       <section class="container">
 

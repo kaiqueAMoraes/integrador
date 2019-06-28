@@ -1,77 +1,76 @@
 @import 'mainSass.scss';
 
+header,
+section[class="sectionProcura"]{
+  background-color: $snowShadow;
+}
+
 header{
+    height: 8vw;
+    div{
+      z-index: 2;
+    }
+}
+
+input[id="procurar"]{
+  @include fluidType(320px, 1600px, 35px, 150px);
+  font-family: 'Lato Light';
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60%;
+  position: relative;
+  top: -7vw;
+  &::placeholder{
+    font-weight: 100;
+  }
+  &:focus{
+    outline: 1px dashed $grayedCloud;
+  }
+}
+
+section[class="sectionProcura"]{
+  $b : TamanhoResponsivo(40, .5);
+  position: relative;
+  height: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  div.tagArea{
     display: flex;
+    align-content: center;
+    justify-content: center;
     flex-wrap: wrap;
-    height: 30vw;
-
-    h1{
-      display: inline-block;
-      position: relative;
-      @include SemEspacoExtra;
-      font-family: 'Lato Light';
-      @include fluidType(320px, 1600px, 30px, 90px);
-      font-weight: lighter;
-      top: 1vw;
-      left: 2.5vw;
-      color: $grayedCloud;
-    }
-
-    input[id="procurar"]{
-      @include fluidType(320px, 1600px, 35px, 150px);
-      font-family: 'Lato Light';
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      &::placeholder{
-        font-weight: 100;
-      }
-      &:focus{
-        outline: 1px dashed $grayedCloud;
-      }
-    }
-
-    section[class="sectionTags"]{
-      $b : TamanhoResponsivo(40, .5);
-      position: relative;
-      top: 7.5vw;
-      height: 20vh;
-      width: 79vw;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      outline: 2px dashed $snowShadow;
-      outline-offset: 5px;
-      flex-wrap: wrap;
-
+    flex-direction: row;
       label{
         margin-top: 1.5vw;
         margin-right: 1.5vw;
         display: block;
-        @include TamanhoObjeto(auto, auto);
+        @include fluidType(320px, 2600px, 15.5px, 20.5px);
         padding-left: 10px;
         padding-right: 10px;
         background-color: $graish;
         border-radius: 10px;
         cursor: pointer;
 
-        input{
-          width: auto;
-          // position: absolute;
-          // z-index: -999;
-          // @include TamanhoObjeto(.1px,.1px);
-          // opacity: 0;
-        }
-    }
-}
-
+          input{
+            width: auto;
+            position: absolute;
+            z-index: -999;
+            @include TamanhoObjeto(.1px,.1px);
+            opacity: 0;
+          }
+      }
+  }
 }
 
 main{
   position: relative;
-  top: 25vh;
+  top: 20vh;
   height: 100%;
     section[class=container]{
       display: flex;
