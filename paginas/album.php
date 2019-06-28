@@ -17,7 +17,7 @@ include("../objetos/obj_conexao_bd.php");
   <canvas id="noise" class="noise"></canvas>
   <header>
     <div id="voltar" title="Voltar á pagina anterior">
-      <a href="portifolioCompleto.html"><span>&#60;</span></a>
+      <a href="portifolioCompleto.php"><span>&#60;</span></a>
     </div>
     <div id="containerInfoAlbum">
       <div id="tituloAlbum">
