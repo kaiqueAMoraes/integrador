@@ -5,7 +5,7 @@ $(function() {
 
     div[i].addEventListener("click", function() {
 
-      location.href="albumSelecionado.html";
+      location.href="albumSelecionado.php" ;
     });
   }
 
