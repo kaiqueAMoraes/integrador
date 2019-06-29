@@ -14,7 +14,7 @@
   <body>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a href="./index.html"><span>&#60;</span></a>
+        <a href="../index.html"><span>&#60;</span></a>
       </div>
       <h1>Menu administrador</h1>
     </header>

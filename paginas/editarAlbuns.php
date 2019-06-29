@@ -30,7 +30,7 @@
   <header>
 
     <div id="voltar" title="Voltar á pagina anterior">
-      <a href="paginaAdministrador.html"><span>&#60;</span></a>
+      <a href="paginaAdministrador.php"><span>&#60;</span></a>
     </div>
 
     <h1>Editar Albuns.</h1>
