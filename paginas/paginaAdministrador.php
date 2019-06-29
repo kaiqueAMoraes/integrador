@@ -19,8 +19,8 @@
       <h1>Menu administrador</h1>
     </header>
     <main>
-      <a href="editarAlbuns.html">Editar Albuns</a>
-      <a href="editarSelecionados.html">Editar Selecionados</a>
+      <a href="editarAlbuns.php">Editar Albuns</a>
+      <a href="editarSelecionados.php">Editar Selecionados</a>
       <a href="sobre.html">Sobre</a>
       <a href="contato.html">Contato</a>
     </main>
