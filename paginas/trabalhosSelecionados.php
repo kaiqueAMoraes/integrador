@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
   include("../objetos/obj_conexao_bd.php");
 
@@ -13,8 +12,6 @@
 
  ?>
 
-=======
->>>>>>> master
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr" >
   <head>
@@ -39,7 +36,6 @@
       </header>
       <main id="container" >
 
-<<<<<<< HEAD
 
             <?php
               while($album = mysqli_fetch_assoc($result)){
@@ -61,10 +57,7 @@
 
                 }
                ?>
-
-
-
-
+               
           <section class="sectionAlbum">
 
               <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/880?grayscale');"  class="imagemCapa"></div>
@@ -91,49 +84,6 @@
               <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1202/700?grayscale');" class="imagemCapa"></div>
               <h1 class="redirecionaAlbumPagina" >titulo album</h1>
           </section>
-=======
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/2200/1200?grayscale');" class="imagemCapa">
-                <h1 class="uph1">01</h1>
-                <h1 class="downh1">05</h1>
-              </div>
-              <h1 class="redirecionaAlbumPagina">Lorem Ipsum</h1>
-
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/880?grayscale');"  class="imagemCapa">
-                <h1 class="uph1">02</h1>
-                <h1 class="downh1">05</h1>
-              </div>
-              <h1 class="redirecionaAlbumPagina">Lorem Ipsum</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/700?grayscale');" class="imagemCapa">
-                <h1 class="uph1">03</h1>
-                <h1 class="downh1">05</h1>
-              </div>
-              <h1 class="redirecionaAlbumPagina" >Lorem Ipsum</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1201/700?grayscale');" class="imagemCapa">
-                <h1 class="uph1">04</h1>
-                <h1 class="downh1">05</h1>
-              </div>
-              <h1 class="redirecionaAlbumPagina">Lorem Ipsum</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1203/700?grayscale');" class="imagemCapa">
-                <h1 class="uph1">05</h1>
-                <h1 class="downh1">05</h1>
-              </div>
-              <h1 class="redirecionaAlbumPagina" >Lorem Ipsum</h1>
-          </section>
-
->>>>>>> master
       </main>
     </section>
   </body>
