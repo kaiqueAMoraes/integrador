@@ -1,0 +1,117 @@
+@import '_dependencias.scss';
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('../fonts/Lato/Lato-Black.ttf');
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: url('../fonts/Lato/Lato-Light.ttf');
+}
+
+a,
+a:active,
+a:visited,
+input:focus{
+  color: $grayedCloud;
+  @include SemDecoracao;
+}
+
+html{
+  background-color: $snowCloud;
+  font-family: 'Lato Light';
+  scrollbar-color: $softGray $darkGray ;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  color: $grayedCloud;
+  @include SemEspacoExtra;
+}
+
+body{
+  color: $softCloud;
+}
+
+input {
+    background: transparent;
+    width: 80vw;
+    font-size: ResponsiveText(20,40);
+    border: none;
+    overflow: hidden;
+    font-weight: lighter;
+    input::placeholder{
+      color: #ffffffa9;
+    }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $softCloud;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grayedCloud ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $graish;
+}
+
+
+div[id="voltar"]{
+  cursor: pointer;
+  @include TamanhoEspaco( $left: 1vw, $position:relative);
+  border-radius: 100%;
+  text-align: center;
+  display: inline-block;
+  background-color: $snowGray;
+  top: 1vw;
+  color: $mediumBlack;
+  $min_width: 320px;
+  $max_width: 1500px;
+
+  $a:TextoResponsivo(50,80);
+  width:$a;
+  height:$a;
+  @include fluidType($min_width, $max_width, 80px, 85px);
+
+  &:hover{
+    transition: background-color 500ms;
+    background-color: $snowShadow;
+  }
+  a{
+    @include CentralizarElemento(absolute);
+    top: 47%;
+  }
+}
+
+
+.noise {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    opacity: .05;
+}

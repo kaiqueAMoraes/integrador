@@ -1,0 +1,67 @@
+@import 'mainSass.scss';
+
+header{
+  // div[id="voltar"]{
+  //   position: fixed;
+  //   z-index: 99;
+  // }
+
+  position: relative;
+  height: auto;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  div[id="containerInfoAlbum"]{
+    margin-top: 5.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h1{
+      position: relative;
+      right: 8.5vw;
+      @include fluidType(300px, 2100px, 55px, 150px);
+      margin-bottom: 2.5vw;
+    }
+    p{
+      margin-right: 8vw;
+      width: 70vw;
+      @include fluidType(300px, 2100px, 12px, 35px);
+    }
+  }
+}
+
+main{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: space-around;
+  img{
+    margin: 2.5rem;
+    filter: grayscale(100%);
+    max-width: 90vw;
+    p{
+      margin: 5vw;
+    text-align: justify;
+    width: 80%;
+    }
+  }
+}
+footer{
+  overflow: hidden;
+  position: relative;
+  height: 20vw;
+  a{
+    width: 85%;
+    $min_width: 320px;
+    $max_width: 1500px;
+    $min_font: 30px;
+    $max_font: 190px;
+    @include CentralizarElemento(absolute);
+    bottom: 30vw;
+    @include fluidType($min_width, $max_width, $min_font, $max_font);
+    margin: auto;
+    display: inline-block;
+  }
+}

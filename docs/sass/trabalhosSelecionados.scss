@@ -1,0 +1,79 @@
+@import 'mainSass.scss';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.imagemCapa{
+  filter: grayscale(100);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+header{
+  height: 10vw;
+  position: fixed;
+  z-index: 2;
+}
+
+main[id="container"]{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+
+    section[class='sectionAlbum']{
+      position:relative;
+      height: 100vh;
+      width: 100%;
+
+        div {
+          position: absolute;
+          width: 60vw;
+          height: 75vh;
+          right: 5vw;
+          top:15vh;
+          cursor: pointer;
+        }
+        h1{
+          display: inline-block;
+          position: relative;
+          top:20vh;
+          left:5.5vw;
+          z-index:10;
+          @include fluidType(300px, 2100px, 80.5px, 150px);
+          font-weight: bolder;
+          color: $softCloud;
+          // -webkit-text-fill-color: $softCloud; /* Will override color (regardless of order) */
+          // -webkit-text-stroke-width: 1px;
+          // -webkit-text-stroke-color: $softGray;
+          text-shadow: 1px 1px 0 #9a9a9a, -1px -1px 0 #9a9a9a, 1px -1px 0 #9a9a9a, -1px 1px 0 #9a9a9a, 1px 1px 0 #9a9a9a;
+          cursor: pointer;
+        }
+        h1.uph1{
+          font-size: 30px;
+          top: -2.5rem;
+          left:0;
+          display: inline-block;
+        }
+        h1.downh1{
+          font-size: 30px;
+          top: 76vh;
+          left:57.5vw;
+          display: inline-block;
+          position: absolute;
+        }
+    }
+
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

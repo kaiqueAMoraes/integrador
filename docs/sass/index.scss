@@ -1,0 +1,136 @@
+@import 'mainSass.scss';
+
+
+body,
+ul{
+  @include SemEspacoExtra;
+}
+
+div.logo,
+section.conteudo{
+  position: absolute;
+}
+
+main{
+  a{
+    position: absolute;
+    display: inline-block;
+    color: $softBlack;
+    text-decoration: none;
+    margin: 1rem;
+
+      &:active,
+      &:hover,
+      &:focus{
+        transition: color .5s;
+        color: $softCloud;
+        /* background-color: $darkerBlack; */
+      }
+
+      &[id=portifolio]{
+        right: 0;
+        top: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+
+      &[class=contato]{
+        bottom: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+
+      &[id=sobre]{
+        top: 5vh;
+        right: 0;
+        font-size: TamanhoResponsivo(10,1);
+      }
+  }
+
+  img[class="iconIndex"]{
+    @include TamanhoObjeto(2rem,2rem);
+  }
+
+}
+
+section.container{
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  background: $snowCloud;
+
+  div.logo{
+    text-align: center;
+    font-weight: bold;
+    /* @include BoxImagem('../img/logo.png', no-repeat, contain); */
+    @include TamanhoObjeto(25vh, 11vh);
+    @include TamanhoEspaco(1rem,0,0,1rem);
+    z-index: 99999;
+    p{
+      @include fluidType(320px, 2600px, 15.5px, 25.5px);
+    }
+  }
+
+  section.containerImagem{
+    cursor: pointer;
+    @include CentralizarElemento(absolute);
+    @include TamanhoObjeto(40vw, 70vh);
+    @include BoxImagem('../img/img1.jpg', no-repeat, contain);
+    filter: grayscale(100%);
+    left: 55vw;
+    &:hover{
+      transition: filter 1s;
+      filter: grayscale(0%);
+    }
+      p{
+        position: relative;
+        font-size: TamanhoResponsivo(8, .7);
+        color: $softCloud;
+        @include TamanhoObjeto(25vw, auto);
+        @include TamanhoEspaco(33vh,0,0,-30vw);
+      }
+
+  }
+
+  section.conteudo{
+    height: 100vh;
+    display: flex;
+    div{
+      height: 100vh;
+      width: 50vw;
+      &[id=box2]{
+            background: $softGray;
+            transition:all 1s ease-in;
+            transform-origin: right 50%;
+
+              a{
+                color: $softCloud;
+
+                @include CentralizarElemento(relative);
+                @include fluidType(320px, 1600px, 40px, 60px);
+                &:hover{
+                  transition: color .7s;
+                  color: black;
+                }
+
+              }
+
+              }
+        &[id=box1]{
+          background: -webkit-linear-gradient(left, $softCloud 50%, $softBlack 50%);
+          background: -o-linear-gradient(left, $softCloud 50%, $softBlack 50% );
+          background: linear-gradient(to right, $softCloud 50%,$softBlack 50%);
+          background-size: 200% 100%;
+          background-position:left bottom;
+          transition:all 1s ease-out;
+          a{
+            @include CentralizarElemento(relative);
+            @include fluidType(320px, 1600px, 40px, 60px);
+            &:hover{
+              transition: color .7s;
+              color: $softBlack;
+            }
+          }
+          }
+      }
+    }
+
+}
