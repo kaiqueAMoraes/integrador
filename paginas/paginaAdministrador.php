@@ -21,8 +21,8 @@
     <main>
       <a href="editarAlbuns.php">Editar Albuns</a>
       <a href="editarSelecionados.php">Editar Selecionados</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+      <a href="sobre.php">Sobre</a>
+      <a href="contato.php">Contato</a>
     </main>
     <footer>
 
