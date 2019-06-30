@@ -5,7 +5,11 @@ $(function() {
 
     div[i].addEventListener("click", function() {
 
+<<<<<<< HEAD
       location.href="albumSelecionado.php" ;
+=======
+      location.href="albumSelecionado.php";
+>>>>>>> master
     });
   }
 
