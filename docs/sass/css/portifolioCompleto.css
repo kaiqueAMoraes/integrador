@@ -1,0 +1,300 @@
+.containerButton,
+.album {
+  position: relative;
+  border-radius: 3%;
+  height: 50vh;
+  width: 50vh;
+  margin-top: 2.5vw;
+  margin-right: 2.5vw;
+  margin-bottom: 2.5vw;
+  margin-left: 2.5vw;
+}
+
+.album {
+  background: #E4E4E4;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  border-top: 0.5vh;
+  border-right: 0.5vh;
+  border-bottom: 0.5vh;
+  border-left: 0.5vh;
+  border-radius: 100%;
+  left: 10vw;
+  color: #9a9a9a;
+  background-color: #F1F1F1;
+}
+.button:hover {
+  transition: color 0.4s, border 0.4s, background-color 0.7s;
+  border-color: #2ecc71;
+  background-color: #2ecc71;
+  color: #464646;
+}
+
+@keyframes encherDireita {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+@font-face {
+  font-family: "Lato Black";
+  src: url("../fonts/Lato/Lato-Black.ttf");
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url("../fonts/Lato/Lato-Light.ttf");
+}
+a,
+a:active,
+a:visited,
+input:focus {
+  color: #B9B9B9;
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  background-color: #F5F6F8;
+  font-family: "Lato Light";
+  scrollbar-color: #9a9a9a #464646;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #B9B9B9;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #f5f5f5;
+}
+
+input {
+  background: transparent;
+  width: 80vw;
+  font-size: ResponsiveText(20, 40);
+  border: none;
+  overflow: hidden;
+  font-weight: lighter;
+}
+input input::placeholder {
+  color: #ffffffa9;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B9B9B9;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555356;
+}
+
+div[id=voltar] {
+  cursor: pointer;
+  left: 1vw;
+  position: relative;
+  border-radius: 100%;
+  text-align: center;
+  display: inline-block;
+  background-color: #F1F1F1;
+  top: 1vw;
+  color: #242424;
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+}
+div[id=voltar] {
+  font-size: 80px;
+}
+@media screen and (min-width: 320px) {
+  div[id=voltar] {
+    font-size: calc(80px + 5 * ((100vw - 320px) / 1180));
+  }
+}
+@media screen and (min-width: 1500px) {
+  div[id=voltar] {
+    font-size: 85px;
+  }
+}
+div[id=voltar]:hover {
+  transition: background-color 500ms;
+  background-color: #E4E4E4;
+}
+div[id=voltar] a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 47%;
+}
+
+.noise {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+header,
+section[class=sectionProcura] {
+  background-color: #E4E4E4;
+}
+
+header {
+  height: 8vw;
+}
+header div {
+  z-index: 2;
+}
+
+input[id=procurar] {
+  font-family: "Lato Light";
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60%;
+  position: relative;
+  top: -7vw;
+}
+input[id=procurar] {
+  font-size: 35px;
+}
+@media screen and (min-width: 320px) {
+  input[id=procurar] {
+    font-size: calc(35px + 115 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  input[id=procurar] {
+    font-size: 150px;
+  }
+}
+input[id=procurar]::placeholder {
+  font-weight: 100;
+}
+input[id=procurar]:focus {
+  outline: 1px dashed #B9B9B9;
+}
+
+section[class=sectionProcura] {
+  position: relative;
+  height: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+section[class=sectionProcura] div.tagArea {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+section[class=sectionProcura] div.tagArea label {
+  margin-top: 1.5vw;
+  margin-right: 1.5vw;
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #555356;
+  border-radius: 10px;
+  cursor: pointer;
+}
+section[class=sectionProcura] div.tagArea label {
+  font-size: 15.5px;
+}
+@media screen and (min-width: 320px) {
+  section[class=sectionProcura] div.tagArea label {
+    font-size: calc(15.5px + 5 * ((100vw - 320px) / 2280));
+  }
+}
+@media screen and (min-width: 2600px) {
+  section[class=sectionProcura] div.tagArea label {
+    font-size: 20.5px;
+  }
+}
+section[class=sectionProcura] div.tagArea label input {
+  width: auto;
+  position: absolute;
+  z-index: -999;
+  height: 0.1px;
+  width: 0.1px;
+  opacity: 0;
+}
+
+main {
+  position: relative;
+  top: 20vh;
+  height: 100%;
+}
+main section[class=container] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+main section[class=container] div[class=album] {
+  overflow: hidden;
+  position: relative;
+  height: calc(70px + 26.5vw);
+  width: calc(70px + 26.5vw);
+  margin-top: 0.5vw;
+  margin-right: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: 0.5vw;
+  border-radius: 0;
+  background-size: contain;
+}
+main section[class=container] div[class=album] img {
+  width: 100%;
+}
+main section[class=container] div[class=album]:hover {
+  transition: background-color 0.5s;
+  background: #242424;
+}
+
+footer {
+  height: 70vh;
+}
+
+/*# sourceMappingURL=portifolioCompleto.css.map */

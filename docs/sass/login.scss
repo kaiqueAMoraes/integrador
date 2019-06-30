@@ -1,0 +1,53 @@
+@import 'mainSass.scss';
+
+
+
+header{
+  height: 15vh;
+}
+
+main{
+
+  section[class="conteudo"]{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    input{
+      text-align: center;
+      & {
+      + input[id="enviaForm"]{
+          display: none;
+
+        }
+
+      }
+    }
+    input[id="usuario"],
+    input[id="senha"]{
+      @include fluidType(320px, 1600px, 35px, 150px);
+      font-family: 'Lato Light';
+      &::placeholder{
+        font-weight: 100;
+      }
+      &:focus{
+        outline: 1px dashed $grayedCloud;
+      }
+    }
+    input[id=usuario]{
+      margin-bottom: 15.5vh;
+    }
+    a{
+      position: absolute;
+      display: block;
+      bottom: -2vw;
+      right: 35.5vw;
+      &:focus{
+        outline: 1px dashed $grayedCloud;
+      }
+    }
+  }
+}
+footer{
+  height:25vh;
+}

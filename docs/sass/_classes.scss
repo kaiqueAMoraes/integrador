@@ -1,0 +1,38 @@
+
+.containerButton,
+.album{
+  position: relative;
+  @include TamanhoBordas($b-radius: 3%);
+  @include TamanhoObjeto(50vh, 50vh);
+  @include TamanhoMargin(2.5vw,2.5vw,2.5vw,2.5vw);
+}
+
+.album{
+    background: $snowShadow;
+    cursor: pointer;
+}
+
+
+
+.button{
+  $a:TextoResponsivo(50,80);
+  cursor: pointer;
+  @include CentralizarElemento(absolute);
+  @include TamanhoObjeto($a, $a);
+  @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
+  left: 10vw;
+  color: $softGray;
+  background-color: $snowGray;
+    &:hover{
+      transition: color .4s,border .4s, background-color .7s;
+      border-color: $softGreen;
+      background-color: $softGreen;
+      color: $darkGray;
+    }
+}
+
+
+@keyframes encherDireita {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
