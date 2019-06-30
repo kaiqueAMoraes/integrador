@@ -22,7 +22,7 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
- truncate table tb_foto;
+ truncate table tb_album;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -73,4 +73,4 @@ select * from tb_album_tag;*/
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1;
          
-DELETE  FROM `tb_album`, `tb_foto` USING `tb_album`, `tb_foto` WHERE `tb_album`.`id_album` = 3 AND `tb_foto`.`id_album` = 3;
+SET foreign_key_checks = 0;DELETE FROM `tb_album`, `tb_foto` USING `tb_album`, `tb_foto` WHERE `tb_album`.`id_album` = 1 AND `tb_foto`.`id_album` = 1;SET foreign_key_checks = 1;

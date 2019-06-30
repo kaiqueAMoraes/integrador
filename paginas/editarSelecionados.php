@@ -7,7 +7,7 @@
          from tb_album inner join tb_foto
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
-  $result= mysqli_query(AbreConexaoBd(), $sql);
+  $result= mysqli_query($conexao, $sql);
 
   include("../objetos/obj_selecionado.php");
 
@@ -48,7 +48,7 @@
                 </div></a>";
           }
 
-            echo "      <input type='submit' value='Selecionado'></form>";
+          echo "<input type='submit' value='Selecionado'></form>";
         ?>
       </section>
     </main>
