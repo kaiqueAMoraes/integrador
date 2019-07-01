@@ -1,53 +1,68 @@
 @import 'mainSass.scss';
-
-
-
 header{
-  height: 15vh;
+  position: absolute;
+  z-index: 2;
 }
 
 main{
 
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  div[class="erroSession"]{
+    position: absolute;
+    height: 5vw;
+    width: 100%;
+    background-color: #f9ca24;
+    text-align: center;
+    p{
+      @include fluidType(320px, 1600px, 15px, 30px);
+      color: $softCloud;
+      @include CentralizarElemento(relative);
+    }
+  }
   section[class="conteudo"]{
     position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
-    input{
-      text-align: center;
-      & {
-      + input[id="enviaForm"]{
-          display: none;
+    height: 100%;
+    form{
+      @include CentralizarElemento(relative);
+      input{
+        text-align: center;
+        & {
+        + input[id="enviaForm"]{
+            display: none;
+
+          }
 
         }
-
       }
-    }
-    input[id="usuario"],
-    input[id="senha"]{
-      @include fluidType(320px, 1600px, 35px, 150px);
-      font-family: 'Lato Light';
-      &::placeholder{
-        font-weight: 100;
+      input[id="usuario"],
+      input[id="senha"]{
+        @include fluidType(320px, 1600px, 35px, 150px);
+        font-family: 'Lato Light';
+        &::placeholder{
+          font-weight: 100;
+        }
+        &:focus{
+          outline: 1px dashed $grayedCloud;
+        }
       }
-      &:focus{
-        outline: 1px dashed $grayedCloud;
+      input[id=usuario]{
+        margin-bottom: 10.5vh;
       }
-    }
-    input[id=usuario]{
-      margin-bottom: 15.5vh;
     }
     a{
-      position: absolute;
-      display: block;
-      bottom: -2vw;
-      right: 35.5vw;
+      @include CentralizarElemento(absolute);
+      top: 90%;
+      @include fluidType(320px, 1600px, 15px, 25px);
+
       &:focus{
         outline: 1px dashed $grayedCloud;
       }
     }
   }
-}
-footer{
-  height:25vh;
 }

@@ -222,11 +222,11 @@ section.container div.logo {
   font-weight: bold;
   /* @include BoxImagem('../img/logo.png', no-repeat, contain); */
   height: 11vh;
-  width: 25vh;
+  width: 10vh;
   top: 1rem;
   right: 0;
   bottom: 0;
-  left: 1rem;
+  left: 1.5rem;
   z-index: 99999;
 }
 section.container div.logo p {

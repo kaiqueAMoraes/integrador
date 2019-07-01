@@ -57,13 +57,13 @@ section[class="sectionProcura"]{
         border-radius: 10px;
         cursor: pointer;
 
-          input{
-            width: auto;
-            position: absolute;
-            z-index: -999;
-            @include TamanhoObjeto(.1px,.1px);
-            opacity: 0;
-          }
+        input{
+          width: auto;
+          position: absolute;
+          z-index: -999;
+          @include TamanhoObjeto(.1px,.1px);
+          opacity: 0;
+        }
       }
   }
 }

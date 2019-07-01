@@ -7,16 +7,17 @@
   }
 
 
- CliqueCheckbox = document.getElementsByTagName('input');
-//   Checked[0].onclick = function OnCheckedMudaCor(){
+var Label = document.getElementsByTagName('label');
 
 var CheckedBox = document.getElementsByTagName('input');
 
-var CheckedBox = document.getElementsByTagName('input');
 for (var j = 0; j < CheckedBox.length; j++){
   CheckedBox[j].onclick = function OnCheckedMudaCor(){
-      if(CheckedBox[j].checked){
-        alert('checked ' + j);
-      }
+
+  Label.className += " " + "BackgroundColorOfLabel";
+
+      // if(CheckedBox[j].checked){
+      //   alert('checked ' + j);
+      // }
     }
   }
