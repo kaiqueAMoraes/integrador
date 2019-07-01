@@ -6,18 +6,26 @@
     });
   }
 
-
+function fundolabel(x){
 var Label = document.getElementsByTagName('label');
+// alert(Label[x].style.backgroundColor);
+if(Label[x].style.backgroundColor === "rgb(46, 204, 113)"){
 
+    Label[x].style.backgroundColor = "rgb(85, 83, 86)";
+
+}else{
+  Label[x].style.backgroundColor = "rgb(46, 204, 113)";
+}
+
+
+}
 var CheckedBox = document.getElementsByTagName('input');
 
-for (var j = 0; j < CheckedBox.length; j++){
-  CheckedBox[j].onclick = function OnCheckedMudaCor(){
 
-  Label.className += " " + "BackgroundColorOfLabel";
+ CheckedBox[1].onclick = function OnCheckedMudaCor(){
+      fundolabel(1 - 1);
+   }
 
-      // if(CheckedBox[j].checked){
-      //   alert('checked ' + j);
-      // }
-    }
-  }
+   CheckedBox[2].onclick = function OnCheckedMudaCor(){
+        fundolabel(2 - 1);
+     }

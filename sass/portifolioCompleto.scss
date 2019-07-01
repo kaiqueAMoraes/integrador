@@ -56,7 +56,7 @@ section[class="sectionProcura"]{
         background-color: $graish;
         border-radius: 10px;
         cursor: pointer;
-
+        transition: background-color .5s;
         input{
           width: auto;
           position: absolute;

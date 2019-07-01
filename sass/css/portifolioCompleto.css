@@ -237,6 +237,7 @@ section[class=sectionProcura] div.tagArea label {
   background-color: #555356;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.5s;
 }
 section[class=sectionProcura] div.tagArea label {
   font-size: 15.5px;
