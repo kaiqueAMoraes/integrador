@@ -8,7 +8,7 @@
     }
 
 
-    require_once("../objetos/obj_processaLogin.php");
+    require_once("objetos/obj_processaLogin.php");
 
 ?>
 
@@ -17,8 +17,8 @@
   <head>
     <meta charset="utf-8">
     <title>Login Administrador</title>
-    <link rel="stylesheet" type="text/css" href="../sass/css/login.css">
-    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="./sass/css/login.css">
+    <script src="./js/backgroundChiado.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
