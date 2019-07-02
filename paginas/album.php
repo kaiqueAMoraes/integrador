@@ -72,6 +72,6 @@ include("../objetos/obj_conexao_bd.php");
 
   </main>
 <footer>
-<a href="#">Proximo Album</a>
+  
 </footer>
 </body>
