@@ -17,37 +17,34 @@
   <head>
     <meta charset="utf-8">
     <title>Login Administrador</title>
-    <link rel="stylesheet" type="text/css" href="../sass/css/login.css";>
-    <link rel="stylesheet" type="text/css" href="../sass/css/mainCss.css";>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../sass/css/login.css">
+    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
   <body>
+    <header>
+      <div id="voltar" title="Voltar á pagina anterior">
+        <a href="../index.html"><span>&#60;</span></a>
+      </div>
+    </header>
+    <canvas id="noise" class="noise"></canvas>
+    <main>
+
       <?php
 
-          if (!empty($_SESSION["erro"])){
-                 echo '<div class="alert alert-danger" role="alert">
-                        USUARIO OU SENHA INCORRETO !!!
-                     </div>';
-                 unset($_SESSION["erro"]);
-              }
-       ?>
-    <main>
+      if (!empty($_SESSION["erro"])){
+        echo '<div class="erroSession">
+        <p>USUARIO OU SENHA INCORRETO !!!</p>
+        </div>';
+        unset($_SESSION["erro"]);
+      }
+      ?>
       <section class="conteudo">
-
         <form action="../objetos/obj_processaLogin.php" method="post">
                 <input type="text" id="usuario" placeholder="usuario" name="nome">
                 <input type="password" id="senha" placeholder="senha" name="senha">
                 <input id="enviaForm" type="submit"  value="enviar">
-                <span class="cursor"></span>
-                <span class="cursor"></span>
         </form>
-
-
-
-
-        <div id="logoImagem"></div>
         <a href="#" id="refazerSenha" >Esqueci a senha!</a>
-        <a id="voltar" href="../index.html">voltar</a>
       </section>
     </main>
   </body>

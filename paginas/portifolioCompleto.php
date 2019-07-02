@@ -16,7 +16,7 @@
     <meta charset="utf-8">
     <title>Editar Albuns</title>
     <link rel="stylesheet" type="text/css" href="../sass/css/portifolioCompleto.css">
-    <script src="../js/portifolio.js" charset="utf-8"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
 <body>
@@ -30,14 +30,14 @@
   <section class="sectionProcura">
   <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
     <div class="tagArea">
-    <label><input type="checkbox" name="checkbox" value="value">casamento</label>
+    <label><input class="teste" type="checkbox" name="checkbox"  value="value">casamento</label>
     <label><input type="checkbox" name="checkbox" value="value">infantil</label>
     <label><input type="checkbox" name="checkbox" value="value">eventos</label>
     <label><input type="checkbox" name="checkbox" value="value">mulher</label>
     <label><input type="checkbox" name="checkbox" value="value">homem</label>
     <label><input type="checkbox" name="checkbox" value="value">ensaio</label>
-    <label><input type="checkbox" name="checkbox" value="value">pets</label>
-    <label><input class="teste" type="checkbox" name="checkbox" value="value">roberto carlos</label>
+    <label><input type="checkbox" name="checkbox" value="value">pets</input></label>
+  
     </div>
   </section>
     <main>
@@ -59,3 +59,4 @@
 
 </footer>
 </body>
+<script src="../js/portifolio.js" charset="utf-8"></script>

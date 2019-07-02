@@ -61,8 +61,8 @@ section.container{
     text-align: center;
     font-weight: bold;
     /* @include BoxImagem('../img/logo.png', no-repeat, contain); */
-    @include TamanhoObjeto(25vh, 11vh);
-    @include TamanhoEspaco(1rem,0,0,1rem);
+    @include TamanhoObjeto(10vh, 11vh);
+    @include TamanhoEspaco(1rem,0,0,1.5rem);
     z-index: 99999;
     p{
       @include fluidType(320px, 2600px, 15.5px, 25.5px);
@@ -97,7 +97,7 @@ section.container{
       height: 100vh;
       width: 50vw;
       &[id=box2]{
-            background: $softGray;
+            background: $veryLightGray;
             transition:all 1s ease-in;
             transform-origin: right 50%;
 
