@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .containerButton,
 .album {
   position: relative;
@@ -219,7 +220,7 @@ section[class=sectionProcura] {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 section[class=sectionProcura] div.tagArea {
   display: flex;
@@ -238,6 +239,18 @@ section[class=sectionProcura] div.tagArea label {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.5s;
+  -webkit-touch-callout: none;
+  /* iPhone OS, Safari */
+  -webkit-user-select: none;
+  /* Chrome, Safari 3 */
+  -khtml-user-select: none;
+  /* Safari 2 */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  user-select: none;
+  /* Possível implementação no futuro */
 }
 section[class=sectionProcura] div.tagArea label {
   font-size: 15.5px;
