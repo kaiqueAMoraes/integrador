@@ -7,7 +7,7 @@
  if (isset($_POST["nome"]) && isset($_POST["senha"])) {
         $nome = $_POST["nome"];
         $senha = $_POST["senha"];
-        
+
 
        $conexao = AbreConexaoBd();
 
@@ -23,7 +23,7 @@
         else{
             session_start();
             $_SESSION["erro"] = true;
-            header("location:../paginas/login.php");
+            header("location:../login.php");
 
         }
         mysqli_close($conexao);
