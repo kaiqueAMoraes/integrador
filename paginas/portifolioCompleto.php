@@ -29,14 +29,15 @@
   </header>
   <section class="sectionProcura">
   <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
-    <div class="tagArea"> 
-    <label><input class="teste" type="checkbox" name="checkbox" value="value">casamento</label>
+    <div class="tagArea">
+    <label><input class="teste" type="checkbox" name="checkbox"  value="value">casamento</label>
     <label><input type="checkbox" name="checkbox" value="value">infantil</label>
     <label><input type="checkbox" name="checkbox" value="value">eventos</label>
     <label><input type="checkbox" name="checkbox" value="value">mulher</label>
     <label><input type="checkbox" name="checkbox" value="value">homem</label>
     <label><input type="checkbox" name="checkbox" value="value">ensaio</label>
-    <label><input type="checkbox" name="checkbox" value="value">pets</input>
+    <label><input type="checkbox" name="checkbox" value="value">pets</input></label>
+  
     </div>
   </section>
     <main>
