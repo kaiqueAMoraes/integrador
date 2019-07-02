@@ -4,11 +4,11 @@
 
     if (isset($_SESSION["user"]) && $_SESSION["user"] > 0) {
         // se já estiver logado, redireciona para a pagina inicial
-        header("location:./paginaAdministrador.php");
+        header("location:./paginas/paginaAdministrador.php");
     }
 
 
-    require_once("objetos/obj_processaLogin.php");
+    require_once("./objetos/obj_processaLogin.php");
 
 ?>
 
@@ -39,7 +39,7 @@
       }
       ?>
       <section class="conteudo">
-        <form action="../objetos/obj_processaLogin.php" method="post">
+        <form action="./objetos/obj_processaLogin.php" method="post">
                 <input type="text" id="usuario" placeholder="usuario" name="nome">
                 <input type="password" id="senha" placeholder="senha" name="senha">
                 <input id="enviaForm" type="submit"  value="enviar">
