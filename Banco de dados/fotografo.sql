@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
   `id_album` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `id_tag` INT,
-  `selecionado` INT,
+  `selecionado` INT(1),
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`id_album`))
 ;
@@ -73,4 +73,3 @@ select * from tb_album_tag;*/
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1;
          
-SET foreign_key_checks = 0;DELETE FROM `tb_album`, `tb_foto` USING `tb_album`, `tb_foto` WHERE `tb_album`.`id_album` = 1 AND `tb_foto`.`id_album` = 1;SET foreign_key_checks = 1;

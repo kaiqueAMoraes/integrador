@@ -9,7 +9,7 @@
          where tb_foto.foto_capa = 1";
   $result= mysqli_query($conexao, $sql);
 
-  include("../objetos/obj_deleteAlbum.php");
+//  include("../objetos/obj_deleteAlbum.php");
  ?>
 
 <!DOCTYPE html>
@@ -36,17 +36,26 @@
       <div class="button" id="button" title="Criar um novo album"><span>&#x2b;</span></div>
       <section class="container">
         <?php
-        echo "<form method='post'>";
+//echo "<form method='post' action='../objetos/obj_deleteAlbum.php'>";
+ echo "<div>";
 
           while($album = mysqli_fetch_assoc($result)){
+            echo "<a href='../objetos/obj_deleteAlbum.php?id_album=".$album['id_album']."'>Excluir</a>";
 
           echo "<a href= 'album.php?id_album=".$album['id_album']."'><div
-                style=\"background-image: url('../albuns/".$album['dir']."/".$album['arq']."'); background-repeat: no-repeat; background-size: cover; background-position: center; filter: grayscale(100%); \" class='album'>
-                </div></a>
-                <a type='hidden' name='excluir' id='".$album['id_album']."' value='".$album['id_album']."'></a>
-                <input style='' type='submit' value='Excluir'>";
-          }
-          echo "</form>";
+                style=\"background-image: url('../albuns/".$album['dir']."/".$album['arq']."');
+                background-repeat: no-repeat; background-size: cover; background-position: center;
+                filter: grayscale(100%); \" class='album'>
+                   </div></a>";
+
+
+
+
+
+        }
+  //<input type='hidden' name='excluir' id='".$album['id_album']."' value='".$album['id_album']."'>
+      //echo "</form>";
+       echo "</div>";
         ?>
       </section>
     </main>

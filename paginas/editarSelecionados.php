@@ -48,7 +48,7 @@
                 </div></a>";
           }
 
-          echo "<input type='submit' value='Selecionado'></form>";
+          echo "<input type='submit' value='Adicionar'></form>";
         ?>
       </section>
     </main>
