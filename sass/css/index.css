@@ -280,7 +280,7 @@ section.container section.conteudo div {
   width: 50vw;
 }
 section.container section.conteudo div[id=box2] {
-  background: #e4e4e4;
+  background: #bfbfbf;
   transition: all 1s ease-in;
   transform-origin: right 50%;
 }

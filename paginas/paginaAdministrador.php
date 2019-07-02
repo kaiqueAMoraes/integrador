@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
     require_once("../objetos/obj_processaLogin.php");
     include("../objetos/obj_validaLogin.php");
 ?>
@@ -9,20 +9,36 @@
   <head>
     <meta charset="utf-8">
     <title>Pagina Administrador</title>
-    <link rel="stylesheet" type="text/css" href="../sass/css/paginaAdmnistrador.css">
+    <link rel="stylesheet" type="text/css" href="../sass/css/paginaAdministrador.css">
+    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a href="../index.html"><span>&#60;</span></a>
+        <a href="../index.html"><span>x</span></a>
       </div>
-      <h1>Menu administrador</h1>
+
+      <div class="blockOfWidth"></div>
+
+      <div class="boxHeader underline-from-center">
+        <a href="editarSelecionados.php">Editar Selecionados</a>
+      </div>
+
+      <div class="boxHeader underline-from-center">
+        <a href="editarAlbuns.php">Editar Albuns</a>
+      </div>
+
+      <div class="boxHeader boxMenor underline-from-center">
+        <a href="sobre.php">Sobre</a>
+      </div>
+
+      <div class="boxHeader boxMenor underline-from-center">
+        <a href="contato.php">Contato</a>
+      </div>
+
     </header>
+    <canvas id="noise" class="noise"></canvas>
     <main>
-      <a href="editarAlbuns.php">Editar Albuns</a>
-      <a href="editarSelecionados.php">Editar Selecionados</a>
-      <a href="sobre.php">Sobre</a>
-      <a href="contato.php">Contato</a>
     </main>
     <footer>
 

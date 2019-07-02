@@ -39,6 +39,14 @@
   color: #464646;
 }
 
+@keyframes encherDireita {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
 @font-face {
   font-family: "Lato Black";
   src: url("../fonts/Lato/Lato-Black.ttf");
@@ -122,8 +130,9 @@ div[id=voltar] {
   background-color: #F1F1F1;
   top: 1vw;
   color: #242424;
-  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: 80px;
+  height: 80px;
+  position: absolute;
 }
 div[id=voltar] {
   font-size: 80px;
@@ -140,7 +149,7 @@ div[id=voltar] {
 }
 div[id=voltar]:hover {
   transition: background-color 500ms;
-  background-color: #E4E4E4;
+  background-color: lig;
 }
 div[id=voltar] a {
   position: absolute;
@@ -161,70 +170,99 @@ div[id=voltar] a {
   opacity: 0.05;
 }
 
-header {
-  display: flex;
-  height: 15vw;
-}
-header h1 {
+.underline-from-center {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
-  font-family: "Lato Light";
-  font-weight: lighter;
-  top: 1vw;
-  left: 2.5vw;
-  color: #B9B9B9;
+  overflow: hidden;
 }
-header h1 {
+.underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-image: radial-gradient(circle, #9a9a9a, #f5f5f5);
+  height: 4px;
+  -webkit-transition-property: left right;
+  transition-property: left right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-from-center:hover:before {
+  left: 0;
+  right: 0;
+}
+
+.blockOfWidth {
+  width: 15%;
+}
+
+.boxHeader {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  text-align: center;
+}
+.boxHeader {
   font-size: 20px;
 }
 @media screen and (min-width: 320px) {
-  header h1 {
-    font-size: calc(20px + 70 * ((100vw - 320px) / 1280));
+  .boxHeader {
+    font-size: calc(20px + 5 * ((100vw - 320px) / 1280));
   }
 }
 @media screen and (min-width: 1600px) {
-  header h1 {
-    font-size: 90px;
+  .boxHeader {
+    font-size: 25px;
   }
 }
-@media (max-width: 320px) and (max-width: 767px) {
-  header {
-    height: 75vh;
-  }
-  header h1 {
-    top: 6.5vw;
-    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300))) !important;
-  }
+.boxHeader a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.boxMenor {
+  width: 16.5%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 6.5rem;
+  width: 100%;
+  box-shadow: 2px -3px 10px #B9B9B9;
+}
+header a {
+  position: relative;
+  left: 2.5vw;
+}
+header a:hover {
+  transition: color 1s;
+  color: #323232;
+}
+header a:focus {
+  outline: 1px dashed #B9B9B9;
+}
+
+header div a span {
+  position: relative;
+  top: -8px;
 }
 
 main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-main {
-  font-size: 50px;
-}
-@media screen and (min-width: 300px) {
-  main {
-    font-size: calc(50px + 60 * ((100vw - 300px) / 1300));
-  }
-}
-@media screen and (min-width: 1600px) {
-  main {
-    font-size: 110px;
-  }
-}
-main a {
-  position: relative;
-  left: 2.5vw;
-  margin-bottom: 4.5vh;
-}
-main a:hover {
-  transition: color 1s;
-  color: #323232;
-}
-main a:focus {
-  outline: 1px dashed #B9B9B9;
 }
 
 footer {
