@@ -1,4 +1,5 @@
 <?php
+session_start();
   require_once("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
 
@@ -8,6 +9,15 @@
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
   $result= mysqli_query($conexao, $sql);
+
+
+
+  if (isset($_SESSION["apagado"])){
+    echo '<div>
+    <p>ALBUM APAGADO COM SUCESSO !!!</p>
+    </div>';
+    unset($_SESSION["apagado"]);
+  }
 
 //  include("../objetos/obj_deleteAlbum.php");
  ?>
@@ -59,19 +69,35 @@
       <div class="button" id="button" title="Criar um novo album"><span>&#x2b;</span></div>
       <section class="container">
         <?php
+<<<<<<< HEAD
 //echo "<form method='post' action='../objetos/obj_deleteAlbum.php'>";
 while($album = mysqli_fetch_assoc($result)){
  echo "<div class='albumEditar' >";
 
             echo "<a title='excluir album.' class='deleteButton' href='../objetos/obj_deleteAlbum.php?id_album=".$album['id_album']."'><span>X</span></a>";
+=======
+
+          echo "<div>";
+
+          while($album = mysqli_fetch_assoc($result)){
+            echo "<a href='../objetos/obj_deleteAlbum.php?id_album=".$album['id_album']."&dir=".$album['dir']."'>Excluir</a>";
+>>>>>>> master
 
           echo "<a href= 'album.php?id_album=".$album['id_album']."'><div
                 style=\"background-image: url('../albuns/".$album['dir']."/".$album['arq']."');
                 background-repeat: no-repeat; background-size: cover; background-position: center;
                 filter: grayscale(100%); \" class='albumEditar' >
                    </div></a>";
+<<<<<<< HEAD
           echo "</div>";
         }
+=======
+        }
+  //<input type='hidden' name='excluir' id='".$album['id_album']."' value='".$album['id_album']."'>
+
+             echo "</div>";
+
+>>>>>>> master
         ?>
       </section>
     </main>
