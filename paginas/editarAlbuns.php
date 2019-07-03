@@ -40,7 +40,6 @@
           echo "<div>";
 
           while($album = mysqli_fetch_assoc($result)){
-            echo "<form method='post'>";
             echo "<a href='../objetos/obj_deleteAlbum.php?id_album=".$album['id_album']."&dir=".$album['dir']."'>Excluir</a>";
 
           echo "<a href= 'album.php?id_album=".$album['id_album']."'><div
@@ -48,7 +47,6 @@
                 background-repeat: no-repeat; background-size: cover; background-position: center;
                 filter: grayscale(100%); \" class='album'>
                    </div></a>";
-            echo "</form>";
         }
   //<input type='hidden' name='excluir' id='".$album['id_album']."' value='".$album['id_album']."'>
 
