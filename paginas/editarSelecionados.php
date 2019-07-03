@@ -57,19 +57,22 @@
             <?php
 
             while($album = mysqli_fetch_assoc($result)){
+              echo "<div class='albumContainer'>";
+              echo "<label title='Selecionar Album' class='albunsSelecionadoButton'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'><span>OK</span></label>";
+
             echo "<a class='albumSelecionado' href= 'album.php?id_album=".$album['id_album']."'>
             <div class='albumSelecionado'
                   style=\"background-image: url('../albuns/".$album['dir']."/".$album['arq']."');
                   background-repeat: no-repeat;
                   background-size: cover;
                   background-position: center;
-                  filter: grayscale(100%);
+
                   \">
 
-                  <label title='Selecionar Album' class='albunsSelecionadoButton'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'><span>OK</span></label>
 
 
             </div></a>";
+            echo "</div>";
             }
             ?>
 
@@ -101,10 +104,9 @@ for (var k = 1; k < CheckedBox.length; k++){
 if(CheckedBox[k].type == "checkbox"){
   v = k ;
   CheckedBox[k].setAttribute("onclick",'fundolabel('+ v + ')');
-}
+  }
 }
 </script>
-<!-- <script type="text/javascript" src="../js/criarDiv.js"></script> -->
 </body>
 
 </html>

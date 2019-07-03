@@ -57,7 +57,7 @@
 
                 }
                ?>
-               
+
           <section class="sectionAlbum">
 
               <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/880?grayscale');"  class="imagemCapa"></div>

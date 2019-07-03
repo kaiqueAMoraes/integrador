@@ -12,7 +12,30 @@
     cursor: pointer;
 }
 
+.alertSucesso,
+.alertErro,
+.alertAtencao{
+  position: absolute;
+  height: 5vw;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+  p{
+    @include fluidType(320px, 1600px, 15px, 30px);
+    color: $softCloud;
+    @include CentralizarElemento(relative);
+  }
+}
 
+.alertSucesso{
+  background-color: $softGreen;
+}
+.alertErro{
+  background-color: $alertRed;
+}
+.alertAtencao{
+  background-color: $alertOrange;
+}
 
 .button{
   $a:TextoResponsivo(50,80);
