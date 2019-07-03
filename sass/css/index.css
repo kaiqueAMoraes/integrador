@@ -271,7 +271,7 @@ main a[id=sobre] {
   right: 0;
   font-size: calc(10px + 1vw);
   font-weight: bold;
-  color: #f5f5f5;
+  color: #999999;
 }
 main img[class=iconIndex] {
   height: 2rem;
@@ -295,6 +295,9 @@ section.container div.logo {
   bottom: 0;
   left: 1.5rem;
   z-index: 99999;
+}
+section.container div.logo p {
+  color: #999999;
 }
 section.container div.logo p {
   font-size: 15.5px;
@@ -347,7 +350,7 @@ section.container section.conteudo div {
   width: 50vw;
 }
 section.container section.conteudo div[id=box2] {
-  background: #bfbfbf;
+  background: #dcdcdc;
   transition: all 1s ease-in;
   transform-origin: right 50%;
 }
