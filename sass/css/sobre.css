@@ -318,16 +318,78 @@ header a:focus {
   outline: 1px dashed #B9B9B9;
 }
 
+html {
+  color: #000;
+}
+
 header div:nth-of-type(5) a {
   color: #464646;
 }
 
 main {
+  /* @include media (">phone", "<tablet"){
+
+      input[id="nomeAlbum"]{
+        font-size: TextoResponsivo(50,100) !important;
+        // background: red;
+      }
+      textarea{
+        font-size: TextoResponsivo(30,100) !important;
+      }
+  }
+
+  @include media (">tablet", "<desktop"){
+    $a:TextoResponsivo(40,60);
+    input{
+      font-size: $a;
+    }
+
+  }
+  @include media (">phone", "<tablet"){
+    $a:TextoResponsivo(30,60);
+    input{
+      font-size: $a;
+    }
+  } */
+}
+main form {
   margin-top: 15vw;
   display: flex;
   flex-direction: column;
 }
-main input {
+main form div[class=imagensContainer] {
+  background-color: #F1F1F1;
+  outline: 2px dashed #B9B9B9;
+  outline-offset: -10px;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  display: flex;
+  box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.2), 0px 3px 20px rgba(0, 0, 0, 0.1);
+}
+@-moz-document url-prefix() {
+  main form div[class=imagensContainer] {
+    outline: none;
+  }
+}
+main form div[class=imagensContainer] label {
+  cursor: pointer;
+  font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #464646;
+}
+main form div[class=imagensContainer] div[class=box__input] {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main form input {
   font-size: calc(20px + (80 - 20) * ((100vw - 300px) / (1600 - 300)));
   padding: 0;
   margin: 0;
@@ -338,10 +400,10 @@ main input {
   margin-right: auto;
   color: #9a9a9a;
 }
-main input:focus {
+main form input:focus {
   border-bottom: 1px solid #9a9a9a;
 }
-main textarea {
+main form textarea {
   position: relative;
   top: 10vh;
   resize: none;
@@ -358,20 +420,66 @@ main textarea {
   padding-left: 2vw;
   font-size: calc(15px + (50 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
-main textarea:active, main textarea:focus {
+main form textarea:active, main form textarea:focus {
   transition: border 0.3s;
   border: 1px dashed #B9B9B9;
 }
-main button[type=submit] {
+main form section {
+  position: relative;
+  margin-top: 5vw;
+  height: 10vw;
+  width: 100%;
+}
+main form section button[type=submit] {
   position: absolute;
-  bottom: 2.5vw;
-  right: 2.5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   background-color: transparent;
   border: none;
   color: #242424;
   font-size: calc(10px + (35 - 10) * ((100vw - 300px) / (1600 - 300)));
   cursor: pointer;
+}
+main .box.has-advanced-upload {
+  position: relative;
+  top: 25vh;
+}
+main .box__dragndrop,
+main .box__uploading,
+main .box__success,
+main .box__error {
+  display: none;
+}
+main .boxFile {
+  display: inline-block;
+  position: relative;
+  height: 80vh;
+  width: 80vw;
+  opacity: 0;
+}
+main .box.has-advanced-upload .box__dragndrop {
+  display: inline-block;
+}
+main .box.is-dragover div[class=imagensContainer] {
+  transition: background-color 1s;
+  background-color: #E4E4E4;
+}
+main div[class=box__input] {
+  position: relative;
+}
+main .box.is-uploading .box__input {
+  visibility: none;
+  display: none;
+}
+main .box.is-uploading .box__uploading {
+  display: block;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=sobre.css.map */

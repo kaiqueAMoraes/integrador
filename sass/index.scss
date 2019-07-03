@@ -39,9 +39,11 @@ main{
       }
 
       &[id=sobre]{
-        top: 5vh;
+        top: .5rem;
         right: 0;
         font-size: TamanhoResponsivo(10,1);
+        font-weight: bold;
+        color: $softCloud;
       }
   }
 

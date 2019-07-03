@@ -5,7 +5,8 @@
     <title>Pagina Administrador</title>
     <link rel="stylesheet" type="text/css" href="../sass/css/sobre.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
+    <script src="../js/uploadImagens.js" charset="utf-8"></script>
+    <!-- <script src="../js/backgroundChiado.js" charset="utf-8"></script> -->
   </head>
   <body>
     <header>
@@ -34,12 +35,25 @@
     </header>
 
     <main>
-      <form class="" action="#" method="post">
-        <div>
-          <input  type="file" name="autorCapa[]" id="aautorCapa" />
-        </div>
+      <form class="" id="form_cadastra" action="#" method="post" enctype="multipart/form-data">
         <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descrição do autor." maxlength='140'></textarea>
-        <button type="submit" name="button">Finalizar</button>
+
+        <div class="imagensContainer">
+          <div class="box__input">
+            <input class="boxFile" type="file" name="foto[]" id="file" data-multiple-caption="{count} arquivos selecionados" multiple />
+            <label for="file"><strong>Selecione um arquivo&nbsp;</strong><span class="box__dragndrop">&nbsp;ou arraste ele aqui</span>.</label>
+
+          </div>
+
+          <div class="box__uploading">Uploading&hellip;</div>
+          <div class="box__success">Done!</div>
+          <div class="box__error">Error! <span></span>.</div>
+        </div>
+
+        <section>
+          <button type="submit" name="button">Finalizar</button>
+
+        </section>
       </form>
     </main>
   </body>

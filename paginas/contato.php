@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Pagina Administrador</title>
-    <link rel="stylesheet" type="text/css" href="../sass/css/sobre.css">
+    <link rel="stylesheet" type="text/css" href="../sass/css/contato.css">
+    <!-- <script src="../js/backgroundChiado.js" charset="utf-8"></script> -->
+
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -34,8 +35,15 @@
     </header>
 
     <main>
-      <input type="text" id="instagram" name="instagram" value="" placeholder="url do instagram" maxlength="50">
-      <input type="text" id="facebook" name="facebook" value="" placeholder="url do facebook" maxlength="50">
-      <input type="text" id="email" name="email" value="" placeholder="url do email" maxlength="50">
+      <form class="" action="index.html" method="post">
+
+        <input type="text" id="instagram" name="instagram" value="" placeholder="url do instagram" maxlength="50">
+        <input type="text" id="facebook" name="facebook" value="" placeholder="url do facebook" maxlength="50">
+        <input type="text" id="email" name="email" value="" placeholder="url do email" maxlength="50">
+        <section>
+          <button type="submit" name="button">Finalizar</button>
+
+        </section>
+      </form>
     </main>
   </body>
