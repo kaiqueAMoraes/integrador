@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../sass/css/editarAlbuns.css">
     <script src="../js/backgroundChiado.js" charset="utf-8"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
+    
   </head>
 
 

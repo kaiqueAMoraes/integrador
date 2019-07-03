@@ -1,0 +1,62 @@
+@import 'headerBar.scss';
+
+header{
+
+  div:nth-of-type(5){
+    a{
+      color: $darkGray;
+    }
+  }
+}
+
+main{
+  margin-top: 15vw;
+  display: flex;
+  flex-direction: column;
+  input{
+    font-size: TextoResponsivo(20,80);
+    @include SemEspacoExtra;
+    padding-left: 2vw;
+    font-family: "Lato Light";
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: $softGray;
+    &:focus{
+      border-bottom: 1px solid $softGray;
+    }
+  }
+  textarea{
+    position: relative;
+    top: 10vh;
+    resize: none;
+    background: none;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: $softGray;
+    padding-left: 2vw;
+    font-size: TextoResponsivo(15,50);
+    &:active,
+    &:focus{
+      transition: border .3s;
+      border: 1px dashed $grayedCloud;
+    }
+  }
+  button[type="submit"]{
+    position: absolute;
+    bottom: 2.5vw;
+    right: 2.5vw;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: $mediumBlack;
+    font-size: TextoResponsivo(10,35);
+    cursor: pointer;
+  }
+}
