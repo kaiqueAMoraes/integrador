@@ -18,7 +18,7 @@ include("../objetos/obj_validaLogin.php");
     </div>';
     unset($_SESSION["select"]);
     $page = $_SERVER['PHP_SELF'];
-    $sec = "10";
+    $sec = "5";
     header("Refresh: $sec; url=$page");
   }
 

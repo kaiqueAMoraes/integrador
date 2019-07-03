@@ -8,7 +8,7 @@ if (isset($_SESSION["upload"])){
   </div>';
   unset($_SESSION["upload"]);
   $page = $_SERVER['PHP_SELF'];
-  $sec = "10";
+  $sec = "5";
   header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["repetido"])){
