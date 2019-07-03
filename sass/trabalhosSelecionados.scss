@@ -37,6 +37,7 @@ main[id="container"]{
           top:15vh;
           cursor: pointer;
         }
+
         h1{
           position: relative;
           top:20vh;
@@ -49,7 +50,16 @@ main[id="container"]{
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: $softGray;
           cursor: pointer;
+          a{
+            color: $softCloud;
+            text-shadow:
+             -1px -1px 0 $grayedCloud,
+              1px -1px 0 $grayedCloud,
+              -1px 1px 0 $grayedCloud,
+              1px 1px 0 $grayedCloud;
+          }
         }
+
     }
 
 }

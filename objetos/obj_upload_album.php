@@ -44,7 +44,7 @@ else {
           }
 
         }
-
+ echo count($_FILES["foto"]);
         if (isset($_FILES["foto"])) {
             // fazer o for para o multiple
             for ($i = 0; $i < count($_FILES["foto"]["name"]); $i++)

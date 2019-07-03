@@ -43,7 +43,7 @@ main{
         right: 0;
         font-size: TamanhoResponsivo(10,1);
         font-weight: bold;
-        color: $softCloud;
+        color: $grayedCloudDarker;
       }
   }
 
@@ -68,6 +68,7 @@ section.container{
     z-index: 99999;
     p{
       @include fluidType(320px, 2600px, 15.5px, 25.5px);
+      color:$grayedCloudDarker;
     }
   }
 
@@ -99,7 +100,7 @@ section.container{
       height: 100vh;
       width: 50vw;
       &[id=box2]{
-            background: $veryLightGray;
+            background: $verySoftGray;
             transition:all 1s ease-in;
             transform-origin: right 50%;
 

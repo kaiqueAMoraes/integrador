@@ -112,7 +112,7 @@ if(Label[x].style.backgroundColor === "rgb(46, 204, 113)"){
 }
 var CheckedBox = document.getElementsByTagName('input');
 
-for (var k = 1; k < CheckedBox.length; k++){
+for (var k = 0; k < CheckedBox.length; k++){
 if(CheckedBox[k].type == "checkbox"){
   v = k ;
   CheckedBox[k].setAttribute("onclick",'fundolabel('+ v + ')');
