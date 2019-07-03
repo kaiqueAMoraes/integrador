@@ -53,8 +53,7 @@
 
         <form method='post'>
             <section>
-              <input class='sumirInput' type='submit' id='finalizarMudancas' value='Finalizar Mudanças'>
-              <label class='sendSelecionados' title='Finalizar as mudanças feitas.' for='finalizarMudancas' class='sendSelecionados' >Aplicar mudanças</label>
+
             <?php
 
             while($album = mysqli_fetch_assoc($result)){
@@ -67,14 +66,15 @@
                   filter: grayscale(100%);
                   \">
 
-                  <label title='Selecionar Album' class='button'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'><span>OK</span></label>
+                  <label title='Selecionar Album' class='albunsSelecionadoButton'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'><span>OK</span></label>
 
 
             </div></a>";
             }
             ?>
 
-
+            <input class='sumirInput' type='submit' id='finalizarMudancas' value='Finalizar Mudanças'>
+            <label class='sendSelecionados' title='Finalizar as mudanças feitas.' for='finalizarMudancas' >Aplicar mudanças</label>
             </section>
         </form>
 
@@ -82,6 +82,28 @@
     </main>
 
 <footer></footer>
+<script type="text/javascript">
+function fundolabel(x){
+
+var Label = document.getElementsByTagName('label');
+
+if(Label[x].style.backgroundColor === "rgb(46, 204, 113)"){
+    Label[x].style.backgroundColor = "rgb(85, 83, 86)";
+}else{
+  Label[x].style.backgroundColor = "rgb(46, 204, 113)";
+}
+
+
+}
+var CheckedBox = document.getElementsByTagName('input');
+
+for (var k = 1; k < CheckedBox.length; k++){
+if(CheckedBox[k].type == "checkbox"){
+  v = k ;
+  CheckedBox[k].setAttribute("onclick",'fundolabel('+ v + ')');
+}
+}
+</script>
 <!-- <script type="text/javascript" src="../js/criarDiv.js"></script> -->
 </body>
 

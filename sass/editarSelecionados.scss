@@ -4,7 +4,7 @@ $break-small: 320px;
 $break-large: 1024px;
 
 @mixin respond-to($media) {
-  @if $media == handhelds {
+  @if $media == little-screens {
     @media only screen and (max-width: $break-small) { @content; }
   }
   @else if $media == medium-screens {
@@ -29,6 +29,18 @@ $break-large: 1024px;
 }
 
 .sendSelecionados{
+  height: 400px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  color: $darkGray;
+  height: 5vw;
+  @include fluidType(320px, 2600px, 25px, 40px);
+  text-align: center;
+  justify-self: center;
+}
+
+.albunsSelecionadoButton{
   margin-top: 10vw;
   display: inline-block;
   width: 100%;
@@ -37,7 +49,17 @@ $break-large: 1024px;
   height: 5vw;
   @include fluidType(320px, 2600px, 25px, 40px);
   text-align: center;
+  background: rgb(85, 83, 86);
+  filter: grayscale(0);
+  position: absolute;
+  $a:TextoResponsivo(50,80);
+  cursor: pointer;
+  @include CentralizarElemento(absolute);
+  @include TamanhoObjeto($a, $a);
+  @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
+
 }
+
 header{
 
   div:nth-of-type(3){
@@ -60,14 +82,15 @@ header{
         grid-template-rows: auto 1fr;
         grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(150,400), 1fr));
         justify-items: center;
-        @include respond-to(handhelds) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(350,600), 1fr)); }
+        @include respond-to(little-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(350,600), 1fr)); }
         @include respond-to(medium-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(300,600), 1fr)); }
-        @include respond-to(wide-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(150,400), 1fr)); }
+        @include respond-to(wide-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(120,340), 1fr)); }
         a{
           div{
               position: relative;
               border-radius: 10px;
             label{
+
                 span{
                   @include fluidType(320px, 2600px, 25px, 35px);
                   font-weight: bold;
