@@ -59,6 +59,7 @@ $break-large: 1024px;
   @include TamanhoObjeto($a, $a);
   @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
   top: 80%;
+  transition: background-color .5s;
 }
 
 header{
