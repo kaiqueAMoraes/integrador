@@ -65,7 +65,7 @@ if(isset($_SESSION["erro"])){
                 <label><input type="checkbox" name="tag[]" value="ensaio">ensaio</label>
                 <label><input type="checkbox" name="tag[]" value="pets">pets</label> -->
                 <div >
-                  <input  type="file" name="capa[]" id="capa" />
+                  <input class="inputXX" type="file" name="capa[]" id="capa" />
                 </div>
             </section>
             <section class="box">

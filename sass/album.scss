@@ -23,8 +23,10 @@ header{
       margin-bottom: 2.5vw;
     }
     p{
-      margin-left: 25%;
-      margin-right: 5%;
+      text-align: right;
+      position: relative;
+      right: 8rem;
+      width: 60vw;
       @include fluidType(300px, 2100px, 12px, 35px);
     }
   }

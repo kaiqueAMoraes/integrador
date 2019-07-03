@@ -10,6 +10,18 @@ html{
   }
 }
 
+.inputXX{width: 100%;
+    display: block;
+    box-sizing: border-box;
+    background-color: $softGray;
+    color: #fff;
+    padding: 10px 0;
+    border: 1px solid $snowShadow;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
 header{
   @include SemEspacoExtra;
   position: relative;
