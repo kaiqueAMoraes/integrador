@@ -1,4 +1,6 @@
 <?php
+require_once("../objetos/obj_processaLogin.php");
+include("../objetos/obj_validaLogin.php");
 session_start();
   require_once("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();

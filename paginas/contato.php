@@ -1,4 +1,6 @@
 <?php
+require_once("../objetos/obj_processaLogin.php");
+include("../objetos/obj_validaLogin.php");
 session_start();
 
 if (isset($_SESSION["contato"])){
@@ -6,7 +8,7 @@ if (isset($_SESSION["contato"])){
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["foto"]);
-  
+
 }
 
 if(isset($_SESSION["erro"])){
