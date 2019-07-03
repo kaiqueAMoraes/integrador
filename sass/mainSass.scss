@@ -90,7 +90,7 @@ div[id="voltar"]{
 position: absolute;
   &:hover{
     transition: background-color 500ms;
-    background-color: lig;
+    background-color: $snowShadow;
   }
   a{
     @include CentralizarElemento(absolute);

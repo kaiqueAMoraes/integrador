@@ -28,7 +28,6 @@
   border-bottom: 0.5vh;
   border-left: 0.5vh;
   border-radius: 100%;
-  left: 10vw;
   color: #9a9a9a;
   background-color: #F1F1F1;
 }
@@ -37,6 +36,29 @@
   border-color: #2ecc71;
   background-color: #2ecc71;
   color: #464646;
+}
+
+.deleteButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  border-top: 0.5vh;
+  border-right: 0.5vh;
+  border-bottom: 0.5vh;
+  border-left: 0.5vh;
+  border-radius: 100%;
+  background-color: #d63031;
+  color: #464646;
+}
+.deleteButton:hover {
+  transition: color 0.4s, border 0.4s, background-color 0.7s;
+  border-color: #464646;
+  background-color: #464646;
+  color: #9a9a9a;
 }
 
 @font-face {
@@ -69,7 +91,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: #B9B9B9;
   padding: 0;
   margin: 0;
@@ -121,8 +144,9 @@ div[id=voltar] {
   background-color: #F1F1F1;
   top: 1vw;
   color: #242424;
-  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: 80px;
+  height: 80px;
+  position: absolute;
 }
 div[id=voltar] {
   font-size: 80px;
@@ -149,47 +173,106 @@ div[id=voltar] a {
   top: 47%;
 }
 
-body {
+.noise {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.underline-from-center {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-image: radial-gradient(circle, #9a9a9a, #f5f5f5);
+  height: 4px;
+  -webkit-transition-property: left right;
+  transition-property: left right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-from-center:hover:before {
+  left: 0;
+  right: 0;
+}
+
+.blockOfWidth {
+  width: 15%;
+}
+
+.boxHeader {
+  position: relative;
   height: 100%;
+  width: 25%;
+  text-align: center;
+}
+.boxHeader {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .boxHeader {
+    font-size: calc(20px + 5 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .boxHeader {
+    font-size: 25px;
+  }
+}
+.boxHeader a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.boxMenor {
+  width: 16.5%;
 }
 
 header {
   display: flex;
-  flex-wrap: wrap;
-  height: 20vw;
+  flex-direction: row;
+  height: 6.5rem;
+  width: 100%;
+  box-shadow: 2px -3px 10px #B9B9B9;
 }
-header h1,
-header h2,
-header h3 {
-  display: inline-block;
+header a {
   position: relative;
-  padding: 0;
-  margin: 0;
-}
-header h1 {
-  font-family: "Lato Light";
-  font-weight: lighter;
-  top: 1vw;
   left: 2.5vw;
-  color: #B9B9B9;
 }
-header h1 {
-  font-size: 30px;
+header a:hover {
+  transition: color 1s;
+  color: #323232;
 }
-@media screen and (min-width: 320px) {
-  header h1 {
-    font-size: calc(30px + 60 * ((100vw - 320px) / 1280));
-  }
+header a:focus {
+  outline: 1px dashed #B9B9B9;
 }
-@media screen and (min-width: 1600px) {
-  header h1 {
-    font-size: 90px;
-  }
+
+body {
+  height: 100%;
 }
-header h2 {
-  font-weight: lighter;
-  top: 1.5vw;
-  left: 4.5vw;
+
+header div:nth-of-type(4) a {
   color: #464646;
 }
 
@@ -206,10 +289,24 @@ main section[class=container] {
   height: 100%;
   width: 100%;
 }
+main section[class=container] div[class=album] a[class=deleteButton] {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+main section[class=container] div[class=album] a[class=deleteButton] span {
+  font-size: calc(10px + 1.5vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
 main div[class=button] {
   position: relative;
   text-align: center;
-  font-size: calc(20px + 4.5vw);
+  font-size: calc(30px + 4.5vw);
 }
 main div[class=button] span {
   position: absolute;

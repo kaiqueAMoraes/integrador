@@ -1,4 +1,4 @@
-@import 'mainSass.scss';
+@import 'headerBar.scss';
 
 
 body{
@@ -6,38 +6,13 @@ body{
 }
 
 header{
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: space-between;
-    height: 20vw;
 
-    h1,
-    h2,
-    h3{
-      display: inline-block;
-      position: relative;
-      @include SemEspacoExtra;
-    }
-
-    h1{
-      font-family: 'Lato Light';
-      @include fluidType(320px, 1600px, 30px, 90px);
-      font-weight: lighter;
-      top: 1vw;
-      left: 2.5vw;
-      color: $grayedCloud;
-    }
-
-    h2{
-      font-weight: lighter;
-      top: 1.5vw;
-      left: 4.5vw;
-      // @include TamanhoEspaco(3.5vh, $left: 40vw);
+  div:nth-of-type(4){
+    a{
       color: $darkGray;
     }
-
+  }
 }
-
 
 main{
   position: relative;
@@ -49,14 +24,25 @@ main{
       flex-wrap: wrap;
       justify-content: center;
       @include container(100%);
-        div[class=album]{
+        div[class="album"]{
 
+          a[class="deleteButton"]{
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            span{
+              font-size: TamanhoResponsivo(10, 1.5);
+              @include CentralizarElemento(absolute);
+              font-weight: bold;
+            }
+          }
         }
     }
     div[class=button]{
       position: relative;
       text-align: center;
-      font-size: TamanhoResponsivo(20, 4.5);
+      font-size: TamanhoResponsivo(30, 4.5);
       span{
         @include CentralizarElemento(absolute);
         top: 46%;
