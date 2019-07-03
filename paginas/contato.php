@@ -7,6 +7,9 @@ if (isset($_SESSION["contato"])){
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["foto"]);
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "5";
+  header("Refresh: $sec; url=$page");
 
 }
 
