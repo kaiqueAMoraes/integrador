@@ -58,32 +58,7 @@
                 }
                ?>
 
-          <section class="sectionAlbum">
-
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/880?grayscale');"  class="imagemCapa"></div>
-              <h1 class="redirecionaAlbumPagina">titulo album</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1200/700?grayscale');" class="imagemCapa">
-              </div>
-              <h1 class="redirecionaAlbumPagina" >titulo album</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1201/700?grayscale');" class="imagemCapa"></div>
-              <h1 class="redirecionaAlbumPagina">titulo album</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1203/700?grayscale');" class="imagemCapa"></div>
-              <h1 class="redirecionaAlbumPagina" >titulo album</h1>
-          </section>
-
-          <section class="sectionAlbum">
-              <div class="redirecionaAlbumPagina" style="background-image: url('https://picsum.photos/1202/700?grayscale');" class="imagemCapa"></div>
-              <h1 class="redirecionaAlbumPagina" >titulo album</h1>
-          </section>
+          
       </main>
     </section>
   </body>
