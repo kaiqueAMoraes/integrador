@@ -48,15 +48,17 @@
   </header>
   <canvas id="noise" class="noise"></canvas>
     <main>
-      <!-- <div class="button" id="button" title="Criar um novo album"><span>&#x2b;</span></div> -->
-      <section>
+
+
 
         <form method='post'>
             <section>
+              <input class='sumirInput' type='submit' id='finalizarMudancas' value='Finalizar Mudanças'>
+              <label class='sendSelecionados' title='Finalizar as mudanças feitas.' for='finalizarMudancas' class='sendSelecionados' >Aplicar mudanças</label>
             <?php
 
             while($album = mysqli_fetch_assoc($result)){
-            echo "<a href= 'album.php?id_album=".$album['id_album']."'>
+            echo "<a class='albumSelecionado' href= 'album.php?id_album=".$album['id_album']."'>
             <div class='albumSelecionado'
                   style=\"background-image: url('../albuns/".$album['dir']."/".$album['arq']."');
                   background-repeat: no-repeat;
@@ -65,17 +67,14 @@
                   filter: grayscale(100%);
                   \">
 
-                  <label class='button'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'>OK</label>
+                  <label title='Selecionar Album' class='button'><input class='sumirInput' type='checkbox' name='selecionado[]' id='".$album['id_album']."' value='".$album['id_album']."'><span>OK</span></label>
 
 
             </div></a>";
             }
             ?>
 
-            </section>
-            <section>
-              <input class='sumirInput' type='submit' id='finalizarMudancas' value='Finalizar Mudanças'>
-              <label title='Finalizar as mudanças feitas.' for='finalizarMudancas' class='sendSelecionados' >Finalizar mudanças</label>
+
             </section>
         </form>
 

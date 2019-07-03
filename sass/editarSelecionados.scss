@@ -1,7 +1,24 @@
 @import 'headerBar.scss';
+
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
 .albumSelecionado{
   height: 400px;
-  width: 400px;
+  width: 100%;
 }
 .sumirInput{
   width: auto;
@@ -11,6 +28,16 @@
   opacity: 0;
 }
 
+.sendSelecionados{
+  margin-top: 10vw;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  color: $darkGray;
+  height: 5vw;
+  @include fluidType(320px, 2600px, 25px, 40px);
+  text-align: center;
+}
 header{
 
   div:nth-of-type(3){
@@ -20,49 +47,42 @@ header{
   }
 }
 
-section{
-  display: flex;
-  flex-direction: column;
 
-  form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    section:nth-of-type(1){
-      margin-top: 10vw;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: space-around;
-      a{
-        display: inline-block;
-        div{
-          border: 1rem;
-          label{
-            input{
+  main{
+    overflow: hidden;
+    form{
+      width: 99vw;
+      section:nth-of-type(1){
+        margin: 3vw;
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(150,400), 1fr));
+        justify-items: center;
+        @include respond-to(handhelds) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(350,600), 1fr)); }
+        @include respond-to(medium-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(300,600), 1fr)); }
+        @include respond-to(wide-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(150,400), 1fr)); }
+        a{
+          div{
+              position: relative;
+              border-radius: 10px;
+            label{
+                span{
+                  @include fluidType(320px, 2600px, 25px, 35px);
+                  font-weight: bold;
+                  @include CentralizarElemento(absolute);
+                }
+              input{
 
+              }
             }
           }
         }
       }
     }
 
-    section:nth-of-type(2){
-width: 100%;
-      label[class='sendSelecionados']{
-        margin-top: 10vw;
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        color: $darkGray;
-        height: 5vw;
-        @include fluidType(320px, 2600px, 25px, 40px);
-        text-align: center;
-      }
-    }
   }
-}
 
 footer{
   height: 5vw;
