@@ -1,12 +1,13 @@
 <?php
-session_start();
+require_once("../objetos/obj_processaLogin.php");
+include("../objetos/obj_validaLogin.php");
 
 if (isset($_SESSION["contato"])){
   echo '<div class="alertSucesso">
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["foto"]);
-  
+
 }
 
 if(isset($_SESSION["erro"])){

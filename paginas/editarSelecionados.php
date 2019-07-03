@@ -1,6 +1,5 @@
-<?php
-session_start();
-
+<?
+include("../objetos/obj_validaLogin.php");
   include("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
 

@@ -1,5 +1,8 @@
 <?php
-session_start();
+require_once("../objetos/obj_processaLogin.php");
+include("../objetos/obj_validaLogin.php");
+
+
   require_once("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
 
@@ -9,7 +12,6 @@ session_start();
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
   $result= mysqli_query($conexao, $sql);
-
 
 
   if (isset($_SESSION["apagado"])){
