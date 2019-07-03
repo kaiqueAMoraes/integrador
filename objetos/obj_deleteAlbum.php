@@ -37,17 +37,22 @@ if (isset($_GET['id_album'])){
       if(mysqli_query($conexao, $delete)){
 
          if( mysqli_query($conexao, $fk1)){
-             header("location:../paginas/editarAlbuns.php");
+                 session_start();
+                 $_SESSION["apagado"] = true;
 
-                mysqli_close($conexao);
-         }
+                 header("location:../paginas/editarAlbuns.php");
+
+             }
+
+
+
 
 
       }
 
    }
 
-
+mysqli_close($conexao);
 
 /*
      $delete.$fk1;

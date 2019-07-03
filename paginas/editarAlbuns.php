@@ -1,4 +1,5 @@
 <?php
+session_start();
   require_once("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
 
@@ -8,6 +9,15 @@
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1";
   $result= mysqli_query($conexao, $sql);
+
+
+
+  if (isset($_SESSION["apagado"])){
+    echo '<div>
+    <p>ALBUM APAGADO COM SUCESSO !!!</p>
+    </div>';
+    unset($_SESSION["apagado"]);
+  }
 
 //  include("../objetos/obj_deleteAlbum.php");
  ?>

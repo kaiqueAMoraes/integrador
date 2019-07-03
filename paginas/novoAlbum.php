@@ -37,7 +37,7 @@ if(isset($_SESSION["erro"])){
     <header>
       <div class="container">
         <div id="voltar" title="Voltar á pagina anterior">
-          <a href="./editarAlbuns.html"><span>&#60;</span></a>
+          <a href="./editarAlbuns.php"><span>&#60;</span></a>
         </div>
         <h1>Adicionar Album</h1>
       </div>
