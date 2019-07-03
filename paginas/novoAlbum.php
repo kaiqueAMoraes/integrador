@@ -6,6 +6,9 @@ if (isset($_SESSION["upload"])){
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["upload"]);
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "10";
+  header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["repetido"])){
     echo '<div class="alertAtencao">

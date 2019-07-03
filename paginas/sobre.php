@@ -6,6 +6,9 @@ if (isset($_SESSION["foto"])){
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["foto"]);
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "10";
+  header("Refresh: $sec; url=$page");
 }
 
 if(isset($_SESSION["erro"])){

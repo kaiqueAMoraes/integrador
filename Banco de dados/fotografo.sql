@@ -22,7 +22,7 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
- truncate table tb_sobre;
+ truncate table tb_album;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -80,7 +80,8 @@ CREATE TABLE tb_contato(
     facebook varchar(100) not null,
     primary key (id_contato)
     );
-    
+	select * from tb_contato;
+
     
     CREATE TABLE tb_sobre(
 	id_sobre int auto_increment,

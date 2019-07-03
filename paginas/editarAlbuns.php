@@ -17,6 +17,9 @@ session_start();
     <p>ALBUM APAGADO COM SUCESSO !!!</p>
     </div>';
     unset($_SESSION["apagado"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "10";
+    header("Refresh: $sec; url=$page");
   }
 
 //  include("../objetos/obj_deleteAlbum.php");

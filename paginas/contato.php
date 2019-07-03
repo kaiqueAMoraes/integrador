@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if (isset($_SESSION["contato"])){
+  echo '<div class="alertSucesso">
+  <p>ALBUM CRIADO COM SUCESSO !!!</p>
+  </div>';
+  unset($_SESSION["foto"]);
+  
+}
+
+if(isset($_SESSION["erro"])){
+    echo '<div class="alertErro">
+    <p>ERRO NO UPLOAD !!!</p>
+    </div>';
+    unset($_SESSION["erro"]);
+}
+
+ ?>
+
 <!DOCTYPE html>
   <html lang="pt-br" dir="ltr">
   <head>
@@ -35,7 +55,7 @@
     </header>
 
     <main>
-      <form class="" action="index.html" method="post">
+      <form class="" action="../objetos/obj_contato.php" method="post">
 
         <input type="text" id="instagram" name="instagram" value="" placeholder="url do instagram" maxlength="50">
         <input type="text" id="facebook" name="facebook" value="" placeholder="url do facebook" maxlength="50">
