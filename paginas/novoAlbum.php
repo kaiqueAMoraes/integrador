@@ -1,7 +1,6 @@
 <?php
 require_once("../objetos/obj_processaLogin.php");
 include("../objetos/obj_validaLogin.php");
-session_start();
 
 if (isset($_SESSION["upload"])){
   echo '<div class="alertSucesso">
