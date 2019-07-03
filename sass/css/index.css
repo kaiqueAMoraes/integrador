@@ -272,6 +272,7 @@ main a[id=sobre] {
   font-size: calc(10px + 1vw);
   font-weight: bold;
   color: #999999;
+  display: none;
 }
 main img[class=iconIndex] {
   height: 2rem;
