@@ -14,7 +14,7 @@ session_start();
   require_once("../objetos/obj_selecionado.php");
 
   if (isset($_SESSION["select"])){
-    echo '<div>
+    echo '<div class="alertSucesso>
     <p style="color: #000;">ADICIONADO AOS SELECIONADOS COM SUCESSO !!</p>
     </div>';
     unset($_SESSION["select"]);

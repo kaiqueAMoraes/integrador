@@ -13,7 +13,7 @@ session_start();
 
 
   if (isset($_SESSION["apagado"])){
-    echo '<div>
+    echo '<div class="alertSucesso>
     <p>ALBUM APAGADO COM SUCESSO !!!</p>
     </div>';
     unset($_SESSION["apagado"]);

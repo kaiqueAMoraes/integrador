@@ -9,7 +9,6 @@ session_start();
 
 if (isset($_POST["descricaoAutor"])) {
 
-    if(mysqli_query($conexao, $sql)) {
         if (isset($_FILES["fotografo"])){
           $fotografo_tmp = $_FILES["fotografo"]["tmp_name"][0];
           $nomeFotografo = $_FILES["fotografo"]["name"][0];
@@ -21,11 +20,10 @@ if (isset($_POST["descricaoAutor"])) {
           $uploadFotografo = move_uploaded_file($fotografo_tmp, $diretorio . "/" . $nomeFotografoCriptografado);
 
           if ($uploadFotografo) {
-              $sql = "INSERT INTO tb_sobre(texto , foto) VALUES ('".$descricaoAutor."','".$nomeFotografoCriptografado."');";
-              $resultado= mysqli_query($conexao, $sql);
+              $sql = "INSERT INTO tb_sobre (texto , foto) VALUES ('".$descricaoAutor."','".$nomeFotografoCriptografado."')";
 
             }
-        }
+
 
         if (mysqli_query($conexao, $sql)){
             session_start();
@@ -34,8 +32,8 @@ if (isset($_POST["descricaoAutor"])) {
             header("location:../paginas/sobre.php");
 
         }
+      }
 
-    }
 
     else {
         session_start();
