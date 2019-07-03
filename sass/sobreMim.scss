@@ -1,0 +1,24 @@
+@import 'mainSass.scss';
+
+
+main{
+  div[id="containerInfoAlbum"]{
+    margin-top: 5.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100vh;
+    h1{
+      position: relative;
+      right: 8.5vw;
+      @include fluidType(300px, 2100px, 55px, 150px);
+      margin-bottom: 2.5vw;
+    }
+    p{
+      margin-left: 25%;
+      margin-right: 5%;
+      @include fluidType(300px, 2100px, 12px, 35px);
+    }
+  }
+}
+}
