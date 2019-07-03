@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+if (isset($_SESSION["foto"])){
+  echo '<div class="alertSucesso">
+  <p>ALBUM CRIADO COM SUCESSO !!!</p>
+  </div>';
+  unset($_SESSION["foto"]);
+}
+
+if(isset($_SESSION["erro"])){
+    echo '<div class="alertErro">
+    <p>ERRO NO UPLOAD !!!</p>
+    </div>';
+    unset($_SESSION["erro"]);
+}
+
+?>
+
 <!DOCTYPE html>
   <html lang="pt-br" dir="ltr">
   <head>
@@ -35,12 +54,12 @@
     </header>
 
     <main>
-      <form class="" id="form_cadastra" action="#" method="post" enctype="multipart/form-data">
+      <form class="" id="form_cadastra" action="../objetos/obj_sobre.php" method="post" enctype="multipart/form-data">
         <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descrição do autor." maxlength='140'></textarea>
 
         <div class="imagensContainer">
           <div class="box__input">
-            <input class="boxFile" type="file" name="foto[]" id="file" data-multiple-caption="{count} arquivos selecionados" multiple />
+            <input class="boxFile" type="file" name="fotografo[]" id="file" data-multiple-caption="{count} arquivos selecionados"/>
             <label for="file"><strong>Selecione um arquivo&nbsp;</strong><span class="box__dragndrop">&nbsp;ou arraste ele aqui</span>.</label>
 
           </div>
