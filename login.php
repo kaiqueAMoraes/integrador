@@ -44,7 +44,6 @@
                 <input type="password" id="senha" placeholder="senha" name="senha">
                 <input id="enviaForm" type="submit"  value="enviar">
         </form>
-        <a href="#" id="refazerSenha" >Esqueci a senha!</a>
       </section>
     </main>
   </body>
