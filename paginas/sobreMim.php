@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Sobre mim</title>
     <link type="text/css" rel="stylesheet" href="../sass/css/sobreMim.css">
+    <script src="../js/backgroundChiado.js" charset="utf-8"></script>
   </head>
   <body>
+    <canvas id="noise" class="noise"></canvas>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
         <a href="../index.html"><span>&#60;</span></a>
