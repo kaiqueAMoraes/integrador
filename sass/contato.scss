@@ -1,0 +1,40 @@
+@import 'headerBar.scss';
+
+main{
+  margin-top: 7vw;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  form{
+    input{
+      margin-top: 3vw;
+  display: inline-block;
+      font-size: TextoResponsivo(20,80);
+      @include SemEspacoExtra;
+      padding-left: 2vw;
+      font-family: "Lato Light";
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      color: $softGray;
+      &:focus{
+        border-bottom: 1px solid $softGray;
+      }
+    }
+    section{
+      button[type="submit"]{
+        position: absolute;
+        bottom: 2.5vw;
+        right: 2.5vw;
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        color: $mediumBlack;
+        font-size: TextoResponsivo(10,35);
+        cursor: pointer;
+      }
+    }
+
+  }
+}

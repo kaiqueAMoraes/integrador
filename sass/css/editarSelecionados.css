@@ -318,79 +318,149 @@ header a:focus {
   outline: 1px dashed #B9B9B9;
 }
 
-.albumEditar {
-  position: relative;
-  border-radius: 10px;
+.albumContainer,
+.albumSelecionado {
   height: 400px;
   width: 100%;
+  position: relative;
 }
 
-body {
-  height: 100%;
+.albumSelecionado {
+  filter: grayscale(100%);
 }
 
-header div:nth-of-type(4) a {
+.sumirInput {
+  width: auto;
+  position: absolute;
+  z-index: -999;
+  height: 0.1px;
+  width: 0.1px;
+  opacity: 0;
+}
+
+.sendSelecionados {
+  height: 400px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  color: #464646;
+  height: 5vw;
+  text-align: center;
+  justify-self: center;
+}
+.sendSelecionados {
+  font-size: 25px;
+}
+@media screen and (min-width: 320px) {
+  .sendSelecionados {
+    font-size: calc(25px + 15 * ((100vw - 320px) / 2280));
+  }
+}
+@media screen and (min-width: 2600px) {
+  .sendSelecionados {
+    font-size: 40px;
+  }
+}
+
+.albunsSelecionadoButton {
+  display: inline-block;
+  color: #464646;
+  text-align: center;
+  background: #555356;
+  filter: grayscale(0);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  border-top: 0.5vh;
+  border-right: 0.5vh;
+  border-bottom: 0.5vh;
+  border-left: 0.5vh;
+  border-radius: 100%;
+  top: 80%;
+  transition: background-color 0.5s;
+}
+.albunsSelecionadoButton {
+  font-size: 25px;
+}
+@media screen and (min-width: 320px) {
+  .albunsSelecionadoButton {
+    font-size: calc(25px + 15 * ((100vw - 320px) / 2280));
+  }
+}
+@media screen and (min-width: 2600px) {
+  .albunsSelecionadoButton {
+    font-size: 40px;
+  }
+}
+
+header div:nth-of-type(3) a {
   color: #464646;
 }
 
 main {
-  position: relative;
-  top: 25vh;
-  height: 100%;
+  overflow: hidden;
 }
-main section[class=container] {
+main form {
+  width: 99vw;
+}
+main form section:nth-of-type(1) {
   margin: 3vw;
   display: grid;
-  row-gap: 5rem;
+  row-gap: 1rem;
   column-gap: 1rem;
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(auto-fill, minmax(calc(150px + (400 - 150) * ((100vw - 300px) / (1600 - 300))), 1fr));
   justify-items: center;
 }
 @media only screen and (max-width: 320px) {
-  main section[class=container] {
+  main form section:nth-of-type(1) {
     grid-template-columns: repeat(auto-fill, minmax(calc(350px + (600 - 350) * ((100vw - 300px) / (1600 - 300))), 1fr));
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-  main section[class=container] {
+  main form section:nth-of-type(1) {
     grid-template-columns: repeat(auto-fill, minmax(calc(300px + (600 - 300) * ((100vw - 300px) / (1600 - 300))), 1fr));
   }
 }
 @media only screen and (min-width: 1024px) {
-  main section[class=container] {
+  main form section:nth-of-type(1) {
     grid-template-columns: repeat(auto-fill, minmax(calc(120px + (340 - 120) * ((100vw - 300px) / (1600 - 300))), 1fr));
   }
 }
-main section[class=container] a[class=deleteButton] {
-  position: absolute;
-  z-index: 999;
-  top: 0;
+main form section:nth-of-type(1) div label {
+  z-index: 99;
 }
-main section[class=container] a[class=deleteButton] span {
-  font-size: calc(10px + 1.5vw);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+main form section:nth-of-type(1) div label span {
   font-weight: bold;
-}
-
-div[class=button] {
-  position: relative;
-  text-align: center;
-  font-size: calc(30px + 4.5vw);
-}
-div[class=button] span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 46%;
+}
+main form section:nth-of-type(1) div label span {
+  font-size: 25px;
+}
+@media screen and (min-width: 320px) {
+  main form section:nth-of-type(1) div label span {
+    font-size: calc(25px + 10 * ((100vw - 320px) / 2280));
+  }
+}
+@media screen and (min-width: 2600px) {
+  main form section:nth-of-type(1) div label span {
+    font-size: 35px;
+  }
+}
+main form section:nth-of-type(1) div label a div {
+  position: relative;
+  border-radius: 10px;
 }
 
 footer {
-  height: 70vh;
+  height: 5vw;
 }
 
-/*# sourceMappingURL=editarAlbuns.css.map */
+/*# sourceMappingURL=editarSelecionados.css.map */

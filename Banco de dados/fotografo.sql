@@ -22,7 +22,7 @@ select * from tb_album;
 
  SET foreign_key_checks = 0;
  SET foreign_key_checks = 1;
- truncate table tb_tag;
+ truncate table tb_sobre;
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -72,4 +72,21 @@ select * from tb_album_tag;*/
          from tb_album inner join tb_foto
          on tb_album.id_album = tb_foto.id_album
          where tb_foto.foto_capa = 1;
-         
+
+CREATE TABLE tb_contato(
+	id_contato int auto_increment,
+    email varchar(100) not null,
+    instagram varchar(100) not null,
+    facebook varchar(100) not null,
+    primary key (id_contato)
+    );
+    
+    
+    CREATE TABLE tb_sobre(
+	id_sobre int auto_increment,
+    texto varchar(200) not null,
+    foto varchar(100) not null,
+    primary key (id_sobre)
+    );
+    select * from tb_sobre;
+    

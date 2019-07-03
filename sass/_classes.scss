@@ -12,7 +12,30 @@
     cursor: pointer;
 }
 
+.alertSucesso,
+.alertErro,
+.alertAtencao{
+  position: absolute;
+  height: 5vw;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+  p{
+    @include fluidType(320px, 1600px, 15px, 30px);
+    color: $softCloud;
+    @include CentralizarElemento(relative);
+  }
+}
 
+.alertSucesso{
+  background-color: $softGreen;
+}
+.alertErro{
+  background-color: $alertRed;
+}
+.alertAtencao{
+  background-color: $alertOrange;
+}
 
 .button{
   $a:TextoResponsivo(50,80);
@@ -20,7 +43,6 @@
   @include CentralizarElemento(absolute);
   @include TamanhoObjeto($a, $a);
   @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
-  left: 10vw;
   color: $softGray;
   background-color: $snowGray;
     &:hover{
@@ -30,9 +52,18 @@
       color: $darkGray;
     }
 }
-
-
-@keyframes encherDireita {
-  from {background-color: red;}
-  to {background-color: yellow;}
+.deleteButton{
+  $a:TextoResponsivo(50,80);
+  cursor: pointer;
+  @include CentralizarElemento(absolute);
+  @include TamanhoObjeto($a, $a);
+  @include TamanhoBordas(.5vh,.5vh,.5vh,.5vh,100%);
+  background-color: $alertRed;
+  color: $darkGray;
+  &:hover{
+    transition: color .4s,border .4s, background-color .7s;
+    border-color: $darkGray;
+    background-color: $darkGray;
+    color: $softGray;
+  }
 }

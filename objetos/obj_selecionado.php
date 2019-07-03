@@ -8,7 +8,11 @@ if(isset($_POST["selecionado"]) != ""){
         {
             $sql =" UPDATE tb_album SET selecionado = 1 WHERE  tb_album.id_album = ". $value;
             if(mysqli_query($conexao, $sql)) {
+
+                // echo "<div class='alertSucesso'><p>Adicionado a Selecionados com sucesso!</p></div>";
+
                 $_SESSION["select"] = true;
+
             }
 
         }

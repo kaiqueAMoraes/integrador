@@ -1,8 +1,8 @@
 
 
 
-  document.getElementsByClassName('contato')[1].style.left = '5vw';
-  document.getElementsByClassName('contato')[2].style.left = '10vw';
+  document.getElementsByClassName('contato')[1].style.left = '5rem';
+  document.getElementsByClassName('contato')[2].style.left = '10rem';
 
    DivTrabalhosSelecionados = document.getElementsByTagName('div')[1];
    DivPortifolioCompleto = document.getElementsByTagName('div')[2];

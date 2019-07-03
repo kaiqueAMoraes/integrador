@@ -15,6 +15,56 @@
   cursor: pointer;
 }
 
+.alertSucesso,
+.alertErro,
+.alertAtencao {
+  position: absolute;
+  height: 5vw;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+}
+.alertSucesso p,
+.alertErro p,
+.alertAtencao p {
+  color: #f5f5f5;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.alertSucesso p,
+.alertErro p,
+.alertAtencao p {
+  font-size: 15px;
+}
+@media screen and (min-width: 320px) {
+  .alertSucesso p,
+.alertErro p,
+.alertAtencao p {
+    font-size: calc(15px + 15 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .alertSucesso p,
+.alertErro p,
+.alertAtencao p {
+    font-size: 30px;
+  }
+}
+
+.alertSucesso {
+  background-color: #2ecc71;
+}
+
+.alertErro {
+  background-color: #d63031;
+}
+
+.alertAtencao {
+  background-color: #dfaa44;
+}
+
 .button {
   cursor: pointer;
   position: absolute;
@@ -28,7 +78,6 @@
   border-bottom: 0.5vh;
   border-left: 0.5vh;
   border-radius: 100%;
-  left: 10vw;
   color: #9a9a9a;
   background-color: #F1F1F1;
 }
@@ -37,6 +86,29 @@
   border-color: #2ecc71;
   background-color: #2ecc71;
   color: #464646;
+}
+
+.deleteButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  border-top: 0.5vh;
+  border-right: 0.5vh;
+  border-bottom: 0.5vh;
+  border-left: 0.5vh;
+  border-radius: 100%;
+  background-color: #d63031;
+  color: #464646;
+}
+.deleteButton:hover {
+  transition: color 0.4s, border 0.4s, background-color 0.7s;
+  border-color: #464646;
+  background-color: #464646;
+  color: #9a9a9a;
 }
 
 @font-face {
@@ -69,7 +141,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: #B9B9B9;
   padding: 0;
   margin: 0;
@@ -121,8 +194,9 @@ div[id=voltar] {
   background-color: #F1F1F1;
   top: 1vw;
   color: #242424;
-  width: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
-  height: calc(50px + (80 - 50) * ((100vw - 300px) / (1600 - 300)));
+  width: 80px;
+  height: 80px;
+  position: absolute;
 }
 div[id=voltar] {
   font-size: 80px;
@@ -149,74 +223,58 @@ div[id=voltar] a {
   top: 47%;
 }
 
-header {
-  display: flex;
-  height: 15vw;
-}
-header h1 {
-  position: relative;
-  font-family: "Lato Light";
-  font-weight: lighter;
-  top: 1vw;
-  left: 2.5vw;
-  color: #B9B9B9;
-}
-header h1 {
-  font-size: 20px;
-}
-@media screen and (min-width: 320px) {
-  header h1 {
-    font-size: calc(20px + 70 * ((100vw - 320px) / 1280));
-  }
-}
-@media screen and (min-width: 1600px) {
-  header h1 {
-    font-size: 90px;
-  }
-}
-@media (max-width: 320px) and (max-width: 767px) {
-  header {
-    height: 75vh;
-  }
-  header h1 {
-    top: 6.5vw;
-    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300))) !important;
-  }
+.noise {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.05;
 }
 
-main {
-  overflow: hidden;
+main div[id=containerInfoAlbum] {
+  margin-top: 5.5vw;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  height: 100vh;
 }
-main {
-  font-size: 50px;
+main div[id=containerInfoAlbum] h1 {
+  position: relative;
+  right: 8.5vw;
+  margin-bottom: 2.5vw;
+}
+main div[id=containerInfoAlbum] h1 {
+  font-size: 55px;
 }
 @media screen and (min-width: 300px) {
-  main {
-    font-size: calc(50px + 60 * ((100vw - 300px) / 1300));
+  main div[id=containerInfoAlbum] h1 {
+    font-size: calc(55px + 95 * ((100vw - 300px) / 1800));
   }
 }
-@media screen and (min-width: 1600px) {
-  main {
-    font-size: 110px;
+@media screen and (min-width: 2100px) {
+  main div[id=containerInfoAlbum] h1 {
+    font-size: 150px;
   }
 }
-main a {
-  position: relative;
-  left: 2.5vw;
-  margin-bottom: 4.5vh;
+main div[id=containerInfoAlbum] p {
+  margin-left: 25%;
+  margin-right: 5%;
 }
-main a:hover {
-  transition: color 1s;
-  color: #323232;
+main div[id=containerInfoAlbum] p {
+  font-size: 12px;
 }
-main a:focus {
-  outline: 1px dashed #B9B9B9;
+@media screen and (min-width: 300px) {
+  main div[id=containerInfoAlbum] p {
+    font-size: calc(12px + 23 * ((100vw - 300px) / 1800));
+  }
+}
+@media screen and (min-width: 2100px) {
+  main div[id=containerInfoAlbum] p {
+    font-size: 35px;
+  }
 }
 
-footer {
-  height: 25vh;
-}
-
-/*# sourceMappingURL=paginaAdmnistrador.css.map */
+/*# sourceMappingURL=sobreMim.css.map */

@@ -1,0 +1,184 @@
+@import 'headerBar.scss';
+
+html{color:#000;}
+
+
+
+header{
+
+  div:nth-of-type(5){
+    a{
+      color: $darkGray;
+    }
+  }
+}
+
+main{
+  form{
+    margin-top: 15vw;
+    display: flex;
+    flex-direction: column;
+
+      div[class="imagensContainer"]{
+        // @include CentralizarElemento(relative);
+
+        background-color: $snowGray;
+        outline: 2px dashed $grayedCloud;
+        outline-offset: -10px;
+        height: 80vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80vw;
+        display: flex;
+        box-shadow: 0px 70px 40px -50px rgba(0, 0, 0, 0.2), 0px 3px 20px rgba(0, 0, 0, 0.1);
+        @-moz-document url-prefix() {
+        outline: none;
+      }
+        label{
+          cursor: pointer;
+          font-size: TextoResponsivo(10, 18);
+          display: inline-block;
+          @include CentralizarElemento(absolute);
+          color: $darkGray;
+        }
+          div[class="box__input"]{
+
+            @include CentralizarElemento(relative);
+          }
+      }
+
+
+    input{
+      font-size: TextoResponsivo(20,80);
+      @include SemEspacoExtra;
+      padding-left: 2vw;
+      font-family: "Lato Light";
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      color: $softGray;
+      &:focus{
+        border-bottom: 1px solid $softGray;
+      }
+    }
+    textarea{
+      position: relative;
+      top: 10vh;
+      resize: none;
+      background: none;
+      border: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      color: $softGray;
+      padding-left: 2vw;
+      font-size: TextoResponsivo(15,50);
+      &:active,
+      &:focus{
+        transition: border .3s;
+        border: 1px dashed $grayedCloud;
+      }
+    }
+    section{
+      position: relative;
+      margin-top: 5vw;
+      height: 10vw;
+      width: 100%;
+      button[type="submit"]{
+
+        @include CentralizarElemento(absolute);
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        color: $mediumBlack;
+        font-size: TextoResponsivo(10,35);
+        cursor: pointer;
+    }
+    }
+  }
+  .box.has-advanced-upload {
+    position: relative;
+    top: 25vh;
+  }
+  .box__dragndrop,
+  .box__uploading,
+  .box__success,
+  .box__error {
+  display: none;
+  }
+
+  .boxFile{
+    display: inline-block;
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    opacity: 0;
+
+  }
+
+
+  .box.has-advanced-upload .box__dragndrop {
+    display: inline-block;
+
+  }
+
+  .box.is-dragover {
+      div[class="imagensContainer"]{
+        transition: background-color 1s;
+        background-color: $snowShadow;
+      }
+
+  }
+
+  div[class="box__input"]{
+  position: relative;
+  }
+
+  .box.is-uploading .box__input {
+  visibility: none;
+  display: none;
+  }
+  .box.is-uploading .box__uploading {
+  display: block;
+  z-index: 9999;
+  @include CentralizarElemento(absolute);
+
+  }
+
+
+
+
+
+
+
+
+
+  /* @include media (">phone", "<tablet"){
+
+      input[id="nomeAlbum"]{
+        font-size: TextoResponsivo(50,100) !important;
+        // background: red;
+      }
+      textarea{
+        font-size: TextoResponsivo(30,100) !important;
+      }
+  }
+
+  @include media (">tablet", "<desktop"){
+    $a:TextoResponsivo(40,60);
+    input{
+      font-size: $a;
+    }
+
+  }
+  @include media (">phone", "<tablet"){
+    $a:TextoResponsivo(30,60);
+    input{
+      font-size: $a;
+    }
+  } */
+    }

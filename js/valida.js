@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
     $("#form_cadastra").submit(function () {
         var vazios = $("input").filter(function() {
             return !this.value;
@@ -10,6 +8,5 @@ $(document).ready(function () {
             return false;
         } else {
 
-        }  
+        }
     });
-});

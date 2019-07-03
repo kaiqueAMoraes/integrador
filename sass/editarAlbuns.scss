@@ -1,68 +1,79 @@
-@import 'mainSass.scss';
+@import 'headerBar.scss';
 
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == little-screens {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+.albumEditar{
+  position: relative;
+  border-radius: 10px;
+  height: 400px;
+  width: 100%;
+}
 
 body{
   height: 100%;
 }
 
 header{
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: space-between;
-    height: 20vw;
 
-    h1,
-    h2,
-    h3{
-      display: inline-block;
-      position: relative;
-      @include SemEspacoExtra;
-    }
-
-    h1{
-      font-family: 'Lato Light';
-      @include fluidType(320px, 1600px, 30px, 90px);
-      font-weight: lighter;
-      top: 1vw;
-      left: 2.5vw;
-      color: $grayedCloud;
-    }
-
-    h2{
-      font-weight: lighter;
-      top: 1.5vw;
-      left: 4.5vw;
-      // @include TamanhoEspaco(3.5vh, $left: 40vw);
+  div:nth-of-type(4){
+    a{
       color: $darkGray;
     }
-
+  }
 }
-
 
 main{
   position: relative;
   top: 25vh;
   height: 100%;
     section[class=container]{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      @include container(100%);
-        div[class=album]{
+      margin: 3vw;
+      display: grid;
+      row-gap: 5rem;
+      column-gap: 1rem;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(150,400), 1fr));
+      justify-items: center;
+      @include respond-to(little-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(350,600), 1fr)); }
+      @include respond-to(medium-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(300,600), 1fr)); }
+      @include respond-to(wide-screens) { grid-template-columns: repeat(auto-fill, minmax(TextoResponsivo(120,340), 1fr)); }
+          a[class="deleteButton"]{
+            position: absolute;
+            z-index: 999;
+            top: 0;
 
+            span{
+              font-size: TamanhoResponsivo(10, 1.5);
+              @include CentralizarElemento(absolute);
+              font-weight: bold;
+            }
+          }
         }
     }
+
     div[class=button]{
       position: relative;
       text-align: center;
-      font-size: TamanhoResponsivo(20, 4.5);
+      font-size: TamanhoResponsivo(30, 4.5);
       span{
         @include CentralizarElemento(absolute);
         top: 46%;
       }
     }
-}
+
 
 footer{
   height: 70vh;

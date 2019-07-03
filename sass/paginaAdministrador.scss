@@ -1,48 +1,22 @@
-@import 'mainSass.scss';
+@import 'headerBar.scss';
 
-header{display: flex;
-  height: 15vw;
-
-  h1{
-    position: relative;
-    font-family: 'Lato Light';
-    @include fluidType(320px, 1600px, 20px, 90px);
-    font-weight: lighter;
-    top: 1vw;
-    left: 2.5vw;
-    color: $grayedCloud;
-  }
-
-  @include media ("<=phone", "<tablet"){
-
-        height: 75vh;
-
-      h1{
-        top: 6.5vw;
-        font-size: TextoResponsivo(20,25) !important;
+header{
+  div{
+    a{
+      span{
+        position: relative;
+        top: -8px;
       }
     }
+  }
 }
 
 main{
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  @include fluidType(300px, 1600px, 50px, 110px);
-  a{
-    position: relative;
-    left: 2.5vw;
-    margin-bottom: 4.5vh;
-    &:hover{
-      transition: color 1s;
-      color: $mediumGray;
-    }
-    &:focus{
-      outline: 1px dashed $grayedCloud;
-    }
-  }
-}
 
+}
 footer{
   height: 25vh;
 }
