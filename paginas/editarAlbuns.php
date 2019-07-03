@@ -33,12 +33,6 @@ session_start();
 
   </head>
 
-
-
-
-
-
-
     <body>
     <header>
       <div id="voltar" title="Voltar á pagina inicial do Administrador">
@@ -86,6 +80,7 @@ while($album = mysqli_fetch_assoc($result)){
                    </div></a>";
 
         }
+      }
   //<input type='hidden' name='excluir' id='".$album['id_album']."' value='".$album['id_album']."'>
 
              echo "</div>";
