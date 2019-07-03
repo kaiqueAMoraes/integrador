@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+if (isset($_SESSION["upload"])){
+  echo '<div>
+  <p>ALBUM CRIADO COM SUCESSO !!!</p>
+  </div>';
+  unset($_SESSION["upload"]);
+}
+if(isset($_SESSION["repetido"])){
+    echo '<div>
+    <p>JÁ EXISTE UM ALBUM COM O MESMO NOME !!!</p>
+    </div>';
+    unset($_SESSION["repetido"]);
+}
+if(isset($_SESSION["erro"])){
+    echo '<div>
+    <p>ERRO NO UPLOAD !!!</p>
+    </div>';
+    unset($_SESSION["erro"]);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -7,12 +30,14 @@
     <script src="../js/frameworks/jquery-3.4.1.min.js" charset="utf-8"></script>
     <script src= "../js/valida.js"></script>
     <script src="../js/uploadImagens.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   </head>
   <body>
     <header>
       <div class="container">
         <div id="voltar" title="Voltar á pagina anterior">
-          <a href="./editarAlbuns.html"><span>&#60;</span></a>
+          <a href="./editarAlbuns.php"><span>&#60;</span></a>
         </div>
         <h1>Adicionar Album</h1>
       </div>

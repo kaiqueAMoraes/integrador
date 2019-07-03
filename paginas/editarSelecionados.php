@@ -1,4 +1,6 @@
 <?php
+session_start();
+
   include("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
 
@@ -9,7 +11,17 @@
          where tb_foto.foto_capa = 1";
   $result= mysqli_query($conexao, $sql);
 
-  include("../objetos/obj_selecionado.php");
+  require_once("../objetos/obj_selecionado.php");
+
+  if (isset($_SESSION["select"])){
+    echo '<div>
+    <p style="color: #000;">ADICIONADO AOS SELECIONADOS COM SUCESSO !!</p>
+    </div>';
+    unset($_SESSION["select"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "10";
+    header("Refresh: $sec; url=$page");
+  }
 
  ?>
 
