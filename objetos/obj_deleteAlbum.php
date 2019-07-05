@@ -5,7 +5,7 @@ $conexao = AbreConexaoBd();
 // inicio
 function rrmdir($src) {
   $dir = opendir($src);
-  while(false !== ( $file = readdir($dir)) ) {
+  while(false !== ( $file = readdir($dir))) {
     if (( $file != '.' ) && ( $file != '..' )) {
         $full = $src . '/' . $file;
         if ( is_dir($full) ) {
@@ -28,7 +28,7 @@ if (isset($_GET['id_album'])){
       rrmdir($src);
      $album= $_GET['id_album'];
      $fk0= "SET foreign_key_checks = 0;";
-     $delete="DELETE FROM `tb_album`, `tb_foto`, `tb_tag`  USING `tb_album`, `tb_foto`, `tb_tag` WHERE `tb_album`.`id_album` = ".$album." AND `tb_foto`.`id_album` = ".$album." AND `tb_tag`.`id_album` = ".$album.";";
+     $delete="DELETE FROM `tb_album`, `tb_foto`  USING `tb_album`, `tb_foto` WHERE `tb_album`.`id_album` = ".$album." AND `tb_foto`.`id_album` = ".$album.";";
      $fk1= "SET foreign_key_checks = 1;";
 
 

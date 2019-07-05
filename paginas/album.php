@@ -53,7 +53,6 @@ include("../objetos/obj_conexao_bd.php");
 
   //  $sql= "SELECT * FROM tb_foto WHERE id_album = ".$_GET["id_album"];
 
-  echo $_GET["id_album"];
 
     $sql = "Select tb_album.nome as dir,tb_foto.nome as foto,tb_foto.id_foto
             from tb_album inner join tb_foto
@@ -72,6 +71,6 @@ include("../objetos/obj_conexao_bd.php");
 
   </main>
 <footer>
-  
+
 </footer>
 </body>

@@ -8,8 +8,18 @@ if (isset($_SESSION["foto"])){
   </div>';
   unset($_SESSION["foto"]);
   $page = $_SERVER['PHP_SELF'];
-  $sec = "5";
+  $sec = "3";
   header("Refresh: $sec; url=$page");
+}
+
+if(isset($_SESSION["repetido"])){
+    echo '<div class="alertAtencao">
+    <p>JÁ EXISTE O MSM ARQUIVO!!!</p>
+    </div>';
+    unset($_SESSION["repetido"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "4";
+    header("Refresh: $sec; url=$page");
 }
 
 if(isset($_SESSION["erro"])){
@@ -18,6 +28,7 @@ if(isset($_SESSION["erro"])){
     </div>';
     unset($_SESSION["erro"]);
 }
+
 
 ?>
 
@@ -74,7 +85,7 @@ if(isset($_SESSION["erro"])){
         </div>
 
         <section>
-          <button type="submit" name="button">Finalizar</button>
+          <button type="submit" name="sobreEnviar">Finalizar</button>
 
         </section>
       </form>

@@ -8,7 +8,7 @@ if (isset($_SESSION["contato"])){
   </div>';
   unset($_SESSION["foto"]);
   $page = $_SERVER['PHP_SELF'];
-  $sec = "5";
+  $sec = "3";
   header("Refresh: $sec; url=$page");
 
 }
