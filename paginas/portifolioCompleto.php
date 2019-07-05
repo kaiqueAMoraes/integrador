@@ -26,6 +26,7 @@
     <div id="voltar" title="Voltar á pagina anterior">
       <a href="../index.html"><span>&#60;</span></a>
     </div>
+    <h1>Portifolio completo</h1>
   </header>
   <!--
   <section class="sectionProcura">

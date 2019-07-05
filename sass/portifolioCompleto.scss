@@ -10,6 +10,14 @@ header{
     div{
       z-index: 2;
     }
+    h1{
+      display: inline-block;
+      position: relative;
+      left: 7.5vw;
+      @include fluidType(320px, 1600px, 35px, 80px);
+      cursor: default;
+      font-weight: 100;
+      }
 }
 
 input[id="procurar"]{

@@ -246,6 +246,26 @@ header {
 header div {
   z-index: 2;
 }
+header h1 {
+  display: inline-block;
+  position: relative;
+  left: 7.5vw;
+  cursor: default;
+  font-weight: 100;
+}
+header h1 {
+  font-size: 35px;
+}
+@media screen and (min-width: 320px) {
+  header h1 {
+    font-size: calc(35px + 45 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  header h1 {
+    font-size: 80px;
+  }
+}
 
 input[id=procurar] {
   font-family: "Lato Light";
