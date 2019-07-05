@@ -41,7 +41,7 @@ header{
     h1{
       display: inline-block;
       position: relative;
-      left: 2.5vw;
+      left: 7.5vw;
       @include fluidType($min_width, $max_width, $min_font, $max_font);
       cursor: default;
       font-weight: 100;
