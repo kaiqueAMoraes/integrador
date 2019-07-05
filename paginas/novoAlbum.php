@@ -8,7 +8,7 @@ if (isset($_SESSION["upload"])){
   </div>';
   unset($_SESSION["upload"]);
   $page = $_SERVER['PHP_SELF'];
-  $sec = "5";
+  $sec = "4";
   header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["repetido"])){
@@ -16,12 +16,18 @@ if(isset($_SESSION["repetido"])){
     <p>JÁ EXISTE UM ALBUM COM O MESMO NOME !!!</p>
     </div>';
     unset($_SESSION["repetido"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "4";
+    header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["erro"])){
     echo '<div class="alertErro">
     <p>ERRO NO UPLOAD !!!</p>
     </div>';
     unset($_SESSION["erro"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "4";
+    header("Refresh: $sec; url=$page");
 }
 
 ?>
