@@ -27,8 +27,10 @@
       <a href="../index.html"><span>&#60;</span></a>
     </div>
   </header>
+  <!--
   <section class="sectionProcura">
   <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
+
     <div class="tagArea">
     <label><input class="teste" type="checkbox" name="checkbox"  value="value">casamento</label>
     <label><input type="checkbox" name="checkbox" value="value">infantil</label>
@@ -40,6 +42,7 @@
 
     </div>
   </section>
+  -->
     <main>
       <section class="container">
 
