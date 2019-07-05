@@ -20,7 +20,7 @@ include("../objetos/obj_validaLogin.php");
     </div>';
     unset($_SESSION["apagado"]);
     $page = $_SERVER['PHP_SELF'];
-    $sec = "5";
+    $sec = "3";
     header("Refresh: $sec; url=$page");
   }
 
