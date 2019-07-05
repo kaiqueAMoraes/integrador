@@ -1,4 +1,4 @@
-<?
+<?php
 include("../objetos/obj_validaLogin.php");
   include("../objetos/obj_conexao_bd.php");
   $conexao = AbreConexaoBd();
@@ -13,8 +13,8 @@ include("../objetos/obj_validaLogin.php");
   require_once("../objetos/obj_selecionado.php");
 
   if (isset($_SESSION["select"])){
-    echo '<div class="alertSucesso>
-    <p style="color: #000;">ADICIONADO AOS SELECIONADOS COM SUCESSO !!</p>
+    echo '<div class="alertSucesso">
+    <p>ADICIONADO AOS SELECIONADOS COM SUCESSO !!!</p>
     </div>';
     unset($_SESSION["select"]);
     $page = $_SERVER['PHP_SELF'];

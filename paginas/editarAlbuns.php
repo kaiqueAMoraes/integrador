@@ -15,7 +15,7 @@ include("../objetos/obj_validaLogin.php");
 
 
   if (isset($_SESSION["apagado"])){
-    echo '<div class="alertSucesso>
+    echo '<div class="alertSucesso">
     <p>ALBUM APAGADO COM SUCESSO !!!</p>
     </div>';
     unset($_SESSION["apagado"]);
