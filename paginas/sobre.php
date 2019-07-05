@@ -62,9 +62,9 @@ if(isset($_SESSION["erro"])){
         <a href="sobre.php">Sobre</a>
       </div>
 
-      <div class="boxHeader boxMenor underline-from-center">
+      <!--<div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div>
+      </div>-->
 
     </header>
 
