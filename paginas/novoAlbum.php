@@ -55,7 +55,7 @@ if(isset($_SESSION["erro"])){
             <textarea name="descricaoAlbum" rows="4" cols="80" placeholder="Descrição do album." maxlength='140'></textarea>
 
             <section class="sectionTags">
-              <!-- <div class="button" id="button" title="Criar nova tag"><span>&#x2b;</span></div>
+              <div class="button" id="button" title="Criar nova tag"><span>&#x2b;</span></div>
 
                 <label><input type="checkbox" name="tag[]" value="casamento">casamento</label>
                 <label><input type="checkbox" name="tag[]" value="infantil">infantil</label>
@@ -63,7 +63,11 @@ if(isset($_SESSION["erro"])){
                 <label><input type="checkbox" name="tag[]" value="mulher">mulher</label>
                 <label><input type="checkbox" name="tag[]" value="homem">homem</label>
                 <label><input type="checkbox" name="tag[]" value="ensaio">ensaio</label>
-                <label><input type="checkbox" name="tag[]" value="pets">pets</label> -->
+                <label><input type="checkbox" name="tag[]" value="pets">pets</label>
+
+            </section>
+
+            <section class="sectionTags">
                 <div >
                   <input class="inputXX" type="file" name="capa[]" id="capa" />
                 </div>

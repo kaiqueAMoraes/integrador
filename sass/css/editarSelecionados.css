@@ -381,7 +381,6 @@ header a:focus {
   border-left: 0.5vh;
   border-radius: 100%;
   top: 80%;
-  transition: background-color 0.5s;
 }
 .albunsSelecionadoButton {
   font-size: 25px;

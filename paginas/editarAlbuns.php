@@ -53,14 +53,14 @@ include("../objetos/obj_validaLogin.php");
       <div class="boxHeader underline-from-center">
         <a href="editarAlbuns.php">Editar Albuns</a>
       </div>
-<!-- 
+
       <div class="boxHeader boxMenor underline-from-center">
         <a href="sobre.php">Sobre</a>
       </div>
 
       <div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div> -->
+      </div>
 
     </header>
     <canvas id="noise" class="noise"></canvas>
