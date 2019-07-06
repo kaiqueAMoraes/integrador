@@ -257,12 +257,12 @@ header div[id=containerInfoAlbum] h1 {
 }
 @media screen and (min-width: 300px) {
   header div[id=containerInfoAlbum] h1 {
-    font-size: calc(55px + 95 * ((100vw - 300px) / 1800));
+    font-size: calc(55px + 55 * ((100vw - 300px) / 1800));
   }
 }
 @media screen and (min-width: 2100px) {
   header div[id=containerInfoAlbum] h1 {
-    font-size: 150px;
+    font-size: 110px;
   }
 }
 header div[id=containerInfoAlbum] p {
@@ -272,16 +272,16 @@ header div[id=containerInfoAlbum] p {
   width: 60vw;
 }
 header div[id=containerInfoAlbum] p {
-  font-size: 12px;
+  font-size: 20px;
 }
 @media screen and (min-width: 300px) {
   header div[id=containerInfoAlbum] p {
-    font-size: calc(12px + 23 * ((100vw - 300px) / 1800));
+    font-size: calc(20px + 20 * ((100vw - 300px) / 1800));
   }
 }
 @media screen and (min-width: 2100px) {
   header div[id=containerInfoAlbum] p {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 

@@ -19,7 +19,7 @@ header{
     h1{
       position: relative;
       right: 8.5vw;
-      @include fluidType(300px, 2100px, 55px, 150px);
+      @include fluidType(300px, 2100px, 55px, 110px);
       margin-bottom: 2.5vw;
     }
     p{
@@ -27,7 +27,7 @@ header{
       position: relative;
       right: 8rem;
       width: 60vw;
-      @include fluidType(300px, 2100px, 12px, 35px);
+      @include fluidType(300px, 2100px, 20px, 40px);
     }
   }
 }

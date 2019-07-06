@@ -249,7 +249,8 @@ header div {
 header h1 {
   display: inline-block;
   position: relative;
-  left: 7.5vw;
+  top: 1rem;
+  left: 6.5rem;
   cursor: default;
   font-weight: 100;
 }
@@ -365,29 +366,44 @@ main {
   height: 100%;
 }
 main section[class=container] {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  margin: 3vw;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(calc(150px + (400 - 150) * ((100vw - 300px) / (1600 - 300))), 1fr));
+  justify-items: center;
 }
-main section[class=container] div[class=album] {
-  overflow: hidden;
+@media only screen and (max-width: 320px) {
+  main section[class=container] {
+    grid-template-columns: repeat(auto-fill, minmax(calc(350px + (600 - 350) * ((100vw - 300px) / (1600 - 300))), 1fr));
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 1023px) {
+  main section[class=container] {
+    grid-template-columns: repeat(auto-fill, minmax(calc(300px + (600 - 300) * ((100vw - 300px) / (1600 - 300))), 1fr));
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main section[class=container] {
+    grid-template-columns: repeat(auto-fill, minmax(calc(120px + (340 - 120) * ((100vw - 300px) / (1600 - 300))), 1fr));
+  }
+}
+main section[class=container] a {
   position: relative;
-  height: calc(70px + 26.5vw);
-  width: calc(70px + 26.5vw);
-  margin-top: 0.5vw;
-  margin-right: 0.5vw;
-  margin-bottom: 0.5vw;
-  margin-left: 0.5vw;
-  border-radius: 0;
-  background-size: contain;
-}
-main section[class=container] div[class=album] img {
   width: 100%;
 }
-main section[class=container] div[class=album]:hover {
+main section[class=container] a div[class=album] {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0;
+}
+main section[class=container] a div[class=album] img {
+  width: 100%;
+}
+main section[class=container] a div[class=album]:hover {
   transition: background-color 0.5s;
   background: #242424;
 }
