@@ -35,7 +35,7 @@ include("../objetos/obj_validaLogin.php");
 <body>
   <header>
     <div id="voltar" title="Voltar á pagina anterior">
-      <a href="../index.html"><span>&#60;</span></a>
+      <a href="./paginaAdministrador.php"><span>&#60;</span></a>
     </div>
 
     <div class="blockOfWidth"></div>
