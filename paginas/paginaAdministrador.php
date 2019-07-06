@@ -15,7 +15,7 @@
   <body>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a <?php unset($_SESSION['user']); ?>href="../index.html"><span>x</span></a>
+        <a  href="../objetos/obj_deslogar.php?x=x"><span>x</span></a>
       </div>
 
       <div class="blockOfWidth"></div>
