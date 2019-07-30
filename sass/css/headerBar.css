@@ -234,180 +234,88 @@ div[id=voltar] a {
   opacity: 0.05;
 }
 
-body,
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-div.logo,
-section.conteudo {
-  position: absolute;
-}
-
-main a {
-  position: absolute;
-  display: inline-block;
-  color: #393939;
-  text-decoration: none;
-  margin: 1rem;
-}
-main a:active, main a:hover, main a:focus {
-  transition: color 0.5s;
-  color: #f5f5f5;
-  /* background-color: $darkerBlack; */
-}
-main a[id=portifolio] {
-  right: 0;
-  top: 0;
-  font-size: calc(10px + 1vw);
-}
-main a[class=contato] {
-  bottom: 0;
-  font-size: calc(10px + 1vw);
-}
-main a[id=sobre] {
-  top: 0.5rem;
-  right: 0;
-  font-size: calc(10px + 1vw);
-  font-weight: bold;
-  color: #999999;
-}
-main img[class=iconIndex] {
-  height: 2rem;
-  width: 2rem;
-}
-
-section.container {
+.underline-from-center {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
-  overflow-x: hidden;
-  height: 100vh;
-  background: #F5F6F8;
+  overflow: hidden;
 }
-section.container div.logo {
+.underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-image: radial-gradient(circle, #9a9a9a, #f5f5f5);
+  height: 4px;
+  -webkit-transition-property: left right;
+  transition-property: left right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-from-center:hover:before {
+  left: 0;
+  right: 0;
+}
+
+.blockOfWidth {
+  width: 15%;
+}
+
+.boxHeader {
+  position: relative;
+  height: 100%;
+  width: 25%;
   text-align: center;
-  font-weight: bold;
-  /* @include BoxImagem('../img/logo.png', no-repeat, contain); */
-  height: 11vh;
-  width: 10vh;
-  top: 1rem;
-  right: 0;
-  bottom: 0;
-  left: 1.5rem;
-  z-index: 99999;
 }
-section.container div.logo p {
-  color: #999999;
-}
-section.container div.logo p {
-  font-size: 15.5px;
+.boxHeader {
+  font-size: 20px;
 }
 @media screen and (min-width: 320px) {
-  section.container div.logo p {
-    font-size: calc(15.5px + 10 * ((100vw - 320px) / 2280));
+  .boxHeader {
+    font-size: calc(20px + 5 * ((100vw - 320px) / 1280));
   }
 }
-@media screen and (min-width: 2600px) {
-  section.container div.logo p {
-    font-size: 25.5px;
+@media screen and (min-width: 1600px) {
+  .boxHeader {
+    font-size: 25px;
   }
 }
-section.container section.containerImagem {
-  cursor: pointer;
+.boxHeader a {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 70vh;
-  width: 40vw;
-  background-image: url("../img/img1.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  filter: grayscale(100%);
-  left: 55vw;
-}
-section.container section.containerImagem:hover {
-  transition: filter 1s;
-  filter: grayscale(0%);
-}
-section.container section.containerImagem p {
-  position: relative;
-  font-size: calc(8px + 0.7vw);
-  color: #f5f5f5;
-  height: auto;
-  width: 25vw;
-  top: 33vh;
-  right: 0;
-  bottom: 0;
-  left: -30vw;
-}
-section.container section.conteudo {
-  height: 100vh;
-  display: flex;
-}
-section.container section.conteudo div {
-  height: 100vh;
-  width: 50vw;
-}
-section.container section.conteudo div[id=box2] {
-  background: #dcdcdc;
-  transition: all 1s ease-in;
-  transform-origin: right 50%;
-}
-section.container section.conteudo div[id=box2] a {
-  color: #f5f5f5;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-section.container section.conteudo div[id=box2] a {
-  font-size: 40px;
-}
-@media screen and (min-width: 320px) {
-  section.container section.conteudo div[id=box2] a {
-    font-size: calc(40px + 20 * ((100vw - 320px) / 1280));
-  }
-}
-@media screen and (min-width: 1600px) {
-  section.container section.conteudo div[id=box2] a {
-    font-size: 60px;
-  }
-}
-section.container section.conteudo div[id=box2] a:hover {
-  transition: color 0.7s;
-  color: black;
-}
-section.container section.conteudo div[id=box1] {
-  background: -webkit-linear-gradient(left, #f5f5f5 50%, #393939 50%);
-  background: -o-linear-gradient(left, #f5f5f5 50%, #393939 50%);
-  background: linear-gradient(to right, #f5f5f5 50%, #393939 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all 1s ease-out;
-}
-section.container section.conteudo div[id=box1] a {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-section.container section.conteudo div[id=box1] a {
-  font-size: 40px;
-}
-@media screen and (min-width: 320px) {
-  section.container section.conteudo div[id=box1] a {
-    font-size: calc(40px + 20 * ((100vw - 320px) / 1280));
-  }
-}
-@media screen and (min-width: 1600px) {
-  section.container section.conteudo div[id=box1] a {
-    font-size: 60px;
-  }
-}
-section.container section.conteudo div[id=box1] a:hover {
-  transition: color 0.7s;
-  color: #393939;
+  width: 100%;
 }
 
-/*# sourceMappingURL=index.css.map */
+.boxMenor {
+  width: 16.5%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 6.5rem;
+  width: 100%;
+  box-shadow: 2px -3px 10px #B9B9B9;
+}
+header a {
+  position: relative;
+  left: 2.5vw;
+}
+header a:hover {
+  transition: color 1s;
+  color: #323232;
+}
+header a:focus {
+  outline: 1px dashed #B9B9B9;
+}
+
+/*# sourceMappingURL=headerBar.css.map */

@@ -1,3 +1,9 @@
+<?php
+  require_once("../objetos/obj_conexao_bd.php");
+
+  $conexao = AbreConexaoBd();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -15,8 +21,30 @@
     </header>
 <main>
   <div class="containerInfoAlbum">
-    <h1></h1>
-    <p> </p>
+    <div style="margin-top: 100px;">
+        <div >
+            <?php
+                $buscaFoto = "SELECT id_sobre,foto,texto FROM tb_sobre WHERE id_sobre = 1 ";
+                $queryFoto= mysqli_query(AbreConexaoBd(),$buscaFoto);
+
+                if($foto = mysqli_fetch_assoc($queryFoto)){
+                echo "<img style='max-width: 60%;' src='../fotografo/".$foto['foto']."'>";
+
+                }
+
+            ?>
+        </div>
+        <h1><?php
+            $buscaSobre = "SELECT id_sobre,foto,texto FROM tb_sobre WHERE id_sobre = 1 ";
+            $querySobre= mysqli_query(AbreConexaoBd(),$buscaSobre);
+
+            if($sobre = mysqli_fetch_assoc($querySobre)){
+              echo $sobre['texto'];
+            }
+
+        ?></h1>
+    </div>
+
   </div>
 </main>
   </body>

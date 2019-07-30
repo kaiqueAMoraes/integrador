@@ -23,7 +23,7 @@
   <body>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a href="../index.html"><span>&#60;</span></a>
+        <a href="./index.html"><span>&#60;</span></a>
       </div>
     </header>
     <canvas id="noise" class="noise"></canvas>

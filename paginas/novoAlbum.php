@@ -8,7 +8,7 @@ if (isset($_SESSION["upload"])){
   </div>';
   unset($_SESSION["upload"]);
   $page = $_SERVER['PHP_SELF'];
-  $sec = "5";
+  $sec = "3";
   header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["repetido"])){
@@ -16,12 +16,18 @@ if(isset($_SESSION["repetido"])){
     <p>JÁ EXISTE UM ALBUM COM O MESMO NOME !!!</p>
     </div>';
     unset($_SESSION["repetido"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "4";
+    header("Refresh: $sec; url=$page");
 }
 if(isset($_SESSION["erro"])){
     echo '<div class="alertErro">
     <p>ERRO NO UPLOAD !!!</p>
     </div>';
     unset($_SESSION["erro"]);
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "4";
+    header("Refresh: $sec; url=$page");
 }
 
 ?>
@@ -55,7 +61,8 @@ if(isset($_SESSION["erro"])){
             <textarea name="descricaoAlbum" rows="4" cols="80" placeholder="Descrição do album." maxlength='140'></textarea>
 
             <section class="sectionTags">
-              <!-- <div class="button" id="button" title="Criar nova tag"><span>&#x2b;</span></div>
+                <!--
+              <div class="button" id="button" title="Criar nova tag"><span>&#x2b;</span></div>
 
                 <label><input type="checkbox" name="tag[]" value="casamento">casamento</label>
                 <label><input type="checkbox" name="tag[]" value="infantil">infantil</label>
@@ -63,7 +70,11 @@ if(isset($_SESSION["erro"])){
                 <label><input type="checkbox" name="tag[]" value="mulher">mulher</label>
                 <label><input type="checkbox" name="tag[]" value="homem">homem</label>
                 <label><input type="checkbox" name="tag[]" value="ensaio">ensaio</label>
-                <label><input type="checkbox" name="tag[]" value="pets">pets</label> -->
+                <label><input type="checkbox" name="tag[]" value="pets">pets</label>
+                -->
+            </section>
+
+            <section class="sectionTags">
                 <div >
                   <input class="inputXX" type="file" name="capa[]" id="capa" />
                 </div>

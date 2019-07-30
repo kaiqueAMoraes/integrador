@@ -15,7 +15,7 @@
   <body>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a href="../index.html"><span>x</span></a>
+        <a  href="../objetos/obj_deslogar.php?x=x"><span>x</span></a>
       </div>
 
       <div class="blockOfWidth"></div>
@@ -28,13 +28,13 @@
         <a href="editarAlbuns.php">Editar Albuns</a>
       </div>
 
-      <!-- <div class="boxHeader boxMenor underline-from-center">
+      <div class="boxHeader boxMenor underline-from-center">
         <a href="sobre.php">Sobre</a>
       </div>
 
-      <div class="boxHeader boxMenor underline-from-center">
+      <!--<div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div> -->
+      </div>-->
 
     </header>
     <canvas id="noise" class="noise"></canvas>

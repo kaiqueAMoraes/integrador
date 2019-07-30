@@ -21,8 +21,14 @@ CREATE TABLE IF NOT EXISTS `fotografo`.`tb_album` (
 select * from tb_album;
 
  SET foreign_key_checks = 0;
+<<<<<<< HEAD
  SET foreign_key_checks = 1;
  truncate table tb_tag;
+=======
+ truncate table tb_sobre;
+ truncate table tb_album;
+ SET foreign_key_checks = 1;
+>>>>>>> a9a63e3e69e9d69187ab218e6604b4e8182b2d0b
 
 CREATE TABLE IF NOT EXISTS `fotografo`.`tb_foto` (
   `id_foto` INT auto_increment NOT NULL,
@@ -82,12 +88,11 @@ CREATE TABLE tb_contato(
     );
 	select * from tb_contato;
 
-    
+
     CREATE TABLE tb_sobre(
-	id_sobre int auto_increment,
+	id_sobre int (1),
     texto varchar(200) not null,
     foto varchar(100) not null,
     primary key (id_sobre)
     );
     select * from tb_sobre;
-    

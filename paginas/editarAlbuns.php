@@ -1,5 +1,4 @@
 <?php
-require_once("../objetos/obj_processaLogin.php");
 include("../objetos/obj_validaLogin.php");
 
 
@@ -15,12 +14,12 @@ include("../objetos/obj_validaLogin.php");
 
 
   if (isset($_SESSION["apagado"])){
-    echo '<div class="alertSucesso>
+    echo '<div class="alertSucesso">
     <p>ALBUM APAGADO COM SUCESSO !!!</p>
     </div>';
     unset($_SESSION["apagado"]);
     $page = $_SERVER['PHP_SELF'];
-    $sec = "5";
+    $sec = "3";
     header("Refresh: $sec; url=$page");
   }
 
@@ -53,14 +52,14 @@ include("../objetos/obj_validaLogin.php");
       <div class="boxHeader underline-from-center">
         <a href="editarAlbuns.php">Editar Albuns</a>
       </div>
-<!-- 
+
       <div class="boxHeader boxMenor underline-from-center">
         <a href="sobre.php">Sobre</a>
       </div>
 
-      <div class="boxHeader boxMenor underline-from-center">
+      <!--<div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div> -->
+      </div>-->
 
     </header>
     <canvas id="noise" class="noise"></canvas>

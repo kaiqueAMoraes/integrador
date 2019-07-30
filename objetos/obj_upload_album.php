@@ -9,6 +9,7 @@ session_start();
     $diretorio = "../albuns/$nomeAlbum";
     $mensagem= '';
 
+
 if (is_dir($diretorio)) {
     session_start();
     $_SESSION["repetido"] = true;
@@ -60,6 +61,7 @@ else {
                 $uploadFoto = move_uploaded_file($foto_tmp, $diretorio . "/" . $nomeFotoCriptografado);
                 if ($uploadFoto) {
                     $sql = "INSERT INTO tb_foto(id_album, nome) VALUES ($idAlbum, '".$nomeFotoCriptografado."');";
+                    $resultado= mysqli_query($conexao, $sql);
 
 
                 }
