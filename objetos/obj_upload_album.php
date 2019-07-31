@@ -45,7 +45,7 @@ else {
           }
 
         }
- echo count($_FILES["foto"]);
+
         if (isset($_FILES["foto"])) {
             // fazer o for para o multiple
             for ($i = 0; $i < count($_FILES["foto"]["name"]); $i++)
@@ -61,8 +61,6 @@ else {
                 $uploadFoto = move_uploaded_file($foto_tmp, $diretorio . "/" . $nomeFotoCriptografado);
                 if ($uploadFoto) {
                     $sql = "INSERT INTO tb_foto(id_album, nome) VALUES ($idAlbum, '".$nomeFotoCriptografado."');";
-                    $resultado= mysqli_query($conexao, $sql);
-
 
                 }
                 else {
