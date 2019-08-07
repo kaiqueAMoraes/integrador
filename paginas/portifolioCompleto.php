@@ -8,6 +8,11 @@
          where tb_foto.foto_capa = 1";
   $result= mysqli_query(AbreConexaoBd(), $sql);
 
+  // TODO:
+    //FIXME:
+    // REVIEW:
+    // IDEA:
+    
  ?>
 
 <!DOCTYPE html>
