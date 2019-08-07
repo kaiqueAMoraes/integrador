@@ -74,3 +74,4 @@ include("../objetos/obj_conexao_bd.php");
 
 </footer>
 </body>
+<script src="../js/adicionaCorImagem.js"></script>

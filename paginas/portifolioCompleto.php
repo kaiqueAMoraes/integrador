@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="../sass/css/portifolioCompleto.css">
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/backgroundChiado.js" charset="utf-8"></script>
+
+
+
+
+
   </head>
 <body>
   <canvas id="noise" class="noise"></canvas>
@@ -28,9 +33,11 @@
     </div>
     <h1>Portifolio completo</h1>
   </header>
-  <!--
+
   <section class="sectionProcura">
   <input type="search" name="" value="" id="procurar" title="Pressione enter para realizar a pesquisa" placeholder="pesquisar">
+
+
 
     <div class="tagArea">
     <label><input class="teste" type="checkbox" name="checkbox"  value="value">casamento</label>
@@ -43,7 +50,6 @@
 
     </div>
   </section>
-  -->
     <main>
       <section class="container">
 
@@ -64,3 +70,40 @@
 </footer>
 </body>
 <script src="../js/portifolio.js" charset="utf-8"></script>
+<script>
+  var pesquisa = document.getElementById('procurar');
+
+  pesquisa.onkeypress = function(event){
+
+    if(event.keyCode == 13){
+
+       var ajax = new XMLHttpRequest();
+       var pagina = "../objetos/pesquisa.php?dado=";
+       var method  = "get";
+       var dados = null;
+
+       dado = pesquisa.value;
+      ajax.open(method, pagina + dado, true);
+var xml = null;
+      ajax.onreadystatechange = function(){
+
+           // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
+           if (ajax.readyState == 4 && ajax.status == 200) {
+
+                   xml = ajax.responseText;
+                   alert(xml)
+               }else{
+                   alert("Erro");
+               }
+           }
+
+ajax.send(null);
+
+    }
+  }
+
+
+
+</script>
+
+<script src="../js/adicionaCorImagem.js"></script>
