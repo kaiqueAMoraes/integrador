@@ -6,7 +6,7 @@ if (isset($_SESSION["contato"])){
   echo '<div class="alertSucesso">
   <p>ALBUM CRIADO COM SUCESSO !!!</p>
   </div>';
-  unset($_SESSION["foto"]);
+  unset($_SESSION["contato"]);
   $page = $_SERVER['PHP_SELF'];
   $sec = "3";
   header("Refresh: $sec; url=$page");
@@ -19,6 +19,8 @@ if(isset($_SESSION["erro"])){
     </div>';
     unset($_SESSION["erro"]);
 }
+
+
 
  ?>
 

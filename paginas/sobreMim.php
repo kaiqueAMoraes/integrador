@@ -16,7 +16,7 @@
     <canvas id="noise" class="noise"></canvas>
     <header>
       <div id="voltar" title="Voltar á pagina anterior">
-        <a href="../index.html"><span>&#60;</span></a>
+        <a href="../index.php"><span>&#60;</span></a>
       </div>
     </header>
 <main>

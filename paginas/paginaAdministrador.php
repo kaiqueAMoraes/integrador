@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-      <div id="voltar" title="Voltar á pagina anterior">
+      <div id="voltar" title="Sair do modo Administrador">
         <a  href="../objetos/obj_deslogar.php?x=x"><span>x</span></a>
       </div>
 
@@ -32,9 +32,9 @@
         <a href="sobre.php">Sobre</a>
       </div>
 
-      <!--<div class="boxHeader boxMenor underline-from-center">
+      <div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div>-->
+      </div>
 
     </header>
     <canvas id="noise" class="noise"></canvas>

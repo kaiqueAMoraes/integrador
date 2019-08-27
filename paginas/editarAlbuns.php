@@ -39,8 +39,8 @@ include("../objetos/obj_validaLogin.php");
 
     <body>
     <header>
-      <div id="voltar" title="Voltar á pagina inicial do Administrador">
-        <a href="./paginaAdministrador.php"><span>&#60;</span></a>
+      <div id="voltar" title="Sair do modo Administrador">
+        <a  href="../objetos/obj_deslogar.php?x=x"><span>x</span></a>
       </div>
 
       <div class="blockOfWidth"></div>
@@ -57,9 +57,9 @@ include("../objetos/obj_validaLogin.php");
         <a href="sobre.php">Sobre</a>
       </div>
 
-      <!--<div class="boxHeader boxMenor underline-from-center">
+      <div class="boxHeader boxMenor underline-from-center">
         <a href="contato.php">Contato</a>
-      </div>-->
+      </div>
 
     </header>
     <canvas id="noise" class="noise"></canvas>
@@ -74,7 +74,7 @@ include("../objetos/obj_validaLogin.php");
 
 
           while($album = mysqli_fetch_assoc($result)){
-              echo "<div class='albumEditar'>";
+            echo "<div class='albumEditar'>";
             echo "<a title='excluir album.' class='deleteButton' href='../objetos/obj_deleteAlbum.php?id_album=".$album['id_album']."&dir=".$album['dir']."'><span>X</span></a>";
 
 

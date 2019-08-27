@@ -12,7 +12,7 @@
     //FIXME:
     // REVIEW:
     // IDEA:
-    
+
  ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 
   <header>
     <div id="voltar" title="Voltar á pagina anterior">
-      <a href="../index.html"><span>&#60;</span></a>
+      <a href="../index.php"><span>&#60;</span></a>
     </div>
     <h1>Portifolio completo</h1>
   </header>
