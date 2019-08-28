@@ -21,7 +21,7 @@ $result= mysqli_query($conexao, $sql);
      <canvas id="noise" class="noise"></canvas>
       <main>
           <section class="container">
-              <div class="logo"><p>Anderson Rodrigues</p></div>
+              <div class="logo"><img src="LOGO.png" height="95px"></div>
               <section class="conteudo">
                 <div id="box1">
                   <a  href="paginas/trabalhosSelecionados.php">Trabalhos selecionados</a>
