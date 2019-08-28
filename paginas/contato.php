@@ -36,8 +36,8 @@ if(isset($_SESSION["erro"])){
   </head>
   <body>
     <header>
-      <div id="voltar" title="Voltar á pagina inicial do Administrador">
-        <a href="./paginaAdministrador.php"><span>&#60;</span></a>
+      <div id="voltar" title="Sair do modo Administrador">
+        <a  href="../objetos/obj_deslogar.php?x=x"><span>x</span></a>
       </div>
 
       <div class="blockOfWidth"></div>
