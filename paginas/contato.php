@@ -4,7 +4,7 @@ include("../objetos/obj_validaLogin.php");
 
 if (isset($_SESSION["contato"])){
   echo '<div class="alertSucesso">
-  <p>ALBUM CRIADO COM SUCESSO !!!</p>
+  <p>CONTATO ATUALIZADO COM SUCESSO !!!</p>
   </div>';
   unset($_SESSION["contato"]);
   $page = $_SERVER['PHP_SELF'];
