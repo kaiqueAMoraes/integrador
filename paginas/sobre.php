@@ -70,7 +70,7 @@ if(isset($_SESSION["erro"])){
 
     <main>
       <form class="" id="form_cadastra" action="../objetos/obj_sobre.php" method="post" enctype="multipart/form-data">
-        <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descrição do autor." maxlength='140'></textarea>
+        <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descrição do autor." maxlength='400'></textarea>
 
         <div class="imagensContainer">
           <div class="box__input">
