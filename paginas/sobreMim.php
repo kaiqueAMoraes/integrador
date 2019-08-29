@@ -1,13 +1,23 @@
 <?php
+header('Content-type: text/html; charset=iso-8859-1');
   require_once("../objetos/obj_conexao_bd.php");
 
   $conexao = AbreConexaoBd();
 
+ $sql = "select * from tb_sobre";
+
+ $res = mysqli_query($conexao, $sql);
+
+ echo mysqli_num_rows($res);
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="iso-8859-1">
     <title>Sobre mim</title>
     <link type="text/css" rel="stylesheet" href="../sass/css/sobreMim.css">
     <script src="../js/backgroundChiado.js" charset="utf-8"></script>

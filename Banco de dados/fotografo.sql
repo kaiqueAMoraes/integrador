@@ -90,5 +90,6 @@ CREATE TABLE tb_contato(
     primary key (id_sobre)
     );
     select * from tb_sobre;
+    drop table tb_sobre
     
     

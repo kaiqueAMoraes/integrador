@@ -7,7 +7,7 @@ $facebook= $_POST['facebook'];
 $email= $_POST['email'];
 
 if(isset($_POST['instagram']) || isset($_POST['facebook']) || isset($_POST['email']) ){
-  $sql = "UPDATE tb_contato SET" ;
+  $sql = "UPDATE tb_contato SET";
   if( strlen($_POST['instagram'])>= 1){
    $sql .=  " instagram= '".$_POST['instagram']."' ";
    }

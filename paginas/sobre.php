@@ -1,6 +1,24 @@
 <?php
+header('Content-type: text/html; charset=iso-8859-1');
 require_once("../objetos/obj_processaLogin.php");
 include("../objetos/obj_validaLogin.php");
+
+require_once("../objetos/obj_conexao_bd.php");
+
+$conexao = AbreConexaoBd();
+
+$sql = "select * from tb_sobre";
+
+$res = mysqli_query($conexao, $sql);
+
+if(mysqli_num_rows($res) ==  1 ){
+
+   $linha = mysqli_num_rows($res);
+
+}else{
+
+  $linha = 0;
+}
 
 if (isset($_SESSION["foto"])){
   echo '<div class="alertSucesso">
@@ -35,7 +53,7 @@ if(isset($_SESSION["erro"])){
 <!DOCTYPE html>
   <html lang="pt-br" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="iso-8859-1">
     <title>Pagina Administrador</title>
     <link rel="stylesheet" type="text/css" href="../sass/css/sobre.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -70,7 +88,8 @@ if(isset($_SESSION["erro"])){
 
     <main>
       <form class="" id="form_cadastra" action="../objetos/obj_sobre.php" method="post" enctype="multipart/form-data">
-        <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descrição do autor." maxlength='400'></textarea>
+
+        <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descri&ccedil;&atilde;o do autor." maxlength='400' ></textarea>
 
         <div class="imagensContainer">
           <div class="box__input">
@@ -86,6 +105,7 @@ if(isset($_SESSION["erro"])){
 
         <section>
           <button type="submit" name="sobreEnviar">Finalizar</button>
+          <input type="hidden" name="tipo" id="tipo" value="<?php  echo $linha ?>"
 
         </section>
       </form>
