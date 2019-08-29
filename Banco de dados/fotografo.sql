@@ -85,11 +85,14 @@ CREATE TABLE tb_contato(
     
     CREATE TABLE tb_sobre(
 	id_sobre int auto_increment,
-    texto varchar(400) not null,
-    foto varchar(100) not null,
+    texto text ,
+    foto varchar(100) ,
     primary key (id_sobre)
     );
     select * from tb_sobre;
-    drop table tb_sobre
+    drop table tb_sobre;
+    
+    delete from tb_sobre where id_sobre = 2;
+    
     
     
