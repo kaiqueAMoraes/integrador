@@ -85,7 +85,7 @@ CREATE TABLE tb_contato(
     
     CREATE TABLE tb_sobre(
 	id_sobre int auto_increment,
-    texto text ,
+    texto text not null,
     foto varchar(100) ,
     primary key (id_sobre)
     );

@@ -29,12 +29,12 @@ if (isset($_POST["descricaoAutor"]) || isset($_FILES["fotografo"])) {
         $uploadFotografo = move_uploaded_file($fotografo_tmp, $diretorio . "/" . $nomeFotografoCriptografado);
 
         if ($uploadFotografo) {
-            $sql .= " foto = '".$nomeFotografoCriptografado."'";
+            $sql = " foto = ('".$nomeFotografoCriptografado."')";
           }
         }
 
 
-        mysqli_query($conexao, $sql);
+
 
         if (mysqli_query($conexao, $sql)){
             session_start();
