@@ -81,18 +81,21 @@ CREATE TABLE tb_contato(
     primary key (id_contato)
     );
 	select * from tb_contato;
+    drop table tb_contato;
 
-    
+insert into tb_contato (email,instagram,facebook) values ("mailto:anderson.aaphoto@gmail.com?subject=feedback","https://www.instagram.com/a.a_photografia/","https://www.facebook.com/anderson.a.a.foto");
+
     CREATE TABLE tb_sobre(
 	id_sobre int auto_increment,
     texto text not null,
-    foto varchar(100) ,
+    foto varchar(100) not null,
     primary key (id_sobre)
     );
     select * from tb_sobre;
     drop table tb_sobre;
     
-    delete from tb_sobre where id_sobre = 2;
+    insert into tb_sobre (texto, foto) values ("sfdsfd", "jkhghj");
+    
     
     
     
