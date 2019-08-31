@@ -89,7 +89,7 @@ if(isset($_SESSION["erro"])){
     <main>
       <form class="" id="form_cadastra" action="../objetos/obj_sobre.php" method="post" enctype="multipart/form-data">
 
-        <textarea name="descricaoAutor" rows="4" cols="80" placeholder="Descri&ccedil;&atilde;o do autor." maxlength='1000' ></textarea>
+        <textarea name="descricaoAutor" rows="7" cols="80" style="top:0; margin-bottom:5rem;" placeholder="Descri&ccedil;&atilde;o do autor." maxlength='1000' ></textarea>
 
         <div class="imagensContainer">
           <div class="box__input">
