@@ -80,29 +80,16 @@ CREATE TABLE tb_contato(
     facebook varchar(100) not null,
     primary key (id_contato)
     );
-	select * from tb_contato;
     drop table tb_contato;
+    INSERT INTO tb_contato (email, instagram, facebook) VALUES ("mailto:anderson.aaphoto@gmail.com?subject=feedback", "https://www.instagram.com/a.a_photografia/", "https://www.facebook.com/anderson.a.a.foto");
+	select * from tb_contato;
 
-insert into tb_contato (email,instagram,facebook) values ("mailto:anderson.aaphoto@gmail.com?subject=feedback","https://www.instagram.com/a.a_photografia/","https://www.facebook.com/anderson.a.a.foto");
-
+    
     CREATE TABLE tb_sobre(
 	id_sobre int auto_increment,
-    texto text not null,
+    texto varchar(200) not null,
     foto varchar(100) not null,
     primary key (id_sobre)
     );
     select * from tb_sobre;
-    drop table tb_sobre;
-    
-insert into tb_sobre (texto, foto) values ("Eu sou Anderson Rodrigues Dos Santos, nasci em São Paulo em 1995, moro em Taboão Da Serra. Em 2016 comecei a estudar edição de video e 
-comprei minha primeira camera, mas a fotografia entrou na minha vida mesmo em 2018, quando inciei um curso
-no Senac, foi nesse curso que minha visão começou a mudar e me encontrei na fotografia. 
-        Depois que terminei comecei a fazer trabalhos em alguns seguimentos, buffet infatil, retrato, casamento, batizado 
-e com o tempo aprimorando minha visão na fotografia, isso me ajudou muito a me encontrar, sempre tive muitos elogios 
-apesar do pouco tempo que estou na área. Sou uma pessoa  muito detalhista, uma paisagem, uma expressão, um olhar, um sorriso, um momento e 
-arte de juntar os sentimentos em algo unico e que desperte uma lembrança, que faça com que melhore a auto-estima, que mude seu jeito de ver 
-as coisas simples da vida", "foto do fotografo");
-    
-    
-    
     
