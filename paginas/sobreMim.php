@@ -21,6 +21,13 @@ header('Content-type: text/html; charset=iso-8859-1');
     <title>Sobre mim</title>
     <link type="text/css" rel="stylesheet" href="../sass/css/sobreMim.css">
     <script src="../js/backgroundChiado.js" charset="utf-8"></script>
+    <style media="screen">
+      body{
+        display: flex;
+        flex-direction: row;
+       align-items: center;
+      }
+    </style>
   </head>
   <body>
     <canvas id="noise" class="noise"></canvas>
@@ -31,8 +38,8 @@ header('Content-type: text/html; charset=iso-8859-1');
     </header>
 <main>
   <div class="containerInfoAlbum">
-    <div style="margin-top: 100px;">
-        <div >
+    <div style="margin: 150px 160px 0 160px;">
+        <div style=" margin-bottom: 10rem;">
             <?php
                 $buscaFoto = "SELECT id_sobre,foto,texto FROM tb_sobre WHERE id_sobre = 1 ";
                 $queryFoto= mysqli_query(AbreConexaoBd(),$buscaFoto);
@@ -44,15 +51,17 @@ header('Content-type: text/html; charset=iso-8859-1');
 
             ?>
         </div>
-        <h1><?php
-            $buscaSobre = "SELECT id_sobre,foto,texto FROM tb_sobre WHERE id_sobre = 1 ";
-            $querySobre= mysqli_query(AbreConexaoBd(),$buscaSobre);
+        <div style=" margin-bottom: 10rem;  text-align: center;">
+          <h1><?php
+          $buscaSobre = "SELECT id_sobre,foto,texto FROM tb_sobre WHERE id_sobre = 1 ";
+          $querySobre= mysqli_query(AbreConexaoBd(),$buscaSobre);
 
-            if($sobre = mysqli_fetch_assoc($querySobre)){
-              echo $sobre['texto'];
-            }
+          if($sobre = mysqli_fetch_assoc($querySobre)){
+            echo $sobre['texto'];
+          }
 
-        ?></h1>
+          ?></h1>
+        </div>
     </div>
 
   </div>
