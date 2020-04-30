@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/kaiqueAMoraes/integrador#readme",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-scrollify": "^1.0.20",
     "scrollreveal": "^4.0.5"
   }
